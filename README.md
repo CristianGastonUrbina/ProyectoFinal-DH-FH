@@ -1,3 +1,4 @@
+URL Trello: https://trello.com/b/mZwvB5oD/proyecto-final-dh
 Tematica del sitio: Se desarrollara una plataforma de eCommerce, orientado a la venta de hardware informatico, y servicios sobre los mismos.
 Futuros clientes: 
 	- Usuarios que requieran de servicios profesionales para la confeccion de un conjunto de hardware de alta gama, para cumplir sus tareas laborales
