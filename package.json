@@ -1,0 +1,29 @@
+{
+  "name": "proyectofinal-dh-fh",
+  "version": "1.0.0",
+  "description": "Proyecto integrador de curso Full Stack DH - venta de insumos informaticos",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CristianGastonUrbina/ProyectoFinal-DH-FH.git"
+  },
+  "keywords": [
+    "Digital",
+    "House",
+    "Proyecto",
+    "Final"
+  ],
+  "author": "Eckl Romanelli Urbina Paul",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CristianGastonUrbina/ProyectoFinal-DH-FH/issues"
+  },
+  "homepage": "https://github.com/CristianGastonUrbina/ProyectoFinal-DH-FH#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.13"
+  }
+}
