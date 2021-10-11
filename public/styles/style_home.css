@@ -2,10 +2,28 @@
     box-sizing: content-box;
     padding: 0;
     margin: 0;
+    list-style: none;
 }
 
 header{
-    background-color: rgba(15, 6, 93, 0.822);
+    background-color: rgba(15, 6, 93, 0.829);
+    position: sticky;
+    top:0;
+    z-index: 10;
+
+
+}
+
+footer{
+    background-color: rgba(15, 6, 93, 0.829);
+}
+footer *{
+    font-size: 16px;
+}
+h6{
+    margin: 0;
+    max-width: 70px;
+    width: 100%;
 }
 
 .mainheader{
@@ -24,9 +42,24 @@ header{
     max-height: 100px;
 }
 
+.Logo-footer  {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    max-height: 100px;
+    color: white;
+    max-width: 250px;
+}  
+
+.Logo-footer img  {
+    width: 100%;
+    max-width: 120px;
+
+}  
+
 .Logo img{
     width: 100%;
-    max-width: 125px;
+    max-width: 120px;
 
 }
 img{
@@ -109,11 +142,16 @@ h2::before , h2::after{
 
 }
 
+.categorias{
+    width: 85%;
+    margin: auto;
+}
 .categorias_conteiner{
     display: flex;
     flex-wrap: wrap;
     margin: 10px;
     justify-content: space-between;
+
 
 }
 .categoria{
@@ -127,6 +165,7 @@ h2::before , h2::after{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    background-color: white;
 }
 
 .suscripcion-redes p{
@@ -193,6 +232,53 @@ margin: 5px;
     max-width: 1200px;
     margin: auto    ;
 }
+
+.info-conteiner{
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: auto;
+    padding: 30px 15px 0;
+    justify-content:space-around;
+
+}
+.pie-nav{
+    display: flex;
+    width: 100%;
+
+    flex-direction: column;
+    justify-content: center;
+
+}
+.About-us, .Ayuda{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 5px;
+    width: 100%;
+    max-width: 300px;
+    padding: 10px 5px;}
+
+.About-us a, .Ayuda a{
+color: white;
+text-decoration: none;
+font-size: 1rem;
+text-align: justify;
+
+}
+
+ul{
+    margin-left: 5px;
+    padding-left: 5px;
+    text-decoration: none;
+    border-left: 1px solid rgba(126,126,131,.15);
+}
+.titulo-lista{
+    margin-right: 10px;
+    padding: 10px;
+
+}
+
 @media (min-width: 767px) {
     .burger{
         display: none;
@@ -208,6 +294,7 @@ margin: 5px;
 
     .Logo{
     order: 0;
+    color: white;
     }
     .search{
     order:10;
@@ -251,6 +338,15 @@ margin: 5px;
         font-size: 18px;
     }
 
+    .pie-nav{
+        max-width: calc(100% - 250px);
+        flex-direction: row;
+ 
+    }
     
+    .info-conteiner{
+        flex-wrap: nowrap;
+        max-width: 1200px;
+    }
 
 }
