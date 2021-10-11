@@ -6,3 +6,4 @@ let viewsPath=path.resolve(__dirname,"./views");
 server.use(express.static(publicPath));
 server.listen(3000);
 server.get('/',(req,res)=> res.sendFile(viewsPath+'/home.html'));
+server.get('/productCart',(req,res)=> res.sendfile(viewsPath+'/productCart.html'));

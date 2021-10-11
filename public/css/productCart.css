@@ -1,0 +1,36 @@
+main{
+    display:flez;
+    justify-items: center;
+    background-color: rgb(230, 230, 230);
+    flex-wrap: wrap;
+
+}
+
+.productoAgregado{
+    display:flex;
+    justify-items: center;
+    flex-flow: column;
+    flex-wrap: wrap;
+    width:80%;
+
+}
+
+.producto{
+    display:flex;
+    flex-wrap: wrap;
+    width:100%;
+}
+
+.producto div{
+    display:flex;
+    width:100%;
+    justify-content: space-between;
+}
+
+.producto div i{
+    width:5%;
+}
+
+.producto div p{
+    width:80%;
+}
