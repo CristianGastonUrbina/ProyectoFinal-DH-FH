@@ -14,24 +14,24 @@
 
     </header>
     <main>
-        <h2>Lista de productos en carrito</h2>
+        <h2>Carrito de compras</h2>
         <section class="productoAgregado">
-            <article class="producto">
-                <div class="productoTop">
-                    <i class="fa fa-product-hunt fa-4x"></i>
+            <article class="producto color-path">
+                <div class="productoTop ">
+                    <i class="fab fa-product-hunt"></i>
                     <p>Auriculares bla bla bla</p>
-                    <i class='fas fa-trash-alt'></i>
+                    <i class="fas fa-trash-alt"></i>
                 </div>
                 <div class="productoBottom">
                     <input type="button" name="agregar/quitar" value="agregar/quitar">
                     <p>$9999,99</p>
                 </div>
             </article>
-            <article class="producto">
+            <article class="producto color-path">
                 <div class="productoTop">
-                    <i class="fa fa-product-hunt"></i>
+                    <i class="fab fa-product-hunt"></i>
                     <p>Auriculares bla bla bla</p>
-                    <i class='fas fa-trash-alt'></i>
+                    <i class="fas fa-trash-alt"></i>
                 </div>
                 <div class="productoBottom">
                     <input type="button" name="agregar/quitar" value="agregar/quitar">
@@ -39,38 +39,39 @@
                 </div>
             </article>
         </section>
-        <section class="subtotal">
-            <article>
+        <section class="subtotal color-path">
                 <p>Subtotal: </p>
                 <p>$19.999,99</p>
-            </article>
         </section>
-        <section class="entrega">
+        <section class="entrega color-path">
             <h4>Medios de envio</h4>
             <article class="aDomicilio">
-                <i class="iconoDelCamion"></i>
-                <p>A Domicilio o correo</p>
+                <div>
+                    <p>A Domicilio o correo</p>
+                    <i class="fas fa-truck"></i>
+                </div>
                 <div class="calculadorDeEnvio">
-
+                    <input type="text" id="cp" placeholder="CP">
+                    <input type="button" id="calcular" value="CALCULAR">
                 </div>
             </article>
             <article class="porElLocal">
                 <i class="iconoDeLocal"></i>
                 <p>Retire por nuestros locales</p>
                 <select name="locales" id="locales">
-                    <option value="Calle falsa 1234 - dpto 69"></option>
-                    <option value="Calle diabolica 999 - dpto 4B"></option>
+                    <option value="Calle falsa 1234 - dpto 69">Calle falsa 1234 - dpto 69</option>
+                    <option value="Calle diabolica 999 - dpto 4B">Calle diabolica 999 - dpto 4B</option>
                 </select>
                 <p>Gratis</p>
             </article>
         </section>
-        <section class="comprar">
+        <section class="comprar color-path">
             <article class="montoTotal">
                 <p>Total: </p>
                 <p>$199988,30</p>
             </article>
-            <article class="pago">
-                <input type="button" value="Pagar">
+            <article class="pago ">
+                <input type="button" class="color-path" value="Pagar">
                 <a href="#">Ver mas productos</a>
             </article>
         </section>
