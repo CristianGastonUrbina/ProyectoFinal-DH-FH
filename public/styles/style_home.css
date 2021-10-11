@@ -13,24 +13,24 @@ header{
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
 }
 
 .Logo{
     width: 25%;
     display: flex;
     justify-content: center;
+    max-height: 100px;
 }
 
 .Logo img{
     width: 100%;
+    max-width: 125px;
+
 }
 img{
     width: 100%;
-}
-.burger ,.Checkout{
-    width: 30%;
-    display: flex;
-    justify-content: center;
 }
 
 .armamos-tu-setup{
@@ -78,7 +78,10 @@ h2::before , h2::after{
 }
 
 
-.Contact,.Login,.Contact{
+.Contacto,.Mi-Cuenta{
+    display: none;
+}
+.Mi-Carro p{
     display: none;
 }
 .Destacados{
@@ -139,7 +142,7 @@ h2::before , h2::after{
     justify-content: center;
     width: 100%;
     max-width: 640px;
-    margin: 0 0 30px;
+    margin: 30px 0 30px 0;
 }
 .send label{
     display: none;
@@ -166,5 +169,88 @@ margin: 5px;
     position: absolute;
     left: 13px;
     bottom: -2px;
+
+}
+
+.pie-redes{
+    width: 250px;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.pie-redes a{
+    color: gainsboro;
+}
+
+.utilities{
+    display: flex;
+}
+.navs{
+    display: none;
+    max-width: 1200px;
+    margin: auto    ;
+}
+@media (min-width: 767px) {
+    .burger{
+        display: none;
+    }
+
+    .Contacto,.Mi-Cuenta{
+        display: inherit;
+    }
+    .mainheader{
+        justify-content: flex-start;
+    }
+
+
+    .Logo{
+    order: 0;
+    }
+    .search{
+    order:10;
+    }
+    .utilities{
+        order: 20;
+
+    }
+
+    .Mi-Carro p{
+        display: inherit;
+    }
+
+    .utilities *{
+        display: flex;
+        flex-direction: column;
+    }
+    .mainheader{
+        flex-wrap: nowrap;
+    }
+    .navs{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .navs a{
+        color: white;
+        text-decoration: none;
+        padding: 0 10px;
+    }
+
+    .form{
+        flex-wrap: nowrap;
+    }
+
+    form{
+        display: flex;
+        align-items: center;
+    }
+
+    form p{
+        font-size: 18px;
+    }
+
+    
 
 }
