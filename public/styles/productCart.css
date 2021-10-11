@@ -1,8 +1,12 @@
+*{
+    box-sizing: border-box;
+}
+
 .color-path{
     border-radius: 10px;
-    padding: 2px;
     border:blue solid 1px;
     margin:2px;
+    padding: 2px;
 
 }
 
@@ -26,12 +30,13 @@ main{
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
+    width:90%;
+    margin:auto;
 
 }
 main h2{
     background-color: blue;
     color:white;
-    width:90%;
     text-align:center;
 }
 
@@ -40,8 +45,8 @@ main h2{
     justify-content: center;
     flex-flow: column;
     flex-wrap: wrap;
-    width:90%;
     align-items: center;
+    width:100%;
 
 }
 
@@ -52,7 +57,7 @@ main h2{
 
 }
 
-.productoTop{
+.productoTop {
     display:flex;
     width:100%;
     justify-content: space-between;
@@ -90,7 +95,7 @@ main h2{
 .subtotal{
     display: flex;
     justify-content: space-between;
-    width:90%;
+    width:100%;
 }
 
 
@@ -99,7 +104,7 @@ main h2{
     flex-wrap: wrap;
     flex-direction: column;
     align-items: flex-start;
-    width:90%;
+    width:100%;
 }
 
 .aDomicilio{
@@ -113,9 +118,9 @@ main h2{
 
 .comprar{
     display:flex;
-    width:90%;
     flex-direction: column;
     flex-wrap: wrap;
+    width:100%;
 }
 
 .pago{
@@ -135,6 +140,21 @@ main h2{
 .pago input{
     width:70%;
 }
+
+@media (min-width: 572px) {
+    main{
+        width:50%;
+        margin-right: 30px;
+    }
+}
+
+@media (min-width: 768px) {
+    main{
+        width:30%;
+    }
+}
+
+
 
 
 
