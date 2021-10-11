@@ -8,7 +8,7 @@ let publicPath=path.resolve(__dirname,"./public");
 let viewsPath=path.resolve(__dirname,"./public/views");
 
 server.use(express.static(publicPath));
-server.get('/',(req,res)=> res.sendFile(viewsPath+'/home.html'));
+server.get('/',(req,res)=> res.sendFile(viewsPath+'/index.html'));
 server.get('/login',(req,res)=> res.sendFile(viewsPath+'/login.html'));
 server.get('/productCart',(req,res)=> res.sendFile(viewsPath+'/productCart.html'));
 server.get('/productDetails',(req,res)=> res.sendFile(viewsPath+'/productDetails.html'));
