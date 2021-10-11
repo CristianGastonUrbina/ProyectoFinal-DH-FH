@@ -1,0 +1,73 @@
+main{
+    display:flex;
+    justify-content: center;
+    background-color: rgb(230, 230, 230);
+    flex-wrap: wrap;
+    flex-direction: column;
+
+}
+
+.productoAgregado{
+    display:flex;
+    justify-content: center;
+    flex-flow: column;
+    flex-wrap: wrap;
+    width:80%;
+    align-items: center;
+
+}
+
+.producto{
+    display:flex;
+    flex-wrap: wrap;
+    width:100%;
+}
+
+.productoTop{
+    display:flex;
+    width:100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.productoTop div i{
+    width:5%;
+}
+
+.productoTop div p{
+    width:80%;
+}
+
+
+.productoBottom{
+    display: flex;
+    width:100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.productoBottom div input{
+    align-self: flex-start;
+    width:80%;
+
+}
+
+.productoBottom div p{
+    align-self: flex-end;
+    width:20%;
+}
+
+.pago{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.pago input{
+    width:90%;
+    background-color: blue;
+    color: white;
+}
+
