@@ -1,0 +1,107 @@
+.color-path{
+    border-radius: 10px;
+    padding: 2px;
+    border:blue solid 1px;
+    margin:2px;
+
+}
+
+
+main{
+    display:flex;
+    justify-content: center;
+    background-color: white;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+
+}
+main h4{
+    background-color: blue;
+    color:white;
+}
+
+.productoAgregado{
+    display:flex;
+    justify-content: center;
+    flex-flow: column;
+    flex-wrap: wrap;
+    width:90%;
+    align-items: center;
+
+}
+
+.producto{
+    display:flex;
+    flex-wrap: wrap;
+    width:100%;
+
+}
+
+.productoTop{
+    display:flex;
+    width:100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.productoTop div i{
+    width:5%;
+}
+
+.productoTop div p{
+    width:80%;
+}
+
+
+.productoBottom{
+    display: flex;
+    width:100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.productoBottom div input{
+    align-self: flex-start;
+    width:80%;
+
+}
+
+.productoBottom div p{
+    align-self: flex-end;
+    width:20%;
+}
+
+.subtotal{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.subtotal p{
+    width:30%;
+}
+
+.entrega {
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.pago{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.pago input{
+    width:70%;
+    background-color: blue;
+    color: white;
+    font-size: 1em;
+}
+
+
+
