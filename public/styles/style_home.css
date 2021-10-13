@@ -220,6 +220,10 @@ margin: 5px;
     margin-bottom: 20px;
 }
 
+a{
+    text-decoration: none;
+    color: black;
+}
 .pie-redes a{
     color: gainsboro;
 }
