@@ -11,50 +11,53 @@
     <link rel="stylesheet" href="./styles/style_home.css" />
 </head>
 <body>
-    <header>
-        <div class="mainheader">
-          <div class="burger"><i class="fas fa-bars fa-4x"></i></div>
-          <div class="Logo">
-            <img src="../images/logo.png" alt="logo" />
-          </div>
-          <div class="utilities">
-            <div class="Mi-Carro">
-              <div><i class="fas fa-shopping-cart fa-4x"></i></div>
-              <p>Mi Carro</p>
-            </div>
-            <div class="Contacto">
-              <div><i class="fas fa-phone fa-4x"></i></div>
-              <p>Contacto</p>
-            </div>
-            <div class="Mi-Cuenta">
-              
-              <div><i class="far fa-user fa-4x"></i></div>
-              <p>Mi Cuenta</p>
-            </div>
+
+  <header>
+    <div class="mainheader">
+      <div class="burger"><i class="fas fa-bars fa-4x"></i></div>
+      <div class="Logo">
+        <a href="/views/index.html"><img src="../images/logo.png" alt="logo" /></a>
+      </div>
+      <div class="utilities">
+        <div class="Mi-Carro">
+          <div><a href="/views/productCart.html" rel="Carrito de Compra"><i class="fas fa-shopping-cart fa-4x"></i></a></div>
+          <p>Carro</p>
         </div>
-          <div class="search">
-            <label for="searchbar"></label>
-            <input
-              type="search"
-              name="searchbar"
-              id="searchbar"
-              placeholder="Buscate esta"
-            />
-          </div>
+        <div class="Contacto">
+          <div><a href="" rel="Contacto"><i class="fas fa-phone fa-4x"></i></a></div>
+          <p>Contacto</p>
         </div>
-        <nav class="navs">
-          <a href="">Componentes de PC</a>
-          <a href="">Componentes de PC</a>
-          <a href="">Componentes de PC</a>
-          <a href="">Componentes de PC</a>
-          <a href="">Componentes de PC</a>
-          <a href="">Componentes de PC</a>
-          <a href="">Componentes de PC</a>
-          <a href="">Componentes de PC</a>
-          <a href="">Componentes de PC</a>
-          <a href="">Componentes de PC</a>
-        </nav>
-    </header>
+        <div class="Mi-Cuenta">
+        
+          
+          <div><a href="/views/login.html"><i class="far fa-user fa-4x"></i></a></div>
+          <p>Cuenta</p>
+        </div>
+    </div>
+      <div class="search">
+        <label for="searchbar"></label>
+        <input
+          type="search"
+          name="searchbar"
+          id="searchbar"
+          placeholder="Buscate esta"
+        />
+      </div>
+    </div>
+    <nav class="navs">
+      <a href="">Componentes de PC</a>
+      <a href="">Componentes de PC</a>
+      <a href="">Componentes de PC</a>
+      <a href="">Componentes de PC</a>
+      <a href="">Componentes de PC</a>
+      <a href="">Componentes de PC</a>
+      <a href="">Componentes de PC</a>
+      <a href="">Componentes de PC</a>
+      <a href="">Componentes de PC</a>
+      <a href="">Componentes de PC</a>
+    </nav>
+  </header>
+
     <main>
       <article class="productoExibido">
         <div class="infoStack">
@@ -106,77 +109,81 @@
         </div>
       </article>
     </main>
+
+
     <footer>
-        <section class="suscripcion-redes">
-          <div class="form">
-  
-            <form action="Post">
-              <p>Recibi las Mejoeres Oportunidades</p>
-            <div class="send">
-              <i class="far fa-envelope fa-2x"></i>
-              <label for="email"></label>
-              <input type="email" name="email" placeholder="Email" />
-            </div>
-            <div class="boton-conteiner">
-  
-              <button type="submit">Suscribirse</button>
-            </div>
-          </form>
+      <section class="suscripcion-redes">
+        <div class="form">
+
+          <form action="Post">
+            <p>Recibi las Mejoeres Oportunidades</p>
+          <div class="send">
+            <i class="far fa-envelope fa-2x"></i>
+            <label for="email"></label>
+            <input type="email" name="email" placeholder="Email" />
+          </div>
+          <div class="boton-conteiner">
+
+            <button class="add" type="submit">Suscribirse</button>
+          </div>
+        </form>
+      </div>
+
+        <div class="pie-redes">
+          <a href="">
+            <i class="fab fa-facebook-f fa-2x"  ></i>
+          </a>
+          <a href="">
+
+            <i class="fab fa-instagram fa-2x"></i>
+          </a>
+          <a href="">
+            <i class="fab fa-twitter fa-2x"></i>
+
+          </a>
+          <a href="">
+
+            <i class="fab fa-youtube fa-2x"></i>
+          </a>
+          <a href="">
+            <i class="fab fa-linkedin-in fa-2x"></i>
+
+          </a>
+
         </div>
-  
-          <div class="pie-redes">
-            <a href="">
-              <i class="fab fa-facebook-f fa-2x"  ></i>
-            </a>
-            <a href="">
-  
-              <i class="fab fa-instagram fa-2x"></i>
-            </a>
-            <a href="">
-              <i class="fab fa-twitter fa-2x"></i>
-  
-            </a>
-            <a href="">
-  
-              <i class="fab fa-youtube fa-2x"></i>
-            </a>
-            <a href="">
-              <i class="fab fa-linkedin-in fa-2x"></i>
-  
-            </a>
-  
+      </section>
+      <section class="info-conteiner">
+        <div class="Logo-footer">
+          <img src="../images/logo.png" alt="logo" />
+          <p>Compu Mundo Hyper Mega Red Copywright 2021</p>
+        </div>
+        <div class="pie-nav">
+          <div class="About-us">
+            <h6 class="titulo-lista">Acerca de nosotros</h6>
+            <ul>
+              <li>
+                
+                <a href="">Terminos y Condiciones</a>
+              </li>
+              <li>
+                <a href="">Sumate a este team</a>
+
+              </li>
+            </ul>
           </div>
-        </section>
-        <section class="info-conteiner">
-          <div class="Logo-footer">
-            <img src="../images/logo.png" alt="logo" />
-            <p>Compu Mundo Hyper Mega Red Copywright 2021</p>
+
+          <div class="Ayuda">
+            <h6 class="titulo-lista">Ayuda</h6>
+            <ul>
+              <li>            <a href="">Comprando</a></li>
+              <li>            <a href="">Mi cuenta</a></li>
+            </ul>
+
+
           </div>
-          <div class="pie-nav">
-            <div class="About-us">
-              <h6 class="titulo-lista">Acerca de nosotros</h6>
-              <ul>
-                <li>
-                  
-                  <a href="">Terminos y Condiciones</a>
-                </li>
-                <li>
-                  <a href="">Sumate a este team</a>
-  
-                </li>
-              </ul>
-            </div>
-            <div class="Ayuda">
-              <h6 class="titulo-lista">Ayuda</h6>
-              <ul>
-                <li>            <a href="">Comprando</a></li>
-                <li>            <a href="">Mi cuenta</a></li>
-              </ul>
-  
-  
-            </div>
-          </div>
-        </section>
-      </footer>
+        </div>
+      </section>
+    </footer>
+
 </body>
 </html>

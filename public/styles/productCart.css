@@ -4,14 +4,14 @@
 
 .color-path{
     border-radius: 10px;
-    border:blue solid 1px;
+    border:rgba(15, 6, 93, 0.829) solid 1px;
     margin:2px;
     padding: 2px;
 
 }
 
 .color-path button{
-    background-color: blue;
+    background-color: rgba(15, 6, 93, 0.829);
     color: white;
     font-size: 1em;
     transition:all 300ms;
@@ -20,7 +20,7 @@
 
 .color-path button:hover{
     background-color: white;
-    color:blue;
+    color:rgba(15, 6, 93, 0.829);
 }
 
 main{
@@ -35,7 +35,7 @@ main{
 
 }
 main h2{
-    background-color: blue;
+
     color:white;
     text-align:center;
 }
@@ -143,14 +143,9 @@ main h2{
 
 @media (min-width: 572px) {
     main{
-        width:50%;
-        margin-right: 30px;
-    }
-}
-
-@media (min-width: 768px) {
-    main{
-        width:30%;
+        max-width: 1200px;
+        width: 50%;
+        
     }
 }
 
