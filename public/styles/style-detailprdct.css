@@ -1,0 +1,386 @@
+*{
+    box-sizing: content-box;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+header{
+    background-color: rgba(15, 6, 93, 0.829);
+    position: sticky;
+    top:0;
+    z-index: 10;
+
+
+}
+
+footer{
+    background-color: rgba(15, 6, 93, 0.829);
+}
+footer *{
+    font-size: 16px;
+}
+h6{
+    margin: 0;
+    max-width: 70px;
+    width: 100%;
+}
+
+.mainheader{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.Logo{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    max-height: 100px;
+}
+
+.Logo-footer  {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    max-height: 100px;
+    color: white;
+    max-width: 250px;
+}  
+
+.Logo-footer img  {
+    width: 100%;
+    max-width: 120px;
+
+}  
+
+.Logo img{
+    width: 100%;
+    max-width: 120px;
+
+}
+img{
+    width: 100%;
+}
+
+.armamos-tu-setup{
+    width: 100%;
+    color: #2a2a2a;
+    text-align: center;
+    position: relative;
+    height: 50px;
+    line-height: 50px;
+    width: 100%;
+    margin: 30px 0;
+    font-size: 1.3rem;
+}
+.armamos-tu-setup2{
+    width: 100%;
+    color: #000000;
+    text-align: center;
+    justify-content: space-evenly;
+    height: 50px;
+    line-height: 50px;
+    width: 100%;
+    margin: 30px 0;
+    font-size: 1.3rem;
+    display: flex;
+    background-color:rgb(156, 133, 197) ;
+}
+
+
+b{
+    color: rgba(214, 12, 106, 0.822);
+    position: relative;
+
+}
+
+
+{
+    display: flex;
+    width: 40%;
+    height: 40%;
+    justify-content: right;
+}
+.search{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+}
+
+.search input{
+    border-radius: 10px;
+    width: 90%;
+    padding: 10px;
+    margin: 10px;
+}
+
+
+.Contacto,.Mi-Cuenta{
+    display: none;
+}
+.Mi-Carro p{
+    display: none;
+}
+.Destacados{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+}
+.infoStack{
+    background-color: rgba(139, 128, 235, 0.829);;
+    padding: 20px;
+}
+
+.productoExibido{
+    display: flex;
+    justify-content: center;
+
+}
+.fotoproducto{
+    width: 70%;
+}
+.nombreProducto{
+    justify-content: right;
+    display: flex;
+    margin: 10px;
+    font-size: 20px;
+    text-align: right;
+}
+.descripcionProducto{
+    text-align: right;
+    font-size: 20px;
+    margin: 15px;
+}
+
+.disc{
+    list-style: disc;
+}
+.preciosProducto{
+    display: flex;
+    padding: 15px;
+    justify-content: space-around;
+}
+.botonCompra button{
+    width: 90%;
+    border-radius: 4px;
+    margin: 10px;
+    padding: 3px;
+    justify-content: center;
+    display: flex;
+    background-color: rgb(156, 133, 197);
+}
+.garantia{
+    text-align: right;
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+
+.categorias{
+    width: 85%;
+    margin: auto;
+}
+.categorias_conteiner{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+    justify-content: space-between;
+
+
+}
+.categoria{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 125px;
+}
+
+.suscripcion-redes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: white;
+}
+
+.suscripcion-redes p{
+    text-align: center;
+    margin: 0;
+    width: 100%;
+    max-width: 260px;
+}
+
+.form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 640px;
+    margin: 30px 0 30px 0;
+}
+.send label{
+    display: none;
+}
+
+.form *{
+margin: 5px;
+}
+    
+.boton-conteiner{
+    display: flex;
+    justify-content: center;
+}
+.send{
+    width: 100%;
+    position: relative;
+}
+
+.send input{
+    padding: 5px 5px 5px 45px;
+}
+
+.fa-envelope{
+    position: absolute;
+    left: 13px;
+    bottom: -2px;
+
+}
+
+.pie-redes{
+    width: 250px;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.pie-redes a{
+    color: gainsboro;
+}
+
+.utilities{
+    display: flex;
+}
+.navs{
+    display: none;
+    max-width: 1200px;
+    margin: auto    ;
+}
+
+.info-conteiner{
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: auto;
+    padding: 30px 15px 0;
+    justify-content:space-around;
+
+}
+.pie-nav{
+    display: flex;
+    width: 100%;
+
+    flex-direction: column;
+    justify-content: center;
+
+}
+.About-us, .Ayuda{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 5px;
+    width: 100%;
+    max-width: 300px;
+    padding: 10px 5px;}
+
+.About-us a, .Ayuda a{
+color: white;
+text-decoration: none;
+font-size: 1rem;
+text-align: justify;
+
+}
+
+
+.titulo-lista{
+    margin-right: 10px;
+    padding: 10px;
+
+}
+
+@media (min-width: 767px) {
+    .burger{
+        display: none;
+    }
+
+    .Contacto,.Mi-Cuenta{
+        display: inherit;
+    }
+    .mainheader{
+        justify-content: flex-start;
+    }
+
+
+    .Logo{
+    order: 0;
+    color: white;
+    }
+    .search{
+    order:10;
+    }
+    .utilities{
+        order: 20;
+
+    }
+
+    .Mi-Carro p{
+        display: inherit;
+    }
+
+    .utilities *{
+        display: flex;
+        flex-direction: column;
+    }
+    .mainheader{
+        flex-wrap: nowrap;
+    }
+    .navs{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .navs a{
+        color: white;
+        text-decoration: none;
+        padding: 0 10px;
+    }
+
+    .form{
+        flex-wrap: nowrap;
+    }
+
+    form{
+        display: flex;
+        align-items: center;
+    }
+
+    form p{
+        font-size: 18px;
+    }
+
+    .pie-nav{
+        max-width: calc(100% - 250px);
+        flex-direction: row;
+ 
+    }
+    
+    .info-conteiner{
+        flex-wrap: nowrap;
+        max-width: 1200px;
+    }
+
+}
