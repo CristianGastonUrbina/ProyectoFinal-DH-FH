@@ -4,15 +4,16 @@
 
 .color-path{
     border-radius: 10px;
-    border:blue solid 1px;
+    border:rgba(15, 6, 93, 0.829) solid 1px;
     margin:2px;
     padding: 2px;
 
 }
 
 .color-path button{
-    background-color: blue;
+    background-color: rgba(15, 6, 93, 0.829);
     color: white;
+    padding: 0;
     font-size: 1em;
     transition:all 300ms;
 
@@ -20,5 +21,58 @@
 
 .color-path button:hover{
     background-color: white;
-    color:blue;
+    color:rgba(15, 6, 93, 0.829);
+}
+
+main h2{
+    font-size: 1.3rem;
+}
+.registerForm{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+    height: 100%;
+    margin:auto;
+    padding: 20px 20px 20px 20px;
+}
+
+.registerForm input{
+    display:inline-block;
+    font-size: 0.5em;
+    width:90%;
+    height: 10%;
+    border-radius: 10px;
+
+    
+}
+.registerForm button{
+    display:inline-block;
+    width:80%;
+    height: 10%;
+}
+
+.register{
+    background-color: rgba(15, 6, 93, 0.829);
+    width:60vw;
+    height: 80vw;
+    margin:auto;
+}
+
+@media (min-width: 361px) {
+    .register{
+        width:50vw;
+        height: 60vw;
+    }
+
+}
+
+@media (min-width: 571px) {
+    .register{
+        width:30vw;
+        height: 30vw;
+    }
+    
 }
