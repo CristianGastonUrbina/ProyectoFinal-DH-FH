@@ -4,7 +4,7 @@
   "description": "Proyecto integrador de curso Full Stack DH - venta de insumos informaticos",
   "main": "app.js",
   "scripts": {
-    "test": "node app.js"
+    "start": "nodemon app.js"
   },
   "repository": {
     "type": "git",

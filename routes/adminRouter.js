@@ -1,8 +1,7 @@
-const { Router } = require('express');
-let express=require('express');
-let adminRouter=express.Router();
-let adminController=require('../controllers/adminController');
+let express = require("express");
+let adminRouter = express.Router();
+let adminController = require("../controllers/adminController");
 
-adminRouter.get('/index',adminController.index);
+adminRouter.get("/index", adminController.index);
 
-module.exports=adminRouter;
+module.exports = adminRouter;
