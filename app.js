@@ -17,8 +17,8 @@ server.set("view engine", "ejs");
 //Se configura el router
 server.use("/", mainRouter);
 server.use("/admin", adminRouter);
-server.use("/User", userRouter);
-server.use("/Producto", productRouter);
+server.use("/users", userRouter);
+server.use("/products", productRouter);
 
 server.listen(port, () =>
   console.log("Esta levantado el servidor en el puerto " + port)

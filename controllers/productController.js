@@ -1,9 +1,9 @@
 let productController = {
   carrito: (req, res) => {
-    res.render("productCart");
+    res.render("./products/productCart");
   },
   detalle: (req, res) => {
-    res.render("productDetails");
+    res.render("./products/productDetails");
   },
 };
 
