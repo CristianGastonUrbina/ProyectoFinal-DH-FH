@@ -1,9 +1,9 @@
 let userController = {
   login: (req, res) => {
-    res.render("productCart");
+    res.render("login");
   },
   register: (req, res) => {
-    res.render("productDetails");
+    res.render("register");
   },
 };
 

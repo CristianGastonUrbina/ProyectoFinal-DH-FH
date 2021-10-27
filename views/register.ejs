@@ -1,64 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/register.css">
-    <title>Document</title>
-    <link rel="stylesheet" href="./styles/style_home.css" />
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-  />
-</head>
+<%- include ("./partials/head.ejs") %> 
 <body>
 
-  <header>
-    <div class="mainheader">
-      <div class="burger"><i class="fas fa-bars fa-4x"></i></div>
-      <div class="Logo">
-        <a href="/views/index.html"><img src="../images/logo.png" alt="logo" /></a>
-      </div>
-      <div class="utilities">
-        <div class="Mi-Carro">
-          <div><a href="/views/productCart.html" rel="Carrito de Compra"><i class="fas fa-shopping-cart fa-4x"></i></a></div>
-          <p>Carro</p>
-        </div>
-        <div class="Contacto">
-          <div><a href="" rel="Contacto"><i class="fas fa-phone fa-4x"></i></a></div>
-          <p>Contacto</p>
-        </div>
-        <div class="Mi-Cuenta">
-        
-          
-          <div><a href="/views/login.html"><i class="far fa-user fa-4x"></i></a></div>
-          <p>Cuenta</p>
-        </div>
-    </div>
-      <div class="search">
-        <label for="searchbar"></label>
-        <input
-          type="search"
-          name="searchbar"
-          id="searchbar"
-          placeholder="Buscate esta"
-        />
-      </div>
-    </div>
-    <nav class="navs">
-      <a href="">Componentes de PC</a>
-      <a href="">Componentes de PC</a>
-      <a href="">Componentes de PC</a>
-      <a href="">Componentes de PC</a>
-      <a href="">Componentes de PC</a>
-      <a href="">Componentes de PC</a>
-      <a href="">Componentes de PC</a>
-      <a href="">Componentes de PC</a>
-      <a href="">Componentes de PC</a>
-      <a href="">Componentes de PC</a>
-    </nav>
-  </header>
+<%- include ("./partials/header.ejs") %> 
 
     <main>
         <h2>Complete algunos datos</h2>
@@ -75,79 +18,7 @@
         </section>
     </main>
 
-    <footer>
-      <section class="suscripcion-redes">
-        <div class="form">
-
-          <form action="Post">
-            <p>Recibi las Mejoeres Oportunidades</p>
-          <div class="send">
-            <i class="far fa-envelope fa-2x"></i>
-            <label for="email"></label>
-            <input type="email" name="email" placeholder="Email" />
-          </div>
-          <div class="boton-conteiner">
-
-            <button class="add" type="submit">Suscribirse</button>
-          </div>
-        </form>
-      </div>
-
-        <div class="pie-redes">
-          <a href="">
-            <i class="fab fa-facebook-f fa-2x"  ></i>
-          </a>
-          <a href="">
-
-            <i class="fab fa-instagram fa-2x"></i>
-          </a>
-          <a href="">
-            <i class="fab fa-twitter fa-2x"></i>
-
-          </a>
-          <a href="">
-
-            <i class="fab fa-youtube fa-2x"></i>
-          </a>
-          <a href="">
-            <i class="fab fa-linkedin-in fa-2x"></i>
-
-          </a>
-
-        </div>
-      </section>
-      <section class="info-conteiner">
-        <div class="Logo-footer">
-          <img src="../images/logo.png" alt="logo" />
-          <p>Compu Mundo Hyper Mega Red Copywright 2021</p>
-        </div>
-        <div class="pie-nav">
-          <div class="About-us">
-            <h6 class="titulo-lista">Acerca de nosotros</h6>
-            <ul>
-              <li>
-                
-                <a href="">Terminos y Condiciones</a>
-              </li>
-              <li>
-                <a href="">Sumate a este team</a>
-
-              </li>
-            </ul>
-          </div>
-
-          <div class="Ayuda">
-            <h6 class="titulo-lista">Ayuda</h6>
-            <ul>
-              <li>            <a href="">Comprando</a></li>
-              <li>            <a href="">Mi cuenta</a></li>
-            </ul>
-
-
-          </div>
-        </div>
-      </section>
-    </footer>
+<%- include ("./partials/footer.ejs") %> 
 
 </body>
 </html>
