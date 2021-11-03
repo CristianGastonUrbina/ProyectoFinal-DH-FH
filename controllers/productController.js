@@ -5,6 +5,12 @@ let productController = {
   detalle: (req, res) => {
     res.render("./products/productDetails");
   },
+  editar: (req, res) => {
+    res.render("./products/productEdit");
+  },
+  agregar: (req, res) => {
+    res.render("./products/productAdd");
+  },
 };
 
 module.exports = productController;

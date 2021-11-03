@@ -4,7 +4,6 @@ let express = require("express");
 let server = express();
 let path = require("path");
 let mainRouter = require("./routes/mainRouter");
-let adminRouter = require("./routes/adminRouter");
 let userRouter = require("./routes/userRouter");
 let productRouter = require("./routes/productRouter");
 
@@ -16,7 +15,6 @@ server.set("view engine", "ejs");
 
 //Se configura el router
 server.use("/", mainRouter);
-server.use("/admin", adminRouter);
 server.use("/users", userRouter);
 server.use("/products", productRouter);
 
