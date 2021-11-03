@@ -1,3 +1,31 @@
-.addproduct {
+textarea {
+  resize: none;
+}
+
+.formulario {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  padding: 20px;
+}
+.formulario .input {
+  width: 90%;
+  max-width: 700px;
+  margin: 5px;
+  padding: 3px;
+  border: none;
+  box-shadow: 0 0 15px 4px rgba(15, 6, 93, 0.329);
+  border-radius: 10px;
+}
+button.input {
+  background-color: rgba(204, 56, 125, 0.722);
+  color: white;
+}
+.negrita {
+  font-weight: bold;
+}
+.Titulo {
+  margin-bottom: 20px;
 }

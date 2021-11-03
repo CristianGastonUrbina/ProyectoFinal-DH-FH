@@ -2,61 +2,47 @@
 <body>
 
   <%- include ("../partials/header.ejs") %> 
-
-    <main>
-      <form action="./productAdd.ejs" method="post">
-      <article class="productoExibido">
-        <div class="infoStack">
-          <div class="nombreProducto">
-            <h2>Un coso para minería</h2>
-          </div>
-          <div class="descripcionProducto">
-            <ul class="disc">
-              <li>- SPECS PRODUCTO</li>
-              <li>- SPECS PRODUCTO</li>
-              <li>- SPECS PRODUCTO</li>
-              <li>- SPECS PRODUCTO</li>
-              <li>- SPECS PRODUCTO</li>
-            </ul>
-          </div>
-          <div class="preciosProducto">
-            <div>
-              <h3>$190.000</h3>
-              <h4>Precio Contado</h4>
-            </div>
-            <div>
-              <h3>$220.000</h3>
-              <h4>Precio de lista</h4>
-            </div>
-          </div>
-          <div class="botonCompra">
-            <button type="add">Agregar al carrito</button>
-          </div>
-          <div class="garantia">
-            <h5><i class="fas fa-user-shield"></i> Garantía disponible</h5>
-            <h5><i class="fas fa-check"></i> Disponible</h5>
-            <h5><i class="fas fa-truck"></i> Envíos a todo el país</h5>
-          </div>
-        </div>
-        <div class="fotoproducto">
-          <div class="fotoProducto">
-            <img src="../images/gpu.jpg" alt="foto del producto">
-          </div>
-        </div>
-      </article>
-      <article>
-        <div>
-          <h2 class="armamos-tu-setup2">
-            Preguntas Sobre el Producto
-          </h2>
-        </div>
-        <div>
-          <input type="search">
-        </div>
-        <a href="./Creacion"><button>ENVIAR</button></a>
-      </article>
+  <main>
+    <section >
+    <form action="./productEdit.ejs" method="post" class="formulario">
+      <h2 class="Titulo">Tu <b>Producto</b> a editar</h2>
+             <label for="imagen"><div class="negrita">Nombre</div></label>
+        <input class="input"  type="text" name="nombre" id="nombre" placeholder="Nombre del Producto">
+             <label for="imagen"><div class="negrita">Descripcion</div></label>
+        <textarea class="input"  name="descripcion" id="descripcion" cols="30" rows="10"  placeholder="Tu descripcion aca"></textarea>
+        <label for="imagen"><div class="negrita">Imagen del <b>Producto</b></div></label>
+        <input  class="input" type="file" name="imagen">
+      <label for="imagen"><div class="negrita">Precios</div></label>
+        <input  class="input" type="text" name="precioContado" id="precioContado" placeholder="Precio al Contado">
+        <input  class="input" type="text" name="precioLista" id="precioLista" placeholder="Precio de Lista">
+        <label for="categoria"><div class="negrita">Categoria</div></label>
+        <select class="input"  name="categoria" id="categoria">
+        <option class="input"  name="CPU" id="categoria">Procesadores y coolers</option>
+        <option class="input"  name="Mother" id="categoria">Motherboards</option>
+        <option  class="input" name="RAM" id="categoria">Memorias Ram</option>
+        <option  class="input" name="ROM" id="categoria">Almacenamiento</option>
+        <option  class="input" name="GPU" id="categoria">Tarjetas Graficas</option>
+        <option class="input"  name="Display" id="categoria">Monitores</option>
+        <option  class="input" name="Others" id="categoria">Otros Perfericos</option>
+        <option  class="input" name="M&K" id="categoria">Mouse y teclados</option>
+        <option  class="input" name="Soft" id="categoria">Software</option>
+        </select>
+        
+        <button class="input" type="submit">Modificar Producto</button>
+        
+        
+        
+        
+        
+        
       </form>
-    </main>
+    </section class="formulario">
+
+  </main>
+
+
+
+
 
 
   <%- include ("../partials/footer.ejs") %> 
