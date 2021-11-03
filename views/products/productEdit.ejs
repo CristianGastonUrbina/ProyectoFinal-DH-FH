@@ -1,62 +1,64 @@
-<%- include ("../partials/head.ejs",{cssPage:"productDetails.css",cssHome:"style_home.css"}) %>
+<%- include ("../partials/head.ejs",{cssPage:"productEdit.css",cssHome:"style_home.css"}) %> 
 <body>
-    
-<%- include ("../partials/header.ejs") %>                
+
+  <%- include ("../partials/header.ejs") %> 
+
     <main>
-        <div class="addproduct">
-            <form action="/" method="POST">
-                <input type="text" name="name" placeholder="Nombre del producto">
-                <input type="text" name="description" placeholder="Descripción del producto">
-                <br>
-                <h4>Foto del producto</h4>
-                <input type="file" name="picture">
-                <br>
-                <h4>Categoría</h4>
-                 <div class="category">
-                     <div>
-                        <input type="checkbox" name="category" value="a" id="a">
-                        <label for="a">Procesadores y coolers</label>
-                     </div>
-                     <div>
-                        <input type="checkbox" name="category" value="b" id="b">
-                        <label for="b">Motherboards</label>
-                     </div>
-                     <div>
-                        <input type="checkbox" name="category" value="c" id="c">
-                        <label for="c">Memorias Ram</label>
-                     </div>
-                     <div>
-                        <input type="checkbox" name="category" value="d" id="d">
-                        <label for="d">Almacenamiento</label>
-                     </div>
-                     <div>
-                        <input type="checkbox" name="category" value="e" id="e">
-                         <label for="e">Tarjetas gráficas</label>
-                     </div>
-                     <div>
-                        <input type="checkbox" name="category" value="f" id="f">
-                         <label for="f">Monitores</label>
-                     </div>
-                     <div>
-                        <input type="checkbox" name="category" value="g" id="g">
-                         <label for="g">Otros periféricos</label>
-                     </div>
-                     <div>
-                        <input type="checkbox" name="category" value="h" id="h">
-                         <label for="h">Mouses y teclados</label>
-                     </div>
-                     <div>
-                        <input type="checkbox" name="category" value="i" id="i">
-                         <label for="i">Software</label>
-                     </div>
-                 </div>
-                <br>
-                <input type="text" name="price" placeholder="Precio del producto">
-                <br>
-                <input type="submit" value="Publicar">
-             </form>
-           </div>
+      <form action="./productAdd.ejs" method="post">
+      <article class="productoExibido">
+        <div class="infoStack">
+          <div class="nombreProducto">
+            <h2>Un coso para minería</h2>
+          </div>
+          <div class="descripcionProducto">
+            <ul class="disc">
+              <li>- SPECS PRODUCTO</li>
+              <li>- SPECS PRODUCTO</li>
+              <li>- SPECS PRODUCTO</li>
+              <li>- SPECS PRODUCTO</li>
+              <li>- SPECS PRODUCTO</li>
+            </ul>
+          </div>
+          <div class="preciosProducto">
+            <div>
+              <h3>$190.000</h3>
+              <h4>Precio Contado</h4>
+            </div>
+            <div>
+              <h3>$220.000</h3>
+              <h4>Precio de lista</h4>
+            </div>
+          </div>
+          <div class="botonCompra">
+            <button type="add">Agregar al carrito</button>
+          </div>
+          <div class="garantia">
+            <h5><i class="fas fa-user-shield"></i> Garantía disponible</h5>
+            <h5><i class="fas fa-check"></i> Disponible</h5>
+            <h5><i class="fas fa-truck"></i> Envíos a todo el país</h5>
+          </div>
+        </div>
+        <div class="fotoproducto">
+          <div class="fotoProducto">
+            <img src="../images/gpu.jpg" alt="foto del producto">
+          </div>
+        </div>
+      </article>
+      <article>
+        <div>
+          <h2 class="armamos-tu-setup2">
+            Preguntas Sobre el Producto
+          </h2>
+        </div>
+        <div>
+          <input type="search">
+        </div>
+        <a href="./Creacion"><button>ENVIAR</button></a>
+      </article>
+      </form>
     </main>
-<%- include ("../partials/footer.ejs") %> 
+
+
+  <%- include ("../partials/footer.ejs") %> 
 </body>
 </html>
