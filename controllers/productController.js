@@ -1,16 +1,32 @@
+const fs = require('fs');
+const path = require('path');
+
+const productsFilePath = path.join(__dirname, '../data/products.json');
+const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
 let productController = {
-  carrito: (req, res) => {
+  cart: (req, res) => {
     res.render("./products/productCart");
   },
-  detalle: (req, res) => {
+  detail: (req, res) => {
     res.render("./products/productDetails");
   },
-  editar: (req, res) => {
+  edit: (req, res) => {
     res.render("./products/productEdit");
   },
-  agregar: (req, res) => {
+  add: (req, res) => {
     res.render("./products/productAdd");
   },
+  store:(req,res)=>{
+
+  },
+  putEdit:(req,res)=>{
+
+  },
+  destroy:(req,res)=>{
+    
+  }
+
 };
 
 module.exports = productController;

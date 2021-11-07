@@ -1,0 +1,122 @@
+[
+    {
+        "id":"0",
+        "manufaacturer":"Gigabyte",
+        "model":"rbb-7021",
+        "description":"Motherboard apto para oficina, socket LGA1155",
+        "category":"Motherboard",
+        "colors":"blue",
+        "price":"131.25",
+        "target":"office",
+        "tags":"motherboard, office, ATX",
+        "image":"/gigabyte-rbb-7021.jpeg"
+    },
+    {
+        "id":"1",
+        "manufaacturer":"LG",
+        "model":"bch-123",
+        "description":"Monitor LG 24 pulgadas, QLED, 144hz",
+        "category":"monitor",
+        "colors":"black",
+        "price":"233.55",
+        "target":"Gamer",
+        "tags":"monitor, tv, QLED",
+        "image":"/lg-bch-123.jpeg"
+    },
+    {
+        "id":"2",
+        "manufaacturer":"Asus",
+        "model":"gtx-3060ti",
+        "description":"Placa de video bastante power, para correr juegos y minar tranqui",
+        "category":"VGA",
+        "colors":"green",
+        "price":"398.22",
+        "target":"Gamer",
+        "tags":"VGA, HDMI, video, GPU",
+        "image":"/asus-gtx-3060ti.jpeg"
+    },
+    {
+        "id":"3",
+        "manufaacturer":"Corsair",
+        "model":"DS-2016",
+        "description":"Modulo de memoria DDR4 2600mhz, 16GB ram",
+        "category":"RAM",
+        "colors":"white",
+        "price":"79.51",
+        "target":"office",
+        "tags":"RAM, memoria",
+        "image":"/corsair-DS-2016.jpeg"
+    },
+    {
+        "id":"4",
+        "manufaacturer":"Thermaltake",
+        "model":"b59",
+        "description":"Grasa siliconada, super termica apto procesadores grandes",
+        "category":"Accesorios",
+        "colors":"white",
+        "price":"49,90",
+        "target":"ultrahigh",
+        "tags":"pasta,grasa, termica",
+        "image":"/thermaltake-b59.jpeg"
+    },
+    {
+        "id":"5",
+        "manufaacturer":"thermaltake",
+        "model":"DAC-CC-3030",
+        "description":"Fuente de alimentacion 700w Bronce Certified",
+        "category":"Fuentes",
+        "colors":"grey",
+        "price":"187.84",
+        "target":"Gamer",
+        "tags":"Fuente, alimentacion, Certified, ATX",
+        "image":"/thermaltake-dac-cc-3030.jpeg"
+    },
+    {
+        "id":"6",
+        "manufaacturer":"Coolmaster",
+        "model":"bh449eq",
+        "description":"Fuente de alimentacion 750w, Gold Certified",
+        "category":"Fuente",
+        "colors":"black",
+        "price":"291.12",
+        "target":"ultrahigh",
+        "tags":"Fuente, alimentacion, certified, atx",
+        "image":"/coolmaster-bh449eq.jpeg"
+    },
+    {
+        "id":"7",
+        "manufaacturer":"Kingston",
+        "model":"dsk-240",
+        "description":"Disco rigido estado solido 240GB entry level",
+        "category":"Disk",
+        "colors":"violet",
+        "price":"47.41",
+        "target":"home",
+        "tags":"disco, ssd, 240",
+        "image":"/kingstone-dsk-240.jpeg"
+    },
+    {
+        "id":"8",
+        "manufaacturer":"Intel",
+        "model":"i3-3600",
+        "description":"Procesador x86 11th generacion, 2.1ghz",
+        "category":"Procesador",
+        "colors":"plate",
+        "price":"127.65",
+        "target":"home",
+        "tags":"procesador, LGA2011",
+        "image":"/intel-i3-3600.jpeg"
+    },
+    {
+        "id":"9",
+        "manufaacturer":"Intel",
+        "model":"i5-5300",
+        "description":"Procesador x86 11th generacion, 3.6ghz",
+        "category":"Procesador",
+        "colors":"plate",
+        "price":"198.63",
+        "target":"office",
+        "tags":"procesador, LGA2011",
+        "image":"/intel-i5-5300.jpeg"
+    }
+]
