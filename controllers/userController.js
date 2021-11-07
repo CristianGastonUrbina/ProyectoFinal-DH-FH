@@ -16,7 +16,14 @@ let userController = {
   },
   postRegister: (req,res)=>{
 
-  }
+  },
+  destroy: (req,res)=>{
+
+  },
+  update:(req,res)=>{
+    
+  },
+
 };
 
 module.exports = userController;

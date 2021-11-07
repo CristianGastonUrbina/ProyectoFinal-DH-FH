@@ -1,13 +1,4 @@
-let user={
-    email:"",
-    firstname:"",
-    lastname:"",
-    password:"",
-    phone:"",
-    zip:"",
-    cateogry:"",
-    image:"",
-    function (
+    function User(
         email,
         fisftname,
         lastname,
@@ -26,6 +17,5 @@ let user={
         this.cateogry=category;
         this.image=image;
     }
-}
 
-module.exports=user;
+module.exports=User;

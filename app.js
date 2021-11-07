@@ -7,6 +7,7 @@ let mainRouter = require("./routes/mainRouter");
 let userRouter = require("./routes/userRouter");
 let productRouter = require("./routes/productRouter");
 
+server.use(express.json());
 let port = 3000;
 let publicPath = path.resolve(__dirname, "./public");
 //Se configura express
@@ -19,5 +20,5 @@ server.use("/users", userRouter);
 server.use("/products", productRouter);
 
 server.listen(port, () =>
-  console.log("Esta levantado el servidor en el puerto " + port)
+  console.log("Server running on port: " + port)
 );
