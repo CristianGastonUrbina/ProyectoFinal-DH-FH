@@ -1,0 +1,34 @@
+<%- include ("../partials/head.ejs",{cssHome:"style_home.css",cssPage:"style_home.css"}) %> 
+  <body>
+<%- include ("../partials/header.ejs") %> 
+    <main>
+
+      <section class="Destacados">
+        <h2 class="armamos-tu-setup">
+           Nuestros <b> Productos </b>
+        </h2>
+
+        <% for (i=0 ; i<product.length; i++) { %> 
+          <article class="product">
+          <div>
+            <a href="./products/Detalle/<%=product[i].id%>"
+              ><img src="<%=product[i].image%>" alt="Gpu"
+            /></a>
+            <div class="descripcion">
+              <div>Modelo:<%=product[i].description%></div>
+              <div>Categoria:<%=product[i].category%></div>
+              <div>Precio:<%=product[i].price%></div>
+
+            </div>
+            <div class=""></div>
+            <button class="add">Agregar al carrito</button>
+          </div>
+        </article>
+          <% } %>
+
+      </section>
+
+    </main>
+    <%- include ("../partials/footer.ejs") %> 
+  </body>
+</html>

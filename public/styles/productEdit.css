@@ -2,6 +2,11 @@ textarea {
   resize: none;
 }
 
+.labelform {
+  width: 90%;
+  max-width: 700px;
+}
+
 .formulario {
   display: flex;
   flex-direction: column;
@@ -13,7 +18,7 @@ textarea {
 .formulario .input {
   width: 90%;
   max-width: 700px;
-  margin: 5px;
+  margin: 16px;
   padding: 3px;
   border: none;
   box-shadow: 0 0 15px 4px rgba(15, 6, 93, 0.329);
@@ -28,4 +33,81 @@ button.input {
 }
 .Titulo {
   margin-bottom: 20px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  padding-left: 35px;
+  margin: 7px;
+  max-width: 700px;
+
+  cursor: pointer;
+  font-size: 17px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Saca opciones de defoult */
+.container input {
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Armado de cheqbox  */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 3px;
+  height: 17px;
+  width: 17px;
+  background-color: #eee;
+}
+
+/* mouse over */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* color de fondo cuando esta chequeado */
+.container input:checked ~ .checkmark {
+  background-color: rgba(204, 56, 125, 0.722);
+}
+
+/* armado de chekmark */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Sse muestra el chekmark */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* estilo de cheqmark */
+.container .checkmark:after {
+  left: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* Edicion de los desplegables */
+option:checked {
+  margin: 40px;
+  background-color: rgba(204, 56, 125, 0.722);
+  color: #fff;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
 }

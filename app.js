@@ -13,12 +13,11 @@ let publicPath = path.resolve(__dirname, "./public");
 //Se configura express
 server.use(express.static(publicPath));
 server.set("view engine", "ejs");
+server.use(express.urlencoded({ extended: false }));
 
 //Se configura el router
 server.use("/", mainRouter);
 server.use("/users", userRouter);
 server.use("/products", productRouter);
 
-server.listen(port, () =>
-  console.log("Server running on port: " + port)
-);
+server.listen(port, () => console.log("Server running on port: " + port));

@@ -1,74 +1,74 @@
 [
- {
-  "id": "0",
-  "manufaacturer": "Gigabyte",
-  "model": "rbb-7021",
-  "description": "Motherboard apto para oficina, socket LGA1155",
-  "category": "Motherboard",
-  "colors": "blue",
-  "price": "131.25",
-  "target": "office",
-  "tags": "motherboard, office, ATX",
-  "image": "/gigabyte-rbb-7021.jpeg"
- },
- {
-  "id": "1",
-  "manufaacturer": "LG",
-  "model": "bch-123",
-  "description": "Monitor LG 24 pulgadas, QLED, 144hz",
-  "category": "monitor",
-  "colors": "black",
-  "price": "233.55",
-  "target": "Gamer",
-  "tags": "monitor, tv, QLED",
-  "image": "/lg-bch-123.jpeg"
- },
- {
-  "id": "2",
-  "manufaacturer": "Asus",
-  "model": "gtx-3060ti",
-  "description": "Placa de video bastante power, para correr juegos y minar tranqui",
-  "category": "VGA",
-  "colors": "green",
-  "price": "398.22",
-  "target": "Gamer",
-  "tags": "VGA, HDMI, video, GPU",
-  "image": "/asus-gtx-3060ti.jpeg"
- },
- {
-  "id": "3",
-  "manufacturer": "NVIDIA",
-  "model": "rtx-1060m",
-  "description": "placa de video mobile, para notebooks",
-  "category": "Placa de video",
-  "colors": "97.64",
-  "price": "black",
-  "target": "office",
-  "tags": "vga, placa de video, notebook",
-  "image": "/nvidia-rtx-1060m.jpeg"
- },
- {
-  "id": "5",
-  "manufaacturer": "thermaltake",
-  "model": "DAC-CC-3030",
-  "description": "Fuente de alimentacion 700w Bronce Certified",
-  "category": "Fuentes",
-  "colors": "grey",
-  "price": "187.84",
-  "target": "Gamer",
-  "tags": "Fuente, alimentacion, Certified, ATX",
-  "image": "/thermaltake-dac-cc-3030.jpeg"
- },
- {
-  "id": "6",
-  "manufaacturer": "Coolmaster",
-  "model": "bh449eq",
-  "description": "Fuente de alimentacion 750w, Gold Certified",
-  "category": "Fuente",
-  "colors": "black",
-  "price": "291.12",
-  "target": "ultrahigh",
-  "tags": "Fuente, alimentacion, certified, atx",
-  "image": "/coolmaster-bh449eq.jpeg"
- }
+  {
+    "id": 1,
+    "name": "Motherboard Gigabyte rbb-7021",
+    "manufaacturer": "Gigabyte",
+    "model": "rbb-7021",
+    "description": "Motherboard apto para oficina, socket LGA1155",
+    "category": "Motherboard",
+    "price": "131.25",
+    "target": "office",
+    "tags": "motherboard, office, ATX",
+    "image": "/gigabyte-rbb-7021.jpeg"
+  },
+  {
+    "id": 2,
+    "name": "Monitor LG bch-123",
+    "manufaacturer": "LG",
+    "model": "bch-123",
+    "description": "Monitor LG 24 pulgadas, QLED, 144hz",
+    "category": "monitor",
+    "price": "233.55",
+    "target": "Gamer",
+    "tags": "monitor, tv, QLED",
+    "image": "/lg-bch-123.jpeg"
+  },
+  {
+    "id": 3,
+    "name": "GPU Asus gtx-3060ti",
+    "manufaacturer": "Asus",
+    "model": "gtx-3060ti",
+    "description": "Placa de video bastante power, para correr juegos y minar tranqui",
+    "category": "VGA",
+    "price": "398.22",
+    "target": "Gamer",
+    "tags": "VGA, HDMI, video, GPU",
+    "image": "/asus-gtx-3060ti.jpeg"
+  },
+  {
+    "id": 4,
+    "name": "GPU NVIDIA rtx-1060m",
+    "manufacturer": "NVIDIA",
+    "model": "rtx-1060m",
+    "description": "placa de video mobile, para notebooks",
+    "category": "Placa de video",
+    "price": "black",
+    "target": "office",
+    "tags": "vga, placa de video, notebook",
+    "image": "/nvidia-rtx-1060m.jpeg"
+  },
+  {
+    "id": 5,
+    "name": "Fuente thermaltake DAC-CC-3030 ",
+    "manufaacturer": "thermaltake",
+    "model": "DAC-CC-3030",
+    "description": "Fuente de alimentacion 700w Bronce Certified",
+    "category": "Fuentes",
+    "price": "187.84",
+    "target": "Gamer",
+    "tags": "Fuente, alimentacion, Certified, ATX",
+    "image": "/thermaltake-dac-cc-3030.jpeg"
+  },
+  {
+    "id": 6,
+    "name": "Fuente Coolmaster bh449eq",
+    "manufaacturer": "Coolmaster",
+    "model": "bh449eq",
+    "description": "Fuente de alimentacion 750w, Gold Certified",
+    "category": "Fuente",
+    "price": "291.12",
+    "target": "ultrahigh",
+    "tags": "Fuente, alimentacion, certified, atx",
+    "image": "/coolmaster-bh449eq.jpeg"
+  }
 ]

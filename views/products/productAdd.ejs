@@ -1,62 +1,149 @@
-<%- include ("../partials/head.ejs",{cssPage:"productEdit.css",cssHome:"style_home.css"}) %>
+<%- include ("../partials/head.ejs",{cssPage:"productEdit.css",cssHome:"style_home.css"}) %> 
 <body>
-    
-<%- include ("../partials/header.ejs") %>                
-    <main>
-        <div class="addproduct">
-            <form action="/" method="POST">
-                <input type="text" name="name" placeholder="Nombre del producto">
-                <input type="text" name="description" placeholder="Descripción del producto">
-                <br>
-                <h4>Foto del producto</h4>
-                <input type="file" name="picture">
-                <br>
-                <h4>Categoría</h4>
-                 <div class="category">
-                     <div>
-                        <input type="checkbox" name="category" value="a" id="a">
-                        <label for="a">Procesadores y coolers</label>
-                     </div>
-                     <div>
-                        <input type="checkbox" name="category" value="b" id="b">
-                        <label for="b">Motherboards</label>
-                     </div>
-                     <div>
-                        <input type="checkbox" name="category" value="c" id="c">
-                        <label for="c">Memorias Ram</label>
-                     </div>
-                     <div>
-                        <input type="checkbox" name="category" value="d" id="d">
-                        <label for="d">Almacenamiento</label>
-                     </div>
-                     <div>
-                        <input type="checkbox" name="category" value="e" id="e">
-                         <label for="e">Tarjetas gráficas</label>
-                     </div>
-                     <div>
-                        <input type="checkbox" name="category" value="f" id="f">
-                         <label for="f">Monitores</label>
-                     </div>
-                     <div>
-                        <input type="checkbox" name="category" value="g" id="g">
-                         <label for="g">Otros periféricos</label>
-                     </div>
-                     <div>
-                        <input type="checkbox" name="category" value="h" id="h">
-                         <label for="h">Mouses y teclados</label>
-                     </div>
-                     <div>
-                        <input type="checkbox" name="category" value="i" id="i">
-                         <label for="i">Software</label>
-                     </div>
-                 </div>
-                <br>
-                <input type="text" name="price" placeholder="Precio del producto">
-                <br>
-                <input type="submit" value="Publicar">
-             </form>
-           </div>
-    </main>
-<%- include ("../partials/footer.ejs") %> 
+
+  <%- include ("../partials/header.ejs") %> 
+  <main>
+    <section >
+    <form action="./Creacion" method="post" class="formulario">
+      <h2 class="Titulo">Tu <b>Producto</b></h2>
+
+      <label class ="labelform
+             " for="id"><div class="negrita">ID</div></label>
+        <input class="input"  type="number" name="id" id="id" placeholder="id">
+
+             <label class ="labelform
+             " for="nombre"><div class="negrita">Nombre</div></label>
+        <input class="input"  type="text" name="name" id="name" placeholder="Nombre del Producto">
+
+             <label class ="labelform
+             " for="manufacturer"><div class="negrita">Marca</div></label>
+        <input class="input"  type="text" name="manufacturer" id="manufacturer" placeholder="Marca del Producto">
+
+              <label class ="labelform
+             " for="model"><div class="negrita">Modelo</div></label>
+        <input class="input"  type="text" name="model" id="model" placeholder="Marca del Producto">
+
+             <label class ="labelform
+             " for="description"><div class="negrita">Descripcion</div></label>
+        <textarea class="input"  name="description" id="description" cols="30" rows="10"  placeholder="Tu descripcion aca"></textarea>
+
+        <label class ="labelform
+        " for="image"><div class="negrita">Imagen del <b>Producto</b></div></label>
+        <input  class="input" type="file" name="image" id="image">
+
+
+      <label class ="labelform
+      " for="price"><div class="negrita">Precio</div></label>
+        <input  class="input" type="number" name="price" id="price" placeholder="Precio">
+
+      <label class ="labelform" for="tags"><div class="negrita">Tags</div></label>
+      
+         <div class="container">
+            <label class="container">Motherboard
+               <input type="checkbox" checked="checked" name="tags" value="Motherboard">
+               <span class="checkmark"></span>
+            </label>
+            <label class="container">Office
+               <input type="checkbox" name="tags" value="Office">
+               <span class="checkmark"></span>
+            </label>
+            <label class="container">ATX
+               <input type="checkbox" name="tags" value="ATX" id="ATX">
+               <span class="checkmark" ></span>
+            </label>
+            <label class="container">Monitor
+               <input type="checkbox" name="tags" value="Monitor" id="Monitor">
+               <span class="checkmark"></span>
+            </label>
+                     <label class="container">TV
+               <input type="checkbox" name="tags" value="TV" id="TV">
+               <span class="checkmark"></span>
+            </label>
+                     <label class="container">QLED
+               <input type="checkbox" name="tags" value="QLED" id="QLED" >
+               <span class="checkmark"></span>
+            </label>
+                     <label class="container">VGA
+               <input type="checkbox" name="tags" value="VGA" id="VGA" >
+               <span class="checkmark"></span>
+            </label>
+                     <label class="container">HDMI
+               <input type="checkbox" name="tags" value="HDMI" id="HDMI" >
+               <span class="checkmark"></span>
+            </label>
+                     <label class="container">Video
+               <input type="checkbox" name="tags" value="Video" id="Video" >
+               <span class="checkmark"></span>
+            </label>
+                     <label class="container">GPU
+               <input type="checkbox" name="tags" value="GPU" id="GPU" >
+               <span class="checkmark"></span>
+            </label>
+                     <label class="container">Placa de video
+               <input type="checkbox" name="tags" value="PlacaDeVideo" id="PlacaDeVideo" >
+               <span class="checkmark"></span>
+            </label>
+                     <label class="container">Notebook
+               <input type="checkbox" name="tags" value="Notebook" id="Notebook" >
+               <span class="checkmark"></span>
+            </label>
+                     <label class="container">Fuente
+               <input type="checkbox" name="tags" value="Fuente" id="Fuente" >
+               <span class="checkmark"></span>
+            </label>
+                     <label class="container">Alimentacion
+               <input type="checkbox" name="tags" value="Alimentacion" id="Alimentacion" >
+               <span class="checkmark"></span>
+            </label>
+                     <label class="container">Certified
+               <input type="checkbox" name="tags" value="Certified" id="Certified" >
+               <span class="checkmark"></span>
+            </label>
+         </div>
+
+         <label class ="labelform
+        " for="target"><div class="negrita">Target</div></label>
+        <select class="input"  name="target" value="" id="target">
+        <option class="input"  name="target" value="home" id="home">Hogareño</option>
+        <option class="input"  name="target" value="office" id="office">Oficina</option>
+        <option  class="input" name="target" value="Gamer" id="Gamer">Gamer</option>
+        <option  class="input" name="target" value="ultrahigh" id="ultrahigh">Tope de Gama</option>
+
+        </select>
+
+
+
+        <label class ="labelform
+        " for="categoria"><div class="negrita">Categoria</div></label>
+        <select class="input"  name="category" id="category">
+        <option class="input"  name="CPU" id="CPU">Procesadores y coolers</option>
+        <option class="input"  name="Mother" id="Mother">Motherboards</option>
+        <option  class="input" name="RAM" id="RAM">Memorias Ram</option>
+        <option  class="input" name="ROM" id="ROM">Almacenamiento</option>
+        <option  class="input" name="GPU" id="GPU">Tarjetas Graficas</option>
+        <option class="input"  name="Display" id="Display">Monitores</option>
+        <option  class="input" name="Others" id="Others">Otros Perfericos</option>
+        <option  class="input" name="M&K" id="M&K">Mouse y teclados</option>
+        <option  class="input" name="Soft" id="Soft">Software</option>
+        </select>
+        
+        <button class="input" type="submit">Crear Producto</button>
+        
+        
+        
+        
+        
+        
+      </form>
+    </section >
+
+  </main>
+
+
+
+
+
+
+  <%- include ("../partials/footer.ejs") %> 
 </body>
 </html>
