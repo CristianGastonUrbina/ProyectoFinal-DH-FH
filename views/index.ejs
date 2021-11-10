@@ -15,75 +15,32 @@
         <h2 class="armamos-tu-setup">
           <b> Destacados </b>
         </h2>
-        <article class="product">
-          <div>
-            <a href="/products/Detalle"
-              ><img src="../images/gpu.jpg" alt="Gpu"
-            /></a>
-            <div class="descripcion">
-              Lorem ipsum dolor sit.lorem15 Lorem ipsum dolor sit amet,
-              consectetur adipisicing elit. Possimus minus sequi vel culpa
-              maiores debitis?
-            </div>
-            <button class="add">Agregar al carrito</button>
-          </div>
-        </article>
-        <article class="product">
-          <div>
-            <a href="/products/Detalle"
-              ><img src="../images/gpu.jpg" alt="Gpu"
-            /></a>
-            <div class="descripcion">
-              Lorem ipsum dolor sit.lorem15 Lorem ipsum dolor sit amet,
-              consectetur adipisicing elit. Possimus minus sequi vel culpa
-              maiores debitis?
-            </div>
-            <button class="add">Agregar al carrito</button>
-          </div>
-        </article>
-        <article class="product">
-          <div>
-            <a href="/products/Detalle"
-              ><img src="../images/gpu.jpg" alt="Gpu"
-            /></a>
-            <div class="descripcion">
-              Lorem ipsum dolor sit.lorem15 Lorem ipsum dolor sit amet,
-              consectetur adipisicing elit. Possimus minus sequi vel culpa
-              maiores debitis?
-            </div>
-            <button class="add">Agregar al carrito</button>
-          </div>
-        </article>
-        <article class="product">
-          <div>
-            <a href="/products/Detalle"
-              ><img src="../images/gpu.jpg" alt="Gpu"
-            /></a>
-            <div class="descripcion">
-              Lorem ipsum dolor sit.lorem15 Lorem ipsum dolor sit amet,
-              consectetur adipisicing elit. Possimus minus sequi vel culpa
-              maiores debitis?
-            </div>
-            <button class="add">Agregar al carrito</button>
-          </div>
-        </article>
-        <article class="product">
-          <div>
-            <a href="/products/Detalle"
-              ><img src="../images/gpu.jpg" alt="Gpu"
-            /></a>
-            <div class="descripcion">
-              Lorem ipsum dolor sit.lorem15 Lorem ipsum dolor sit amet,
-              consectetur adipisicing elit. Possimus minus sequi vel culpa
-              maiores debitis?
-            </div>
-            <button class="add">Agregar al carrito</button>
-          </div>
+        
 
-
-        </article>
                   <a href="/products"><button>TODOS</button></a>
+                  
+                  <% for (i=0 ; i<product.length; i++) { %> 
+                    <article class="product">
+                      <div>
+                        <a href="./products/Detalle/<%=product[i].id%>"
+                          ><img src="<%=product[i].image%>" alt="Gpu"
+                          /></a>
+                          <div class="descripcion">
+                            <div>Modelo:<%=product[i].description%></div>
+                            <div>Categoria:<%=product[i].category%></div>
+              <div>Precio:<%=product[i].price%></div>
+
+            </div>
+            <div class=""></div>
+            <button class="add">Agregar al carrito</button>
+          </div>
+        </article>
+        <% } %>
+        
       </section>
+        
+
+
 
       <section class="categorias">
         <h2><b> Categorias </b></h2>
