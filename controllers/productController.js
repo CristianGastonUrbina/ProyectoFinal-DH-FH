@@ -15,7 +15,10 @@ function store(req, res) {
     req.body.price,
     req.body.target,
     req.body.tags,
-    req.body.image
+    req.body.image,
+    req.body.ship,
+    req.body.warranty,
+    req.body.stock
   );
   console.log(req.body);
   products.push(prod);

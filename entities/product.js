@@ -8,7 +8,10 @@ function Product(
   price,
   target,
   tags,
-  image
+  image,
+  ship,
+  warranty,
+  stock
 ) {
   this.id = id;
   this.name = name;
@@ -20,6 +23,9 @@ function Product(
   this.target = target;
   this.tags = tags;
   this.image = image;
+  this.ship = ship;
+  this.warranty = warranty;
+  this.stock = stock;
 }
 
 module.exports = Product;

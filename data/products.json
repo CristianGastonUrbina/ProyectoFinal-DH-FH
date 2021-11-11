@@ -9,7 +9,10 @@
     "price": "131.25",
     "target": "office",
     "tags": "motherboard, office, ATX",
-    "image": "/gigabyte-rbb-7021.jpeg"
+    "image": "/gigabyte-rbb-7021.jpeg",
+    "ship": 1,
+    "warranty": 6,
+    "stock": 12
   },
   {
     "id": 2,
@@ -21,7 +24,10 @@
     "price": "233.55",
     "target": "Gamer",
     "tags": "monitor, tv, QLED",
-    "image": "/lg-bch-123.jpeg"
+    "image": "/lg-bch-123.jpeg",
+    "ship": 1,
+    "warranty": 6,
+    "stock": 12
   },
   {
     "id": 3,
@@ -33,7 +39,10 @@
     "price": "398.22",
     "target": "Gamer",
     "tags": "VGA, HDMI, video, GPU",
-    "image": "/asus-gtx-3060ti.jpeg"
+    "image": "/asus-gtx-3060ti.jpeg",
+    "ship": 1,
+    "warranty": 6,
+    "stock": 12
   },
   {
     "id": 4,
@@ -45,7 +54,10 @@
     "price": "black",
     "target": "office",
     "tags": "vga, placa de video, notebook",
-    "image": "/nvidia-rtx-1060m.jpeg"
+    "image": "/nvidia-rtx-1060m.jpeg",
+    "ship": 1,
+    "warranty": 6,
+    "stock": 12
   },
   {
     "id": 5,
@@ -57,7 +69,10 @@
     "price": "187.84",
     "target": "Gamer",
     "tags": "Fuente, alimentacion, Certified, ATX",
-    "image": "/thermaltake-dac-cc-3030.jpeg"
+    "image": "/thermaltake-dac-cc-3030.jpeg",
+    "ship": 1,
+    "warranty": 6,
+    "stock": 12
   },
   {
     "id": 6,
@@ -69,6 +84,9 @@
     "price": "291.12",
     "target": "ultrahigh",
     "tags": "Fuente, alimentacion, certified, atx",
-    "image": "/coolmaster-bh449eq.jpeg"
+    "image": "/coolmaster-bh449eq.jpeg",
+    "ship": 1,
+    "warranty": 6,
+    "stock": 12
   }
 ]
