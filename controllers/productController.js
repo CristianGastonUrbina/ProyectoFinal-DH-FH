@@ -4,9 +4,16 @@ const Product = require("../entities/product");
 const productsFilePath = path.join(__dirname, "../data/products.json");
 const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
 
+function findProduct(id) {
+  found = (obj) => obj.id === +id;
+  index = products.findIndex(found);
+  product = products[index];
+  return product;
+}
+
 function store(req, res) {
   let prod = new Product(
-    req.body.id,
+    +req.body.id,
     req.body.name,
     req.body.manufacturer,
     req.body.model,
@@ -28,18 +35,21 @@ function store(req, res) {
 }
 
 function update(req, res) {
-  idProd = req.params.id;
+  idProd = +req.params.id;
   let prod = new Product(
-    req.params.id,
+    idProd,
+    req.body.name,
     req.body.manufacturer,
     req.body.model,
     req.body.description,
     req.body.category,
-    req.body.colors,
     req.body.price,
     req.body.target,
     req.body.tags,
-    req.body.image
+    req.body.image,
+    req.body.ship,
+    req.body.warranty,
+    req.body.stock
   );
   products[idProd] = prod;
   fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
@@ -60,16 +70,17 @@ let productController = {
     res.render("./products/productCart");
   },
   detail: (req, res) => {
-    id = req.params.id;
-    found = (obj) => obj.id === +id;
-    index = products.findIndex(found);
-    product = products[index];
+    id = +req.params.id;
+    product = findProduct(id);
     console.log(product);
     res.render("./products/productDetails", { product });
   },
 
   edit: (req, res) => {
-    res.render("./products/productEdit");
+    id = +req.params.id;
+    product = findProduct(id);
+    console.log(product);
+    res.render("./products/productEdit", { product });
   },
   add: (req, res) => {
     res.render("./products/productAdd");

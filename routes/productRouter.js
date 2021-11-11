@@ -22,8 +22,8 @@ router.get("/Detalle/:id", productController.detail);
 // CArrito de compras
 router.get("/Carrito", productController.cart);
 //Edicion de producto
-router.get("/Edicion", productController.edit);
-router.put("/Edicion/:id", productController.update);
+router.get("/Detalle/Edicion/:id", productController.edit);
+router.put("/Detalle/:id", productController.update);
 //Creacion de producto
 router.get("/Creacion", productController.add);
 router.post("/Creacion", productController.store);

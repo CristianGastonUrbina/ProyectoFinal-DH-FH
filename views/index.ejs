@@ -45,99 +45,27 @@
       <section class="categorias">
         <h2><b> Categorias </b></h2>
         <div class="categorias_conteiner">
+          <% let category = [] %>
+          <% for ( i=0; i<product.length; i++) { %>
+          <%  if  (!category.includes(product[i].category)) { %>
+           <%   category.push(product[i].category) %>
+           <% } %>
+           <% } %> 
+           
+           <%= console.log(category) %> 
+
+            <% for (i=0;i<category.length;i++) { %>
           <article class="categoria">
             <div class="imagen">
               <img src="../images/icon-motherboard.svg" alt="Motherboard" />
             </div>
-            <div class="nombre">Placas de video</div>
+            <div class="nombre"><%=category[i]%> </div>
           </article>
-          <article class="categoria">
-            <div class="imagen">
-              <img src="../images/icon-motherboard.svg" alt="Motherboard" />
-            </div>
-            <div class="nombre">Placas de video</div>
-          </article>
-          <article class="categoria">
-            <div class="imagen">
-              <img src="../images/icon-motherboard.svg" alt="Motherboard" />
-            </div>
-            <div class="nombre">Placas de video</div>
-          </article>
-          <article class="categoria">
-            <div class="imagen">
-              <img src="../images/icon-motherboard.svg" alt="Motherboard" />
-            </div>
-            <div class="nombre">Placas de video</div>
-          </article>
-          <article class="categoria">
-            <div class="imagen">
-              <img src="../images/icon-motherboard.svg" alt="Motherboard" />
-            </div>
-            <div class="nombre">Placas de video</div>
-          </article>
-          <article class="categoria">
-            <div class="imagen">
-              <img src="../images/icon-motherboard.svg" alt="Motherboard" />
-            </div>
-            <div class="nombre">Placas de video</div>
-          </article>
-          <article class="categoria">
-            <div class="imagen">
-              <img src="../images/icon-motherboard.svg" alt="Motherboard" />
-            </div>
-            <div class="nombre">Placas de video</div>
-          </article>
-          <article class="categoria">
-            <div class="imagen">
-              <img src="../images/icon-motherboard.svg" alt="Motherboard" />
-            </div>
-            <div class="nombre">Placas de video</div>
-          </article>
-          <article class="categoria">
-            <div class="imagen">
-              <img src="../images/icon-motherboard.svg" alt="Motherboard" />
-            </div>
-            <div class="nombre">Placas de video</div>
-          </article>
-          <article class="categoria">
-            <div class="imagen">
-              <img src="../images/icon-motherboard.svg" alt="Motherboard" />
-            </div>
-            <div class="nombre">Placas de video</div>
-          </article>
-          <article class="categoria">
-            <div class="imagen">
-              <img src="../images/icon-motherboard.svg" alt="Motherboard" />
-            </div>
-            <div class="nombre">Placas de video</div>
-          </article>
-          <article class="categoria">
-            <div class="imagen">
-              <img src="../images/icon-motherboard.svg" alt="Motherboard" />
-            </div>
-            <div class="nombre">Placas de video</div>
-          </article>
-          <article class="categoria">
-            <div class="imagen">
-              <img src="../images/icon-motherboard.svg" alt="Motherboard" />
-            </div>
-            <div class="nombre">Placas de video</div>
-          </article>
-          <article class="categoria">
-            <div class="imagen">
-              <img src="../images/icon-motherboard.svg" alt="Motherboard" />
-            </div>
-            <div class="nombre">Placas de video</div>
-          </article>
-          <article class="categoria">
-            <div class="imagen">
-              <img src="../images/icon-motherboard.svg" alt="Motherboard" />
-            </div>
-            <div class="nombre">Placas de video</div>
-          </article>
+          <% } %> 
         </div>
       </section>
     </main>
     <%- include ("./partials/footer.ejs") %> 
+
   </body>
 </html>

@@ -11,35 +11,43 @@
           </div>
           <div class="descripcionProducto">
             <ul class="disc">
-              <li>- SPECS PRODUCTO</li>
-              <li>- SPECS PRODUCTO</li>
-              <li>- SPECS PRODUCTO</li>
-              <li>- SPECS PRODUCTO</li>
-              <li>- SPECS PRODUCTO</li>
+              <li><%=product.description  %> </li>
+              <li>Calidad:<%=product.target  %> </li>
+
             </ul>
           </div>
           <div class="preciosProducto">
             <div>
-              <h3>$190.000</h3>
-              <h4>Precio Contado</h4>
+              <h3><%=product.price%></h3>
             </div>
-            <div>
-              <h3>$220.000</h3>
-              <h4>Precio de lista</h4>
-            </div>
-          </div>
+
           <div class="botonCompra">
             <button type="add">Agregar al carrito</button>
           </div>
           <div class="garantia">
-            <h5><i class="fas fa-user-shield"></i> Garantía disponible</h5>
-            <h5><i class="fas fa-check"></i> Disponible</h5>
-            <h5><i class="fas fa-truck"></i> Envíos a todo el país</h5>
+            <%if (product.warranty != "") {%>
+            <h5><i class="fas fa-user-shield"></i> Garantia de <%=product.warranty%> meses  </h5>
+            <% }else { %> 
+              <h5>Sin Garantia</h5>
+              <% } %> 
+
+            <%if (product.stock >= 1) {%>
+            <h5><i class="fas fa-check"></i> Disponible </h5>
+            <% }else { %> 
+              <h5>Sin Stock </h5>
+                     <% } %> 
+
+            <%if (product.ship === 1) {%>
+            <h5><i class="fas fa-truck"></i> Envíos a todo el país </h5>
+            <% }else { %> 
+              <h5>Solo retiro por sucursal </h5>
+                     <% } %> 
+            
           </div>
         </div>
         <div class="fotoproducto">
           <div class="fotoProducto">
-            <img src="../images/gpu.jpg" alt="foto del producto">
+            <img src="../../public/images/<%=product.image%>" alt="foto del producto">
           </div>
         </div>
       </article>
@@ -52,8 +60,8 @@
         <div>
           <input type="search">
         </div>
-        <a href="./Edicion"><button>EDITAR</button></a>
-        <a href="./Creacion"><button>AGREGAR</button></a>
+        <a href="./Edicion/<%=product.id%>"><button>EDITAR</button></a>
+
       </article>
     </main>
 

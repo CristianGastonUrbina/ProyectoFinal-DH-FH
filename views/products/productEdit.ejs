@@ -4,39 +4,164 @@
   <%- include ("../partials/header.ejs") %> 
   <main>
     <section >
-    <form action="./productEdit.ejs" method="post" class="formulario">
-      <h2 class="Titulo">Tu <b>Producto</b> a editar</h2>
-             <label for="imagen"><div class="negrita">Nombre</div></label>
-        <input class="input"  type="text" name="nombre" id="nombre" placeholder="Nombre del Producto">
-             <label for="imagen"><div class="negrita">Descripcion</div></label>
-        <textarea class="input"  name="descripcion" id="descripcion" cols="30" rows="10"  placeholder="Tu descripcion aca"></textarea>
-        <label for="imagen"><div class="negrita">Imagen del <b>Producto</b></div></label>
-        <input  class="input" type="file" name="imagen">
-      <label for="imagen"><div class="negrita">Precios</div></label>
-        <input  class="input" type="text" name="precioContado" id="precioContado" placeholder="Precio al Contado">
-        <input  class="input" type="text" name="precioLista" id="precioLista" placeholder="Precio de Lista">
-        <label for="categoria"><div class="negrita">Categoria</div></label>
-        <select class="input"  name="categoria" id="categoria">
-        <option class="input"  name="CPU" id="categoria">Procesadores y coolers</option>
-        <option class="input"  name="Mother" id="categoria">Motherboards</option>
-        <option  class="input" name="RAM" id="categoria">Memorias Ram</option>
-        <option  class="input" name="ROM" id="categoria">Almacenamiento</option>
-        <option  class="input" name="GPU" id="categoria">Tarjetas Graficas</option>
-        <option class="input"  name="Display" id="categoria">Monitores</option>
-        <option  class="input" name="Others" id="categoria">Otros Perfericos</option>
-        <option  class="input" name="M&K" id="categoria">Mouse y teclados</option>
-        <option  class="input" name="Soft" id="categoria">Software</option>
+    <form action="../<%=product.id%>" method="post" class="formulario">
+      <h2 class="Titulo">Tu <b>Producto</b></h2>
+
+      <label class ="labelform
+             " for="id"><div class="negrita">ID</div></label>
+        <input class="input"  type="number" name="id" id="id" value="<%=product.id%>">
+
+             <label class ="labelform
+             " for="nombre"><div class="negrita">Nombre</div></label>
+        <input class="input"  type="text" name="name" id="name" value="<%=product.name%>">
+
+             <label class ="labelform
+             " for="manufacturer"><div class="negrita">Marca</div></label>
+        <input class="input"  type="text" name="manufacturer" id="manufacturer" value="<%=product.manufacturer%>">
+
+              <label class ="labelform
+             " for="model"><div class="negrita">Modelo</div></label>
+        <input class="input"  type="text" name="model" id="model" value="<%=product.model%>">
+
+             <label class ="labelform
+             " for="description"><div class="negrita">Descripcion</div></label>
+        <input class="input"  name="description" id="description" cols="30" rows="10"  value="<%=product.description%>">
+
+        <label class ="labelform
+        " for="image"><div class="negrita">Imagen del <b>Producto</b></div></label>
+        <input  class="input" type="file" name="image" id="image" >
+
+
+      <label class ="labelform
+      " for="price"><div class="negrita">Precio</div></label>
+        <input  class="input" type="number" name="price" id="price" value="<%=product.price%>">
+
+      <label class ="labelform" for="tags"><div class="negrita">Tags</div></label>
+      
+
+
+
+         <div class="container">
+            <label class="container">Motherboard
+               <input type="checkbox" <% if (product.tags.includes("Motherboard")) { %>checked<% } %>   name="tags" value="Motherboard">
+               <span class="checkmark"></span>
+            </label>
+            <label class="container">Office
+               <input type="checkbox" <% if (product.tags.includes("Office")) { %>checked<% } %> name="tags" value="Office">
+               <span class="checkmark"></span>
+            </label>
+            <label class="container">ATX
+               <input type="checkbox" <% if (product.tags.includes("ATX")) { %>checked<% } %>  name="tags" value="ATX" id="ATX">
+               <span class="checkmark" ></span>
+            </label>
+            <label class="container">Monitor
+               <input type="checkbox" <% if (product.tags.includes("Monitor")) { %>checked<% } %>  name="tags" value="Monitor" id="Monitor">
+               <span class="checkmark"></span>
+            </label>
+                     <label class="container">TV
+               <input type="checkbox" <% if (product.tags.includes("TV")) { %>checked<% } %>  name="tags" value="TV" id="TV">
+               <span class="checkmark"></span>
+            </label>
+                     <label class="container">QLED
+               <input type="checkbox" <% if (product.tags.includes("QLED")) { %>checked<% } %>  name="tags" value="QLED" id="QLED" >
+               <span class="checkmark"></span>
+            </label>
+                     <label class="container">VGA
+               <input type="checkbox" <% if (product.tags.includes("VGA")) { %>checked<% } %>  name="tags" value="VGA" id="VGA" >
+               <span class="checkmark"></span>
+            </label>
+                     <label class="container">HDMI
+               <input type="checkbox" <% if (product.tags.includes("HDMI")) { %>checked<% } %>  name="tags" value="HDMI" id="HDMI" >
+               <span class="checkmark"></span>
+            </label>
+                     <label class="container">Video
+               <input type="checkbox" <% if (product.tags.includes("Video")) { %>checked<% } %>  name="tags" value="Video" id="Video" >
+               <span class="checkmark"></span>
+            </label>
+                     <label class="container">GPU
+               <input type="checkbox" <% if (product.tags.includes("GPU")) { %>checked<% } %>  name="tags" value="GPU" id="GPUU" >
+               <span class="checkmark"></span>
+            </label>
+                     <label class="container">Placa de video
+               <input type="checkbox" <% if (product.tags.includes("PlacaDeVideo")) { %>checked<% } %>  name="tags" value="PlacaDeVideo" id="PlacaDeVideo" >
+               <span class="checkmark"></span>
+            </label>
+                     <label class="container">Notebook
+               <input type="checkbox" <% if (product.tags.includes("Notebook")) { %>checked<% } %>  name="tags" value="Notebook" id="Notebook" >
+               <span class="checkmark"></span>
+            </label>
+                     <label class="container">Fuente
+               <input type="checkbox" <% if (product.tags.includes("Fuente")) { %>checked<% } %>  name="tags" value="Fuente" id="Fuente" >
+               <span class="checkmark"></span>
+            </label>
+                     <label class="container">Alimentacion
+               <input type="checkbox" <% if (product.tags.includes("Alimentacion")) { %>checked<% } %>  name="tags" value="Alimentacion" id="Alimentacion" >
+               <span class="checkmark"></span>
+            </label>
+                     <label class="container">Certified
+               <input type="checkbox" <% if (product.tags.includes("Certified")) { %>checked<% } %>  name="tags" value="Certified" id="Certified" >
+               <span class="checkmark"></span>
+            </label>
+         </div>
+
+         <label class ="labelform
+        " for="target"><div class="negrita">Target</div></label>
+        <select class="input"  name="target"  value="" id="target">
+        <option class="input"  name="target"   value="home" id="home" <% if (product.target = "home") { %>selected<% } %> >Hogareño</option>
+        <option class="input"  name="target" value="office" id="office" <% if (product.target = "office") { %>selected<% } %> >Oficina</option>
+        <option  class="input" name="target" value="Gamer" id="Gamer" <% if (product.target = "Gamer") { %>selected<% } %> >Gamer</option>
+        <option  class="input" name="target" value="ultrahigh" id="ultrahigh" <% if (product.target = "Certified") { %>selected<% } %> >Tope de Gama</option>
+
+        </select>
+
+
+
+        <label class ="labelform
+        " for="categoria"><div class="negrita">Categoria</div></label>
+        <select class="input"  name="category" id="category">
+        <option class="input"  <% if (product.category = "CPU") { %>selected<% } %> name="CPU" id="CPU">Procesadores y coolers</option>
+        <option class="input"  <% if (product.category = "Mother") { %>selected<% } %> name="Mother" id="Mother">Motherboards</option>
+        <option  class="input" <% if (product.category = "RAM") { %>selected<% } %> name="RAM" id="RAM">Memorias Ram</option>
+        <option  class="input" <% if (product.category = "ROM") { %>selected<% } %> name="ROM" id="ROM">Almacenamiento</option>
+        <option  class="input" <% if (product.category = "GPU") { %>selected<% } %> name="GPU" id="GPU">Tarjetas Graficas</option>
+        <option class="input"  <% if (product.category = "Display") { %>selected<% } %> name="Display" id="Display">Monitores</option>
+        <option  class="input" <% if (product.category = "Others") { %>selected<% } %> name="Others" id="Others">Otros Perfericos</option>
+        <option  class="input" <% if (product.category = "M&K") { %>selected<% } %> name="M&K" id="M&K">Mouse y teclados</option>
+        <option  class="input" <% if (product.category = "Soft") { %>selected<% } %> name="Soft" id="Soft">Software</option>
         </select>
         
-        <button class="input" type="submit">Modificar Producto</button>
+
+
+
+        
+                 <label class ="labelform
+        " for="ship"><div class="negrita">Envios</div></label>
+        <select class="input"   name="ship" value="" id="ship">
+        <option class="input" <% if (product.ship = 1) { %>selected<% } %>  name="ship" value="1" >Con Envios</option>
+        <option class="input" <% if (product.ship = 0) { %>selected<% } %>  name="ship" value="0" >Retiro en Sucursal</option>
+        </select>
+
+
+
+
+                         <label class ="labelform
+        " for="warranty"><div class="negrita">Garantia</div></label>
+        <select class="input"  name="warranty"  value="" id="warranty">
+        <option class="input"  name="warranty" <% if (product.warranty = 0) { %>selected<% } %> value="0" >Sin Garantia</option>
+        <option class="input"  name="warranty" <% if (product.warranty = 3) { %>selected<% } %> value="3" >3 meses de garantia</option>
+        <option class="input"  name="warranty" <% if (product.warranty = 6) { %>selected<% } %> value="6" >6 meses de garantia</option>
+        <option class="input"  name="warranty" <% if (product.warranty = 9) { %>selected<% } %> value="9" >9 meses de garantia</option>
+        <option class="input"  name="warranty" <% if (product.warranty = 12) { %>selected<% } %> value="12" >12 meses de garantia</option>
+        
+        </select>
+
         
         
-        
-        
-        
-        
+        <button class="input" type="submit">Guardar Edicion</button>
+
+
       </form>
-    </section class="formulario">
+    </section >
 
   </main>
 

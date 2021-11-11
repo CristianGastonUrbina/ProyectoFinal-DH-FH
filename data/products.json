@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Motherboard Gigabyte rbb-7021",
-    "manufaacturer": "Gigabyte",
+    "manufacturer": "Gigabyte",
     "model": "rbb-7021",
     "description": "Motherboard apto para oficina, socket LGA1155",
     "category": "Motherboard",
@@ -17,7 +17,7 @@
   {
     "id": 2,
     "name": "Monitor LG bch-123",
-    "manufaacturer": "LG",
+    "manufacturer": "LG",
     "model": "bch-123",
     "description": "Monitor LG 24 pulgadas, QLED, 144hz",
     "category": "monitor",
@@ -32,7 +32,7 @@
   {
     "id": 3,
     "name": "GPU Asus gtx-3060ti",
-    "manufaacturer": "Asus",
+    "manufacturer": "Asus",
     "model": "gtx-3060ti",
     "description": "Placa de video bastante power, para correr juegos y minar tranqui",
     "category": "VGA",
@@ -62,7 +62,7 @@
   {
     "id": 5,
     "name": "Fuente thermaltake DAC-CC-3030 ",
-    "manufaacturer": "thermaltake",
+    "manufacturer": "thermaltake",
     "model": "DAC-CC-3030",
     "description": "Fuente de alimentacion 700w Bronce Certified",
     "category": "Fuentes",
@@ -77,7 +77,7 @@
   {
     "id": 6,
     "name": "Fuente Coolmaster bh449eq",
-    "manufaacturer": "Coolmaster",
+    "manufacturer": "Coolmaster",
     "model": "bh449eq",
     "description": "Fuente de alimentacion 750w, Gold Certified",
     "category": "Fuente",
@@ -85,8 +85,36 @@
     "target": "ultrahigh",
     "tags": "Fuente, alimentacion, certified, atx",
     "image": "/coolmaster-bh449eq.jpeg",
-    "ship": 1,
-    "warranty": 6,
-    "stock": 12
+    "ship": 0,
+    "warranty": "",
+    "stock": 0
+  },
+  {
+    "id": 123,
+    "name": "123123",
+    "manufacturer": "12312",
+    "model": "312312",
+    "description": "1231",
+    "category": "Procesadores y coolers",
+    "price": "1123",
+    "target": "home",
+    "tags": ["Motherboard", "Monitor"],
+    "image": "",
+    "ship": "1",
+    "warranty": "0"
+  },
+  {
+    "id": 90,
+    "name": "",
+    "manufacturer": "",
+    "model": "",
+    "description": "",
+    "category": "Procesadores y coolers",
+    "price": "",
+    "target": "home",
+    "tags": "Motherboard",
+    "image": "",
+    "ship": "1",
+    "warranty": "0"
   }
 ]
