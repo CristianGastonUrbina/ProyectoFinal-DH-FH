@@ -4,7 +4,7 @@
   <%- include ("../partials/header.ejs") %> 
   <main>
     <section >
-    <form action="../Edicion/<%=product.id%>?_method=PUT" method="post" class="formulario">
+    <form action="/products/Detalle/Edicion/<%=product.id%>?_method=PUT" method="post" class="formulario" enctype="multipart/form-data">
       <h2 class="Titulo">Tu <b>Producto</b></h2>
 
       <label class ="labelform
@@ -28,7 +28,8 @@
         <input class="input"  name="description" id="description" cols="30" rows="10"  value="<%=product.description%>">
 
         <label class ="labelform
-        " for="image"><div class="negrita">Imagen del <b>Producto</b></div></label>
+        " for="image"><div class="negrita">Imagen del <b>Producto </b></div></label>
+        <img class ="imagen" src="../../../images/products/<%=product.image%>" alt="ACAA">
         <input  class="input" type="file" name="image" id="image" >
 
 
@@ -43,66 +44,67 @@
 
          <div class="container">
             <label class="container">Motherboard
-               <input type="checkbox" <% if (product.tags.includes("Motherboard")) { %>checked<% } %>   name="tags" value="Motherboard">
+               <input type="checkbox" <% if ( product.tags && product.tags && product.tags.includes("Motherboard")) { %>checked<% } %>   name="tags" value="Motherboard">
                <span class="checkmark"></span>
             </label>
             <label class="container">Office
-               <input type="checkbox" <% if (product.tags.includes("Office")) { %>checked<% } %> name="tags" value="Office">
+               <input type="checkbox" <% if ( product.tags && product.tags.includes("Office")) { %>checked<% } %> name="tags" value="Office">
                <span class="checkmark"></span>
             </label>
             <label class="container">ATX
-               <input type="checkbox" <% if (product.tags.includes("ATX")) { %>checked<% } %>  name="tags" value="ATX" id="ATX">
+               <input type="checkbox" <% if ( product.tags && product.tags.includes("ATX")) { %>checked<% } %>  name="tags" value="ATX" id="ATX">
                <span class="checkmark" ></span>
             </label>
             <label class="container">Monitor
-               <input type="checkbox" <% if (product.tags.includes("Monitor")) { %>checked<% } %>  name="tags" value="Monitor" id="Monitor">
+               <input type="checkbox" <% if ( product.tags && product.tags.includes("Monitor")) { %>checked<% } %>  name="tags" value="Monitor" id="Monitor">
                <span class="checkmark"></span>
             </label>
                      <label class="container">TV
-               <input type="checkbox" <% if (product.tags.includes("TV")) { %>checked<% } %>  name="tags" value="TV" id="TV">
+               <input type="checkbox" <% if ( product.tags && product.tags.includes("TV")) { %>checked<% } %>  name="tags" value="TV" id="TV">
                <span class="checkmark"></span>
             </label>
                      <label class="container">QLED
-               <input type="checkbox" <% if (product.tags.includes("QLED")) { %>checked<% } %>  name="tags" value="QLED" id="QLED" >
+               <input type="checkbox" <% if ( product.tags && product.tags.includes("QLED")) { %>checked<% } %>  name="tags" value="QLED" id="QLED" >
                <span class="checkmark"></span>
             </label>
                      <label class="container">VGA
-               <input type="checkbox" <% if (product.tags.includes("VGA")) { %>checked<% } %>  name="tags" value="VGA" id="VGA" >
+               <input type="checkbox" <% if ( product.tags && product.tags.includes("VGA")) { %>checked<% } %>  name="tags" value="VGA" id="VGA" >
                <span class="checkmark"></span>
             </label>
                      <label class="container">HDMI
-               <input type="checkbox" <% if (product.tags.includes("HDMI")) { %>checked<% } %>  name="tags" value="HDMI" id="HDMI" >
+               <input type="checkbox" <% if ( product.tags && product.tags.includes("HDMI")) { %>checked<% } %>  name="tags" value="HDMI" id="HDMI" >
                <span class="checkmark"></span>
             </label>
                      <label class="container">Video
-               <input type="checkbox" <% if (product.tags.includes("Video")) { %>checked<% } %>  name="tags" value="Video" id="Video" >
+               <input type="checkbox" <% if ( product.tags && product.tags.includes("Video")) { %>checked<% } %>  name="tags" value="Video" id="Video" >
                <span class="checkmark"></span>
             </label>
                      <label class="container">GPU
-               <input type="checkbox" <% if (product.tags.includes("GPU")) { %>checked<% } %>  name="tags" value="GPU" id="GPUU" >
+               <input type="checkbox" <% if ( product.tags && product.tags.includes("GPU")) { %>checked<% } %>  name="tags" value="GPU" id="GPUU" >
                <span class="checkmark"></span>
             </label>
                      <label class="container">Placa de video
-               <input type="checkbox" <% if (product.tags.includes("PlacaDeVideo")) { %>checked<% } %>  name="tags" value="PlacaDeVideo" id="PlacaDeVideo" >
+               <input type="checkbox" <% if ( product.tags && product.tags.includes("PlacaDeVideo")) { %>checked<% } %>  name="tags" value="PlacaDeVideo" id="PlacaDeVideo" >
                <span class="checkmark"></span>
             </label>
                      <label class="container">Notebook
-               <input type="checkbox" <% if (product.tags.includes("Notebook")) { %>checked<% } %>  name="tags" value="Notebook" id="Notebook" >
+               <input type="checkbox" <% if ( product.tags && product.tags.includes("Notebook")) { %>checked<% } %>  name="tags" value="Notebook" id="Notebook" >
                <span class="checkmark"></span>
             </label>
                      <label class="container">Fuente
-               <input type="checkbox" <% if (product.tags.includes("Fuente")) { %>checked<% } %>  name="tags" value="Fuente" id="Fuente" >
+               <input type="checkbox" <% if ( product.tags && product.tags.includes("Fuente")) { %>checked<% } %>  name="tags" value="Fuente" id="Fuente" >
                <span class="checkmark"></span>
             </label>
                      <label class="container">Alimentacion
-               <input type="checkbox" <% if (product.tags.includes("Alimentacion")) { %>checked<% } %>  name="tags" value="Alimentacion" id="Alimentacion" >
+               <input type="checkbox" <% if ( product.tags && product.tags.includes("Alimentacion")) { %>checked<% } %>  name="tags" value="Alimentacion" id="Alimentacion" >
                <span class="checkmark"></span>
             </label>
                      <label class="container">Certified
-               <input type="checkbox" <% if (product.tags.includes("Certified")) { %>checked<% } %>  name="tags" value="Certified" id="Certified" >
+               <input type="checkbox" <% if ( product.tags && product.tags.includes("Certified")) { %>checked<% } %>  name="tags" value="Certified" id="Certified" >
                <span class="checkmark"></span>
             </label>
          </div>
+
 
          <label class ="labelform
         " for="target"><div class="negrita">Target</div></label>

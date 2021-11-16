@@ -6,11 +6,11 @@ const path = require("path");
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, "../public/images/products");
+    cb(null, path.join(__dirname, "../public/images/products"));
   },
   filename: function (req, file, cb) {
     console.log(file);
-    cb(null, file.originalName + Date.now() + path.extname(file.originalName));
+    cb(null, Date.now() + file.originalname);
   },
 });
 
@@ -24,6 +24,7 @@ router.get("/Detalle/:id", productController.detail);
 // CArrito de compras
 router.get("/Carrito", productController.cart);
 //Edicion de producto
+
 router.get("/Detalle/Edicion/:id", productController.edit);
 router.put(
   "/Detalle/Edicion/:id",

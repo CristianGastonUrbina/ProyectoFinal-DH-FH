@@ -7,6 +7,9 @@ textarea {
   max-width: 700px;
 }
 
+.imagen {
+  max-width: 100px;
+}
 .formulario {
   display: flex;
   flex-direction: column;

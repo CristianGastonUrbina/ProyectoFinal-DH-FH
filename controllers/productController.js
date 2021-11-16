@@ -1,3 +1,4 @@
+const { randomInt } = require("crypto");
 const fs = require("fs");
 const path = require("path");
 const Product = require("../entities/product");
@@ -18,8 +19,18 @@ function findProductIndex(id) {
 }
 
 function store(req, res) {
+  if (req.file) {
+    imageName = req.file.filename;
+  } else {
+    imageName = "dummy.jpg";
+  }
+
+  if (req.body.id === "") {
+    id = (Math.random() * Date.now()) / 3;
+  }
+
   let prod = new Product(
-    +req.body.id,
+    id,
     req.body.name,
     req.body.manufacturer,
     req.body.model,
@@ -28,7 +39,7 @@ function store(req, res) {
     req.body.price,
     req.body.target,
     req.body.tags,
-    req.body.image,
+    imageName,
     req.body.ship,
     req.body.warranty,
     req.body.stock
@@ -40,6 +51,13 @@ function store(req, res) {
 
 function update(req, res) {
   idProd = +req.params.id;
+  console.log(req.file);
+  if (req.file) {
+    imageName = req.file.filename;
+  } else {
+    prod = findProduct(idProd);
+    imageName = prod.image;
+  }
   let product = new Product(
     idProd,
     req.body.name,
@@ -50,12 +68,11 @@ function update(req, res) {
     req.body.price,
     req.body.target,
     req.body.tags,
-    req.body.image,
+    imageName,
     req.body.ship,
     req.body.warranty,
     req.body.stock
   );
-
   products.splice(findProductIndex(idProd), 1, product);
   fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
   res.redirect("/");
