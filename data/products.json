@@ -6,10 +6,10 @@
   "model": "rbb-7021",
   "description": "Motherboard apto para oficina, socket LGA1155",
   "category": "Software",
-  "price": "131.25",
+  "price": "136",
   "target": "ultrahigh",
   "tags": "ATX",
-  "image": "foto barba.jpg",
+  "image": "Documento escaneado 17.jpeg",
   "ship": "1",
   "warranty": "12"
  },
@@ -26,5 +26,18 @@
   "image": "foto barba.jpg",
   "ship": "1",
   "warranty": "12"
+ },
+ {
+  "id": 0,
+  "name": "",
+  "manufacturer": "",
+  "model": "",
+  "description": "",
+  "category": "Procesadores y coolers",
+  "price": "",
+  "target": "home",
+  "tags": "Motherboard",
+  "ship": "1",
+  "warranty": "0"
  }
 ]
