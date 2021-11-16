@@ -47,7 +47,7 @@
         </div>
         <div class="fotoproducto">
           <div class="fotoProducto">
-            <img src="../../public/images/<%=product.image%>" alt="foto del producto">
+            <img src="../../images/products/<%=product.image%>" alt="foto del producto">
           </div>
         </div>
       </article>
@@ -61,6 +61,11 @@
           <input type="search">
         </div>
         <a href="./Edicion/<%=product.id%>"><button>EDITAR</button></a>
+        <form action="../Eliminacion/<%=product.id%>?_method=DELETE" method="post"  >
+          <button type="submit">Borrar</button></a>
+        </form>
+
+          
 
       </article>
     </main>

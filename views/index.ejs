@@ -23,7 +23,7 @@
                     <article class="product">
                       <div>
                         <a href="./products/Detalle/<%=product[i].id%>"
-                          ><img src="<%=product[i].image%>" alt="Gpu"
+                          ><img src="../../images/products/<%=product[i].image%>" alt="<%=product[i].name%>"
                           /></a>
                           <div class="descripcion">
                             <div>Modelo:<%=product[i].description%></div>
@@ -52,7 +52,6 @@
            <% } %>
            <% } %> 
            
-           <%= console.log(category) %> 
 
             <% for (i=0;i<category.length;i++) { %>
           <article class="categoria">

@@ -6,6 +6,7 @@ let path = require("path");
 let mainRouter = require("./routes/mainRouter");
 let userRouter = require("./routes/userRouter");
 let productRouter = require("./routes/productRouter");
+let methodOverride = require("method-override");
 
 server.use(express.json());
 let port = 3000;
@@ -14,6 +15,7 @@ let publicPath = path.resolve(__dirname, "./public");
 server.use(express.static(publicPath));
 server.set("view engine", "ejs");
 server.use(express.urlencoded({ extended: false }));
+server.use(methodOverride("_method"));
 
 //Se configura el router
 server.use("/", mainRouter);

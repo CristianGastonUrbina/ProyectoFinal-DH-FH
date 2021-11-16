@@ -11,6 +11,12 @@ function findProduct(id) {
   return product;
 }
 
+function findProductIndex(id) {
+  found = (obj) => obj.id === +id;
+  index = products.findIndex(found);
+  return index;
+}
+
 function store(req, res) {
   let prod = new Product(
     +req.body.id,
@@ -27,16 +33,14 @@ function store(req, res) {
     req.body.warranty,
     req.body.stock
   );
-  console.log(req.body);
   products.push(prod);
   fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
   res.redirect("/");
-  res.send(prod);
 }
 
 function update(req, res) {
   idProd = +req.params.id;
-  let prod = new Product(
+  let product = new Product(
     idProd,
     req.body.name,
     req.body.manufacturer,
@@ -51,13 +55,14 @@ function update(req, res) {
     req.body.warranty,
     req.body.stock
   );
-  products[idProd] = prod;
+
+  products.splice(findProductIndex(idProd), 1, product);
   fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
   res.redirect("/");
 }
 
 function destroy(req, res) {
-  products.splice(req.params.id, 1);
+  products.splice(findProductIndex(req.params.id), 1);
   fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
   res.redirect("/");
 }
@@ -72,14 +77,12 @@ let productController = {
   detail: (req, res) => {
     id = +req.params.id;
     product = findProduct(id);
-    console.log(product);
     res.render("./products/productDetails", { product });
   },
 
   edit: (req, res) => {
     id = +req.params.id;
     product = findProduct(id);
-    console.log(product);
     res.render("./products/productEdit", { product });
   },
   add: (req, res) => {
