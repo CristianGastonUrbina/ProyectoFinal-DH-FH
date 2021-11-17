@@ -27,6 +27,8 @@ function store(req, res) {
 
   if (req.body.id === "") {
     id = (Math.random() * Date.now()) / 3;
+  } else {
+    id = req.body.id;
   }
 
   let prod = new Product(
@@ -44,6 +46,7 @@ function store(req, res) {
     req.body.warranty,
     req.body.stock
   );
+  console.log();
   products.push(prod);
   fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
   res.redirect("/");

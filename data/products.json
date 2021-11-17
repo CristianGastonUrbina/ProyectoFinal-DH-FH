@@ -697,5 +697,19 @@
   "image": "http://dummyimage.com/185x100.png/ff4444/ffffff",
   "ship": 1,
   "warranty": 1
+ },
+ {
+  "id": "23242",
+  "name": "",
+  "manufacturer": "",
+  "model": "",
+  "description": "",
+  "category": "Procesadores y coolers",
+  "price": "",
+  "target": "home",
+  "tags": "Motherboard",
+  "image": "dummy.jpg",
+  "ship": "1",
+  "warranty": "0"
  }
 ]
