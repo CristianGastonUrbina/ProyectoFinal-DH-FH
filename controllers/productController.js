@@ -1,116 +1,84 @@
 const { randomInt } = require("crypto");
 const fs = require("fs");
-const path = require("path");
+
 const Product = require("../entities/product");
-const productsFilePath = path.join(__dirname, "../data/products.json");
-const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
-
-function findProduct(id) {
-  found = (obj) => obj.id === +id;
-  index = products.findIndex(found);
-  product = products[index];
-  return product;
-}
-
-function findProductIndex(id) {
-  found = (obj) => obj.id === +id;
-  index = products.findIndex(found);
-  return index;
-}
-
-function store(req, res) {
-  if (req.file) {
-    imageName = req.file.filename;
-  } else {
-    imageName = "dummy.jpg";
-  }
-
-  if (req.body.id === "") {
-    id = (Math.random() * Date.now()) / 3;
-  } else {
-    id = req.body.id;
-  }
-
-  let prod = new Product(
-    id,
-    req.body.name,
-    req.body.manufacturer,
-    req.body.model,
-    req.body.description,
-    req.body.category,
-    req.body.price,
-    req.body.target,
-    req.body.tags,
-    imageName,
-    req.body.ship,
-    req.body.warranty,
-    req.body.stock
-  );
-  console.log();
-  products.push(prod);
-  fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
-  res.redirect("/");
-}
-
-function update(req, res) {
-  idProd = +req.params.id;
-  console.log(req.file);
-  if (req.file) {
-    imageName = req.file.filename;
-  } else {
-    prod = findProduct(idProd);
-    imageName = prod.image;
-  }
-  let product = new Product(
-    idProd,
-    req.body.name,
-    req.body.manufacturer,
-    req.body.model,
-    req.body.description,
-    req.body.category,
-    req.body.price,
-    req.body.target,
-    req.body.tags,
-    imageName,
-    req.body.ship,
-    req.body.warranty,
-    req.body.stock
-  );
-  products.splice(findProductIndex(idProd), 1, product);
-  fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
-  res.redirect("/");
-}
-
-function destroy(req, res) {
-  products.splice(findProductIndex(req.params.id), 1);
-  fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
-  res.redirect("/");
-}
 
 let productController = {
   list: (req, res) => {
-    res.render("./products/products", { product: products });
+    res.render("./products/products", { product: Product.findAll() });
   },
   cart: (req, res) => {
     res.render("./products/productCart");
   },
   detail: (req, res) => {
-    id = +req.params.id;
-    product = findProduct(id);
+    id = req.params.id;
+    product = Product.findProductbyPK(id);
     res.render("./products/productDetails", { product });
   },
 
   edit: (req, res) => {
     id = +req.params.id;
-    product = findProduct(id);
+    product = Product.findProductbyPK(id);
+    console.log(product);
     res.render("./products/productEdit", { product });
   },
   add: (req, res) => {
     res.render("./products/productAdd");
   },
-  store: store,
-  update: update,
-  destroy: destroy,
+  store: (req, res) => {
+    if (req.file) {
+      imageName = req.file.filename;
+    } else {
+      imageName = "dummy.jpg";
+    }
+
+    let prod = new Product.Product(
+      req.body.name,
+      req.body.manufacturer,
+      req.body.model,
+      req.body.description,
+      req.body.category,
+      req.body.price,
+      req.body.target,
+      req.body.tags,
+      imageName,
+      req.body.ship,
+      req.body.warranty,
+      req.body.stock
+    );
+    Product.store(prod);
+    res.redirect("/");
+  },
+  update: (req, res) => {
+    if (req.file) {
+      imageName = req.file.filename;
+    } else {
+      prod = Product.findProductbyPK(req.params.id);
+      imageName = prod.image;
+    }
+    let product = new Product.Product(
+      +req.params.id,
+      req.body.name,
+      req.body.manufacturer,
+      req.body.model,
+      req.body.description,
+      req.body.category,
+      req.body.price,
+      req.body.target,
+      req.body.tags,
+      imageName,
+      req.body.ship,
+      req.body.warranty,
+      req.body.stock
+    );
+    console.log(product);
+    Product.edit(product);
+    res.redirect("/");
+  },
+  destroy: (req, res) => {
+    Product.delete(+req.params.id);
+    res.redirect("/");
+  },
 };
 
 module.exports = productController;

@@ -1,6 +1,6 @@
 [
  {
-  "id": 52,
+  "id": 1,
   "name": "Mouse",
   "manufacturer": "Intel",
   "model": "In hac habitasse platea dictumst. Maecenas ut massa quis augue luctus tincidunt.",
@@ -13,7 +13,7 @@
   "warranty": "12"
  },
  {
-  "id": 196,
+  "id": 2,
   "name": "Motherboard",
   "manufacturer": "",
   "model": "Maecenas leo odio, condimentum id, luctus nec.",
@@ -27,7 +27,7 @@
   "warranty": 1
  },
  {
-  "id": 150,
+  "id": 3,
   "name": "Memoria",
   "manufacturer": "AMD",
   "model": "Aenean sit amet justo. Morbi ut odio justo.",
@@ -41,7 +41,7 @@
   "warranty": 1
  },
  {
-  "id": 135,
+  "id": 4,
   "name": "Fuente de alimentación",
   "manufacturer": "CoolerMaster",
   "model": "Nulla neque libero.",
@@ -55,7 +55,7 @@
   "warranty": 1
  },
  {
-  "id": 180,
+  "id": 5,
   "name": "GPU",
   "manufacturer": "",
   "model": "Integer tincidunt ante vel ipsum.",
@@ -69,7 +69,7 @@
   "warranty": 1
  },
  {
-  "id": 66,
+  "id": 6,
   "name": "RAM",
   "manufacturer": "CoolerMaster",
   "model": "Proin interdum mauris non ligula pellentesque ultrices.",
@@ -83,7 +83,7 @@
   "warranty": 1
  },
  {
-  "id": 150,
+  "id": 7,
   "name": "Gabinete",
   "manufacturer": "",
   "model": "In hac habitasse platea dictumst.",
@@ -97,7 +97,7 @@
   "warranty": 1
  },
  {
-  "id": 78,
+  "id": 8,
   "name": "Motherboard",
   "manufacturer": "AMD",
   "model": "Nulla suscipit ligula in lacus. Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.",
@@ -111,7 +111,7 @@
   "warranty": 1
  },
  {
-  "id": 18,
+  "id": 9,
   "name": "GPU",
   "manufacturer": "Geforce",
   "model": "Morbi vel lectus in quam fringilla rhoncus. Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.",
@@ -125,7 +125,7 @@
   "warranty": 1
  },
  {
-  "id": 186,
+  "id": 10,
   "name": "Cooler",
   "manufacturer": "Geforce",
   "model": "Sed accumsan felis. Ut at dolor quis odio consequat varius. Integer ac leo.",
@@ -139,7 +139,7 @@
   "warranty": 1
  },
  {
-  "id": 4,
+  "id": 11,
   "name": "Procesador",
   "manufacturer": "AMD",
   "model": "Maecenas rhoncus aliquam lacus.",
@@ -153,7 +153,7 @@
   "warranty": 1
  },
  {
-  "id": 63,
+  "id": 12,
   "name": "Procesador",
   "manufacturer": "Geforce",
   "model": "Nulla ac enim.",
@@ -167,7 +167,7 @@
   "warranty": 1
  },
  {
-  "id": 43,
+  "id": 13,
   "name": "Teclado",
   "manufacturer": "Geforce",
   "model": "Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh. Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est.",
@@ -181,7 +181,7 @@
   "warranty": 1
  },
  {
-  "id": 101,
+  "id": 14,
   "name": "Mouse",
   "manufacturer": "AMD",
   "model": "Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh. Quisque id justo sit amet sapien dignissim vestibulum.",
@@ -195,7 +195,7 @@
   "warranty": 1
  },
  {
-  "id": 7,
+  "id": 15,
   "name": "Memoria",
   "manufacturer": "AMD",
   "model": "Aenean sit amet justo. Morbi ut odio. Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo.",
@@ -209,7 +209,7 @@
   "warranty": 1
  },
  {
-  "id": 39,
+  "id": 16,
   "name": "Gabinete",
   "manufacturer": "AMD",
   "model": "Maecenas pulvinar lobortis est. Phasellus sit amet erat.",
@@ -223,7 +223,7 @@
   "warranty": 1
  },
  {
-  "id": 36,
+  "id": 17,
   "name": "Cooler",
   "manufacturer": "CoolerMaster",
   "model": "Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem. Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat.",
@@ -237,7 +237,7 @@
   "warranty": 1
  },
  {
-  "id": 117,
+  "id": 18,
   "name": "GPU",
   "manufacturer": "AMD",
   "model": "Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus. Phasellus in felis.",
@@ -251,7 +251,7 @@
   "warranty": 1
  },
  {
-  "id": 154,
+  "id": 19,
   "name": "GPU",
   "manufacturer": "Intel",
   "model": "Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.",
@@ -265,7 +265,7 @@
   "warranty": 1
  },
  {
-  "id": 158,
+  "id": 20,
   "name": "Teclado",
   "manufacturer": "",
   "model": "Morbi a ipsum. Integer a nibh. In quis justo.",
@@ -279,7 +279,7 @@
   "warranty": 1
  },
  {
-  "id": 155,
+  "id": 21,
   "name": "Teclado",
   "manufacturer": "",
   "model": "Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est. Phasellus sit amet erat.",
@@ -293,7 +293,7 @@
   "warranty": 1
  },
  {
-  "id": 181,
+  "id": 22,
   "name": "Procesador",
   "manufacturer": "Intel",
   "model": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc.",
@@ -307,7 +307,7 @@
   "warranty": 1
  },
  {
-  "id": 168,
+  "id": 23,
   "name": "RAM",
   "manufacturer": "AMD",
   "model": "Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem. Duis aliquam convallis nunc.",
@@ -321,7 +321,7 @@
   "warranty": 1
  },
  {
-  "id": 180,
+  "id": 24,
   "name": "RAM",
   "manufacturer": "AMD",
   "model": "In hac habitasse platea dictumst.",
@@ -335,7 +335,7 @@
   "warranty": 1
  },
  {
-  "id": 87,
+  "id": 25,
   "name": "Fuente de alimentación",
   "manufacturer": "Intel",
   "model": "Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis. Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl.",
@@ -349,7 +349,7 @@
   "warranty": 1
  },
  {
-  "id": 200,
+  "id": 26,
   "name": "Gabinete",
   "manufacturer": "AMD",
   "model": "Suspendisse accumsan tortor quis turpis.",
@@ -363,7 +363,7 @@
   "warranty": 1
  },
  {
-  "id": 89,
+  "id": 27,
   "name": "Memoria",
   "manufacturer": "CoolerMaster",
   "model": "Morbi ut odio. Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
@@ -377,7 +377,7 @@
   "warranty": 1
  },
  {
-  "id": 35,
+  "id": 28,
   "name": "GPU",
   "manufacturer": "CoolerMaster",
   "model": "Sed accumsan felis. Ut at dolor quis odio consequat varius. Integer ac leo. Pellentesque ultrices mattis odio.",
@@ -391,7 +391,7 @@
   "warranty": 1
  },
  {
-  "id": 81,
+  "id": 29,
   "name": "Teclado",
   "manufacturer": "AMD",
   "model": "Phasellus in felis.",
@@ -405,7 +405,7 @@
   "warranty": 1
  },
  {
-  "id": 150,
+  "id": 30,
   "name": "Motherboard",
   "manufacturer": "",
   "model": "Aliquam non mauris. Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet.",
@@ -419,7 +419,7 @@
   "warranty": 1
  },
  {
-  "id": 41,
+  "id": 31,
   "name": "Procesador",
   "manufacturer": "Intel",
   "model": "Morbi vel lectus in quam fringilla rhoncus. Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis.",
@@ -433,7 +433,7 @@
   "warranty": 1
  },
  {
-  "id": 160,
+  "id": 32,
   "name": "Motherboard",
   "manufacturer": "AMD",
   "model": "Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede. Morbi porttitor lorem id ligula.",
@@ -447,7 +447,7 @@
   "warranty": 1
  },
  {
-  "id": 178,
+  "id": 33,
   "name": "Teclado",
   "manufacturer": "Intel",
   "model": "Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.",
@@ -461,7 +461,7 @@
   "warranty": 1
  },
  {
-  "id": 52,
+  "id": 34,
   "name": "Memoria",
   "manufacturer": "Geforce",
   "model": "In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.",
@@ -475,7 +475,7 @@
   "warranty": 1
  },
  {
-  "id": 29,
+  "id": 35,
   "name": "Motherboard",
   "manufacturer": "Geforce",
   "model": "Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.",
@@ -489,7 +489,7 @@
   "warranty": 1
  },
  {
-  "id": 114,
+  "id": 36,
   "name": "Mouse",
   "manufacturer": "",
   "model": "Praesent blandit lacinia erat.",
@@ -503,7 +503,7 @@
   "warranty": 1
  },
  {
-  "id": 29,
+  "id": 37,
   "name": "Cooler",
   "manufacturer": "Geforce",
   "model": "Donec quis orci eget orci vehicula condimentum. Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.",
@@ -517,7 +517,7 @@
   "warranty": 1
  },
  {
-  "id": 152,
+  "id": 38,
   "name": "Monitor",
   "manufacturer": "AMD",
   "model": "Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.",
@@ -531,7 +531,7 @@
   "warranty": 1
  },
  {
-  "id": 194,
+  "id": 39,
   "name": "Procesador",
   "manufacturer": "AMD",
   "model": "Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.",
@@ -545,7 +545,7 @@
   "warranty": 1
  },
  {
-  "id": 36,
+  "id": 40,
   "name": "Fuente de alimentación",
   "manufacturer": "",
   "model": "In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.",
@@ -559,7 +559,7 @@
   "warranty": 1
  },
  {
-  "id": 140,
+  "id": 41,
   "name": "RAM",
   "manufacturer": "Geforce",
   "model": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque. Duis bibendum. Morbi non quam nec dui luctus rutrum.",
@@ -573,7 +573,7 @@
   "warranty": 1
  },
  {
-  "id": 83,
+  "id": 42,
   "name": "Fuente de alimentación",
   "manufacturer": "AMD",
   "model": "Cras pellentesque volutpat dui. Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc.",
@@ -587,7 +587,7 @@
   "warranty": 1
  },
  {
-  "id": 139,
+  "id": 43,
   "name": "Placa de video",
   "manufacturer": "Geforce",
   "model": "Donec dapibus. Duis at velit eu est congue elementum. In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante.",
@@ -601,7 +601,7 @@
   "warranty": 1
  },
  {
-  "id": 41,
+  "id": 44,
   "name": "RAM",
   "manufacturer": "AMD",
   "model": "Proin interdum mauris non ligula pellentesque ultrices.",
@@ -615,7 +615,7 @@
   "warranty": 1
  },
  {
-  "id": 161,
+  "id": 45,
   "name": "Procesador",
   "manufacturer": "",
   "model": "Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.",
@@ -629,7 +629,7 @@
   "warranty": 1
  },
  {
-  "id": 153,
+  "id": 46,
   "name": "Motherboard",
   "manufacturer": "Geforce",
   "model": "Nulla nisl. Nunc nisl. Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus.",
@@ -643,7 +643,7 @@
   "warranty": 1
  },
  {
-  "id": 163,
+  "id": 47,
   "name": "Motherboard",
   "manufacturer": "CoolerMaster",
   "model": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus.",
@@ -657,7 +657,7 @@
   "warranty": 1
  },
  {
-  "id": 195,
+  "id": 48,
   "name": "Teclado",
   "manufacturer": "Intel",
   "model": "Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede. Morbi porttitor lorem id ligula.",
@@ -671,45 +671,16 @@
   "warranty": 1
  },
  {
-  "id": 175,
+  "id": 49,
   "name": "Procesador",
   "manufacturer": "Geforce",
   "model": "Sed ante.",
   "description": "Nulla tempus.",
-  "category": "Procesadores y coolers",
-  "price": "$31603.07",
-  "target": "Ultrahigh",
-  "tags": "habitasse platea dictumst aliquam augue",
-  "image": "http://dummyimage.com/243x100.png/ff4444/ffffff",
-  "ship": 1,
-  "warranty": 1
- },
- {
-  "id": 67,
-  "name": "Monitor",
-  "manufacturer": "CoolerMaster",
-  "model": "Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
-  "description": "Maecenas pulvinar lobortis est.",
   "category": "Software",
-  "price": "$7530.45",
-  "target": "Office",
-  "tags": "elit ac nulla sed vel",
-  "image": "http://dummyimage.com/185x100.png/ff4444/ffffff",
-  "ship": 1,
-  "warranty": 1
- },
- {
-  "id": "23242",
-  "name": "",
-  "manufacturer": "",
-  "model": "",
-  "description": "",
-  "category": "Procesadores y coolers",
-  "price": "",
-  "target": "home",
-  "tags": "Motherboard",
-  "image": "dummy.jpg",
+  "price": "$31603.07",
+  "target": "ultrahigh",
+  "image": "http://dummyimage.com/243x100.png/ff4444/ffffff",
   "ship": "1",
-  "warranty": "0"
+  "warranty": "3"
  }
 ]
