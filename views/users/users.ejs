@@ -1,0 +1,33 @@
+<%- include ("../partials/head.ejs",{cssHome:"style_home.css",cssPage:"style_home.css"}) %> 
+  <body>
+<%- include ("../partials/header.ejs") %> 
+    <main>
+
+      <section class="Destacados">
+        <h2 class="armamos-tu-setup">
+            <b> Usuarios </b>
+        </h2>
+
+        <% for (i=0 ; i<users.length; i++) { %> 
+          <article class="product">
+          <div>
+            <a href="/users/Detalle/<%=users[i].id%>"
+              ><img src="../../images/users/<%=users[i].image%>" alt="Imagen del Usuario"
+            /></a>
+            <div class="descripcion">
+              <div>Nombre Completo: <%=users[i].firstname%> <%=users[i].lastname%></div>
+              <div>Telefono:<%=users[i].phone%></div>
+              <div>category:<%=users[i].category%></div>
+
+            </div>
+
+          </div>
+        </article>
+          <% } %>
+
+      </section>
+
+    </main>
+    <%- include ("../partials/footer.ejs") %> 
+  </body>
+</html>

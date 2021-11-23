@@ -1,7 +1,7 @@
 let express = require("express");
 let router = express.Router();
 let productController = require("../controllers/productController");
-let upload = require("../middlewares/multer");
+let upload = require("../middlewares/multerProducts");
 
 // Todos los productos
 router.get("/", productController.list);

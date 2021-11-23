@@ -1,0 +1,38 @@
+<%- include ("../partials/head.ejs",{cssHome:"style_home.css",cssPage:"style_home.css"}) %> 
+  <body>
+<%- include ("../partials/header.ejs") %> 
+    <main>
+
+      <section class="Destacados">
+        <h2 class="armamos-tu-setup">
+            <b> <%=user.firstname%> <%=user.lastname%> </b>
+        </h2>
+
+        
+          <article class="product">
+          <div>
+            
+              <img src="../../images/users/<%=user.image%>" alt="Gpu"
+            />
+            <div class="descripcion">
+              <div>Nombre Completo: <%=user.firstname%> <%=user.lastname%></div>
+              <div>Telefono:<%=user.phone%></div>
+              <div>Categoria:<%=user.category%></div>
+              <div>password:<%=user.password%></div>
+              <div>Codigo Postal:<%=user.zip%></div>
+            </div>
+            <form action="unregister/<%=user.id%>?_method=DELETE" method="post">
+              
+              <button class="add" type="submit">BORRAR!!!</button>
+            </form>
+          </div>
+
+        </article>
+
+
+      </section>
+
+    </main>
+    <%- include ("../partials/footer.ejs") %> 
+  </body>
+</html>
