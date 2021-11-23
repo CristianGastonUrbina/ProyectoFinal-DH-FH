@@ -7,51 +7,55 @@
     <form action="./register" method="post" class="formulario" enctype="multipart/form-data">
       <h2 class="Titulo">Tu <b>Producto</b></h2>
 
-<% if (locals && locals.mensajesDeError) { %> 
-    <% for ( let error in mensajesDeError) { %>
-        <p> <%= mensajesDeError[error].msg%> </p>
-    <% } %>
-  <% } %>
+
 
       
              <label class ="labelform
              " for="nombre"><div class="negrita">Nombre</div></label>
-        <input class="input"  type="text" name="firstname" id="firstname" placeholder="Nombre ">
+        <input class="input <%= locals.mensajesDeError && locals.mensajesDeError.firstname ? "error" : "" %>"  type="text" name="firstname" id="firstname" placeholder="Nombre"
+        value="<%=  locals.old && old.firstname  ?  old.firstname : "" %>">
+
+          <b><%= locals.mensajesDeError && locals.mensajesDeError.firstname ? mensajesDeError.firstname.msg : "" %> </b>
 
              <label class ="labelform
              " for="manufacturer"><div class="negrita">Apellido</div></label>
-        <input class="input"  type="text" name="lastname" id="lastname" placeholder="Apellido">
+        <input class="input <%= locals.mensajesDeError && locals.mensajesDeError.lastname ? "error" : "" %>"  type="text" name="lastname" id="lastname" placeholder="Apellido" value="<%= locals.old && old.lastname  ?  old.lastname : "" %>">
+        <b><%= locals.mensajesDeError && locals.mensajesDeError.lastname ? mensajesDeError.lastname.msg : "" %> </b>
 
               <label class ="labelform
              " for="model"><div class="negrita">Email</div></label>
-        <input class="input"  type="text" name="email" id="email" placeholder="Email">
+        <input class="input <%= locals.mensajesDeError && locals.mensajesDeError.email ? "error" : "" %>"  type="text" name="email" id="email" placeholder="Email"
+        value="<%= locals.old && old.email  ?  old.email : "" %>">
+         <b><%= locals.mensajesDeError && locals.mensajesDeError.email ? mensajesDeError.email.msg : "" %> </b>
 
              <label class ="labelform
              " for="description"><div class="negrita">Contraseña</div></label>
-        <input class="input"  type="password" name="password" id="password" cols="30" rows="10"  placeholder="Dale, no pongas 1234">
+        <input class="input <%= locals.mensajesDeError && locals.mensajesDeError.password ? "error" : "" %>"  type="password" name="password" id="password" cols="30" rows="10"  placeholder="Dale, no pongas 1234" >
+         <b><%= locals.mensajesDeError && locals.mensajesDeError.password ? mensajesDeError.password.msg : "" %> </b>
 
-        <label class ="labelform
-             " for="model"><div class="negrita">Telefono</div></label>
-        <input class="input"  type="text" name="phone" id="phone" placeholder="Telefono">
+        <label class ="labelform" for="model"><div class="negrita">Telefono</div></label>
+        <input class="input <%= locals.mensajesDeError && locals.mensajesDeError.phone ? "error" : "" %>"  type="text" name="phone" id="phone" placeholder="Telefono" value="<%=locals.old && old.phone  ?  old.phone : "" %>">
+         <b><%= locals.mensajesDeError && locals.mensajesDeError.phone ? mensajesDeError.phone.msg : "" %> </b>
 
 
-             <label class ="labelform
-             " for="model"><div class="negrita">Codigo Postal</div></label>
-        <input class="input"  type="text" name="zip" id="zip" placeholder="Codigo Postal">
+             <label class ="labelform" for="model"><div class="negrita">Codigo Postal</div></label>
+        <input class="input <%= locals.mensajesDeError && locals.mensajesDeError.zip ? "error" : "" %> "  type="text" name="zip" id="zip" placeholder="Codigo Postal" value="<%=locals.old && old.zip  ?  old.zip : "" %>">
+         <b><%= locals.mensajesDeError && locals.mensajesDeError.zip ? mensajesDeError.zip.msg : "" %> </b>
 
 
 
         <label class ="labelform
         " for="image"><div class="negrita"> <b>Avatar</b></div></label>
-        <input  class="input" type="file" name="image" id="image">
+        <input  class="input <%= locals.mensajesDeError && locals.mensajesDeError.image ? "error" : "" %>" type="file" name="image" id="image" value="<%= locals.old && old.lastname  ?  old.image : "" %>">
+         <b><%= locals.mensajesDeError && locals.mensajesDeError.image ? mensajesDeError.image.msg : "" %> </b>
 
 
       
          <label class ="labelform
         " for="category"><div class="negrita">Target</div></label>
         <select class="input"  name="category" value="" id="target">
-        <option class="input"  name="category" value="Comprador" id="Comprador">Comprador</option>
-        <option class="input"  name="category" value="Vendedor" id="Vendedor">Vendedor</option>
+        <option class="input"  name="category" value="Comprador"  id="Comprador"  <%= locals.old && old.category == "Comprador"  ?  "selected" : ""  %>>Comprador</option>
+        <option class="input"  name="category" value="Vendedor" id="Vendedor"  <%= locals.old && old.category == "Vendedor"  ?  "selected" : ""  %>    >Vendedor</option>
         </select>
 
 

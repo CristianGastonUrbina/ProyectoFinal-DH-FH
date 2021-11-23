@@ -30,8 +30,8 @@ const expressValidator = {
           );
         }
       }
+      return true;
     }),
   ],
 };
-path.filextname;
 module.exports = expressValidator;

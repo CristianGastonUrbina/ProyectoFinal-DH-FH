@@ -22,7 +22,7 @@ let userController = {
     }
 
     let errores = validationResult(req);
-
+    console.log(errores.mapped());
     let user = new User.User(
       null,
       req.body.email,
@@ -34,14 +34,17 @@ let userController = {
       req.body.category,
       imageName
     );
-    User.create(user);
-    let users = User.findAll();
     if (!errores.isEmpty()) {
+      console.log(errores.mapped());
       return res.render("./users/register", {
         mensajesDeError: errores.mapped(),
+        old: req.body,
       });
+    } else {
+      User.create(user);
+      let users = User.findAll();
+      res.render("./users/users", { users: users });
     }
-    res.render("./users/users", { users: users });
   },
   destroy: (req, res) => {
     User.delete(+req.params.id);

@@ -19,6 +19,10 @@ header {
   color: white;
 }
 
+input.input.error {
+  box-shadow: red 0px 5px 5px;
+}
+
 footer {
   background-color: rgba(15, 6, 93, 0.829);
 }

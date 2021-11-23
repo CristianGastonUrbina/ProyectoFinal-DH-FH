@@ -1,28 +1,47 @@
-<%- include ("../partials/head.ejs",{cssHome:"style_home.css", cssPage:"login.css"}) %>
+<%- include ("../partials/head.ejs",{cssPage:"productEdit.css",cssHome:"style_home.css"}) %> 
 <body>
-<%- include ("../partials/header.ejs") %>  
+
+  <%- include ("../partials/header.ejs") %> 
+  <main>
+    <section >
+    <form action="./login" method="post" class="formulario" enctype="multipart/form-data">
+      <h2 class="Titulo"> <b>Login</b></h2>
+
+
+
+      
+             <label class ="labelform
+             " for="nombre"><div class="negrita">Email</div></label>
+        <input class="input <%= locals.mensajesDeError && locals.mensajesDeError.Email ? "error" : "" %>"  type="Email" name="user" id="firstname" placeholder="Email"
+        value="<%=  locals.old && old.Email  ?  old.Email : "" %>">
+
+          <b><%= locals.mensajesDeError && locals.mensajesDeError.Email ? mensajesDeError.Email.msg : "" %> </b>
+
+             <label class ="labelform
+             " for="manufacturer"><div class="negrita">Password</div></label>
+        <input class="input <%= locals.mensajesDeError && locals.mensajesDeError.lastname ? "error" : "" %>"  type="Password" name="password" id="lastname" placeholder="*******">
+        <b><%= locals.mensajesDeError && locals.mensajesDeError.password ? mensajesDeError.password.msg : "" %> </b>
+
+                    <div>
+      <input type="checkbox" value="recuerdame" name="recuerdame">
+    <label for="recuerdame">Recuerdame</label>
+    </div>
+        
+        <button class="input" type="submit">Entrar</button>
 
   
 
 
-    <main>
-        <h2>Inicio de sesion</h2>
-        <section class="login color-path">
-            <form action="/login" method="POST" class="loginForm">
-                <input type="text" placeholder="Usuario o E-Mail" name="login">
-                <input type="password" placeholder="Contraseña" name="pass">
-                <button type="submit" class="color-path">Ingresar</button>
-            </form>
-            <p><a href="/users/register">Registrate</a></p>
-            <p><a href="/resetPassword">Olvidaste tu contraseña</a></p>
+      </form>
+    </section >
 
-        </section>
-        <section class="options">
- 
-        </section>
-    </main>
+  </main>
 
-<%- include ("../partials/footer.ejs") %> 
 
+
+
+
+
+  <%- include ("../partials/footer.ejs") %> 
 </body>
 </html>
