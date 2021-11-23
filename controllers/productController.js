@@ -17,10 +17,8 @@ let productController = {
   },
 
   edit: (req, res) => {
-    id = +req.params.id;
-    product = Product.findProductbyPK(id);
-    console.log(product);
-    res.render("./products/productEdit", { product });
+    product = Product.findProductbyPK(req.params.id);
+    res.render("./products/productEdit", { product: product });
   },
   add: (req, res) => {
     res.render("./products/productAdd");
@@ -33,6 +31,7 @@ let productController = {
     }
 
     let prod = new Product.Product(
+      null,
       req.body.name,
       req.body.manufacturer,
       req.body.model,
@@ -71,7 +70,6 @@ let productController = {
       req.body.warranty,
       req.body.stock
     );
-    console.log(product);
     Product.edit(product);
     res.redirect("/");
   },

@@ -66,16 +66,11 @@ Products = {
 
   store: function (newProduct) {
     let allProducts = this.findAll();
-    newProduct = {
-      id: this.generateId(),
-      ...newProduct,
-    };
-
-    allProducts.push(newProduct);
+    (newProduct.id = this.generateId()), allProducts.push(newProduct);
 
     fs.writeFileSync(
       this.productsFilePath,
-      JSON.stringify(newProducts, null, " ")
+      JSON.stringify(allProducts, null, " ")
     );
   },
   delete: function (id) {
@@ -94,11 +89,10 @@ Products = {
       this.productsFilePath,
       JSON.stringify(allProducts, null, " ")
     );
-    return true;
+    return newProduct;
   },
 };
 // test = {
-//   id: 49,
 //   name: "Tu mama",
 //   manufacturer: "Intel",
 //   model:
@@ -111,5 +105,7 @@ Products = {
 //   ship: "1",
 //   warranty: "12",
 // };
+
+// console.log(Products.store(test));
 
 module.exports = Products;

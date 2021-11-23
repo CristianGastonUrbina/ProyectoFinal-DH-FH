@@ -7,9 +7,7 @@
     <form action="/products/Detalle/Edicion/<%=product.id%>?_method=PUT" method="post" class="formulario" enctype="multipart/form-data">
       <h2 class="Titulo">Tu <b>Producto</b></h2>
 
-      <label class ="labelform
-             " for="id"><div class="negrita">ID</div></label>
-        <input class="input"  type="number" name="id" id="id" value="<%=product.id%>">
+      
 
              <label class ="labelform
              " for="nombre"><div class="negrita">Nombre</div></label>
@@ -149,11 +147,11 @@
                          <label class ="labelform
         " for="warranty"><div class="negrita">Garantia</div></label>
         <select class="input"  name="warranty"  value="" id="warranty">
-        <option class="input"  name="warranty" <% if (product.warranty = 0) { %>selected<% } %> value="0" >Sin Garantia</option>
-        <option class="input"  name="warranty" <% if (product.warranty = 3) { %>selected<% } %> value="3" >3 meses de garantia</option>
-        <option class="input"  name="warranty" <% if (product.warranty = 6) { %>selected<% } %> value="6" >6 meses de garantia</option>
-        <option class="input"  name="warranty" <% if (product.warranty = 9) { %>selected<% } %> value="9" >9 meses de garantia</option>
-        <option class="input"  name="warranty" <% if (product.warranty = 12) { %>selected<% } %> value="12" >12 meses de garantia</option>
+        <option class="input"  name="warranty" <% if (product.warranty == 0) { %>selected<% } %> value="0" >Sin Garantia</option>
+        <option class="input"  name="warranty" <% if (product.warranty == 3) { %>selected<% } %> value="3" >3 meses de garantia</option>
+        <option class="input"  name="warranty" <% if (product.warranty == 6) { %>selected<% } %> value="6" >6 meses de garantia</option>
+        <option class="input"  name="warranty" <% if (product.warranty == 9) { %>selected<% } %> value="9" >9 meses de garantia</option>
+        <option class="input"  name="warranty" <% if (product.warranty == 12) { %>selected<% } %> value="12" >12 meses de garantia</option>
         
         </select>
 
