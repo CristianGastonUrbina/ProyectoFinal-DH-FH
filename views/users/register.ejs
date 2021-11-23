@@ -7,6 +7,12 @@
     <form action="./register" method="post" class="formulario" enctype="multipart/form-data">
       <h2 class="Titulo">Tu <b>Producto</b></h2>
 
+<% if (locals && locals.mensajesDeError) { %> 
+    <% for ( let error in mensajesDeError) { %>
+        <p> <%= mensajesDeError[error].msg%> </p>
+    <% } %>
+  <% } %>
+
       
              <label class ="labelform
              " for="nombre"><div class="negrita">Nombre</div></label>
