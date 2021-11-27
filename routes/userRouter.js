@@ -6,7 +6,11 @@ const expressValidator = require("../middlewares/expValidator");
 const { body } = require("express-validator");
 
 router.get("/login", userController.login);
-router.post("/login", userController.checkLogin);
+router.post(
+  "/login",
+  expressValidator.loginValidations,
+  userController.checkLogin
+);
 
 router.get("/register", userController.register);
 router.post(

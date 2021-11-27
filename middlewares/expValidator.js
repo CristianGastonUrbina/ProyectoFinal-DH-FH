@@ -33,5 +33,15 @@ const expressValidator = {
       return true;
     }),
   ],
+
+  loginValidations: [
+    body("email")
+      .notEmpty()
+      .withMessage("Campo Obligatorio")
+      .bail()
+      .isEmail()
+      .withMessage("Ingresa un Emial Valido"),
+    body("password").notEmpty().withMessage("Campo Obligatorio"),
+  ],
 };
 module.exports = expressValidator;

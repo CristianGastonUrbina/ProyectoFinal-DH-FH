@@ -11,8 +11,47 @@ let userController = {
     res.render("./users/register");
   },
   checkLogin: (req, res) => {
-    //Validar usuario y dar sesion
-    res.redirect("/");
+    let errors = validationResult(req); //Para levantar los errores enviados por express-validator
+    let users = User.findAll();
+    if (errors.isEmpty()) {
+      let users = User.findAll();
+      users === "" ? (users = []) : ""; //Si no llego a tener users, creo un array vacio
+      let usuarioALogearse;
+
+      for (let i = 0; i < users.length; i++) {
+        if (users[i].email === req.body.email) {
+          if (bcrypt.compareSync(req.body.password, users[i].password)) {
+            usuarioALogearse = users[i]; //Si lo encuentro, lo guardo
+            break;
+          }
+        }
+      }
+
+      if (usuarioALogearse == undefined) {
+        //Si no lo encuentro, redirecciono
+
+        return res.render("./users/login", {
+          errors: { msg: "Credenciales invalidas" },
+          old: req.body,
+        });
+
+        //Aca se hace una especie de mimica a como vienen los errores si estuviara usarndo express validator, cosa que si la pgaina ya esta armada para funcionar con express validator tambien me aparesca enste mensaje
+      }
+
+      req.session.usuarioALogearse = usuarioALogearse;
+      if (req.body.recuerdame != undefined) {
+        res.cookie("recuerdame", usuarioALogearse.email, { maxAge: 600000 }); //!ACA CREO LA COOKIE
+
+        //No guardo todo el user ya que tengo poco espacio en las cookies. MaxAGE reciebe en milisegundos, cuanto tiempo va a durar la cookie
+      }
+
+      return res.redirect("/users");
+    } else {
+      return res.render("./users/login", {
+        errors: errors.mapped(),
+        old: req.body,
+      });
+    }
   },
   postRegister: (req, res) => {
     if (req.file) {
@@ -22,7 +61,6 @@ let userController = {
     }
 
     let errores = validationResult(req);
-    console.log(errores.mapped());
     let user = new User.User(
       null,
       req.body.email,
@@ -35,7 +73,6 @@ let userController = {
       imageName
     );
     if (!errores.isEmpty()) {
-      console.log(errores.mapped());
       return res.render("./users/register", {
         mensajesDeError: errores.mapped(),
         old: req.body,

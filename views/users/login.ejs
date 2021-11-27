@@ -4,35 +4,43 @@
   <%- include ("../partials/header.ejs") %> 
   <main>
     <section >
-    <form action="./login" method="post" class="formulario" enctype="multipart/form-data">
+    <form action="./login" method="post" class="formulario" >
       <h2 class="Titulo"> <b>Login</b></h2>
-
-
 
       
              <label class ="labelform
-             " for="nombre"><div class="negrita">Email</div></label>
-        <input class="input <%= locals.mensajesDeError && locals.mensajesDeError.Email ? "error" : "" %>"  type="Email" name="user" id="firstname" placeholder="Email"
-        value="<%=  locals.old && old.Email  ?  old.Email : "" %>">
+             " for="email"><div class="negrita">Email</div></label>
+        <input class="input <%= locals.errors && locals.errors.email ? "error" : "" %>"  type="email"   name="email" id="email" placeholder="email"
+        value="<%=  locals.old && old.email  ?  old.email : "" %>">
 
-          <b><%= locals.mensajesDeError && locals.mensajesDeError.Email ? mensajesDeError.Email.msg : "" %> </b>
+          <b><%= locals.errors && locals.errors.email ? errors.email.msg : "" %> </b>
 
              <label class ="labelform
              " for="manufacturer"><div class="negrita">Password</div></label>
-        <input class="input <%= locals.mensajesDeError && locals.mensajesDeError.lastname ? "error" : "" %>"  type="Password" name="password" id="lastname" placeholder="*******">
-        <b><%= locals.mensajesDeError && locals.mensajesDeError.password ? mensajesDeError.password.msg : "" %> </b>
+        <input class="input <%= locals.errors && locals.errors.password ? "error" : "" %>"  type="Password" name="password" id="password" placeholder="*******">
+        <b><%= locals.errors && locals.errors.password ? errors.password.msg : "" %> </b>
 
                     <div>
       <input type="checkbox" value="recuerdame" name="recuerdame">
     <label for="recuerdame">Recuerdame</label>
     </div>
+
+    <br>
+    <b><%= locals.errors && locals.errors.msg ? errors.msg : "" %> </b>
+
+
         
         <button class="input" type="submit">Entrar</button>
 
   
 
 
+          <a class="input" href="/users/register">Registrarse</a>
+          
+
+
       </form>
+
     </section >
 
   </main>

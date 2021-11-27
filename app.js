@@ -7,6 +7,8 @@ let mainRouter = require("./routes/mainRouter");
 let userRouter = require("./routes/userRouter");
 let productRouter = require("./routes/productRouter");
 let methodOverride = require("method-override");
+const session = require("express-session");
+const cookieParser = require("cookie-parser");
 
 server.use(express.json());
 let port = 3000;
@@ -16,6 +18,8 @@ server.use(express.static(publicPath));
 server.set("view engine", "ejs");
 server.use(express.urlencoded({ extended: false }));
 server.use(methodOverride("_method"));
+server.use(session({ secret: "Sarasa" }));
+server.use(cookieParser());
 
 //Se configura el router
 server.use("/", mainRouter);
