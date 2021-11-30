@@ -1,23 +1,22 @@
+const User = require("../entities/user");
 function recodameMiddleware(req, res, next) {
+  let users = User.findAll();
   if (
-    req.cookie.recuerdame != undefined &&
-    req.session.usuariologueado == undefined
+    req.session.usuariologueado == undefined &&
+    req.cookies.recuerdame != undefined
   ) {
-
-
+    let usuarioALogearse;
     for (let i = 0; i < users.length; i++) {
-      if (users[i].email === req.cookie.recuerdame) {
-          usuarioALogearse = users[i]; //Si lo encuentro, lo guardo
-          break;
-        }
+      if (users[i].email === req.cookies.recuerdame) {
+        usuarioALogearse = users[i]; //Si lo encuentro, lo guardo
+        break;
       }
-
-      //! ACA debo agregar la logica que busca en todos los mail de los usuarios y los compara con lo req.cookie.recuerdame y ese usuario se guarda en usuarioAlogearse
-
-      //!Finalmente agrego a mi logica que el usuiario que encontre va a estar dendtro de mi session
     }
-    next();
+    if (usuarioALogearse != undefined) {
+      req.session.usuariologueado = usuarioALogearse;
+    } //Lo agrego a mi logica que el usuiario que encontre va a estar dendtro de mi session
   }
+  next();
 }
 
 module.exports = recodameMiddleware;

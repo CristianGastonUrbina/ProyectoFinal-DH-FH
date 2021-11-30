@@ -9,6 +9,7 @@ let productRouter = require("./routes/productRouter");
 let methodOverride = require("method-override");
 const session = require("express-session");
 const cookieParser = require("cookie-parser");
+let recuerdame = require("./middlewares/recuerdame");
 
 server.use(express.json());
 let port = 3000;
@@ -20,6 +21,7 @@ server.use(express.urlencoded({ extended: false }));
 server.use(methodOverride("_method"));
 server.use(session({ secret: "Sarasa" }));
 server.use(cookieParser());
+server.use(recuerdame);
 
 //Se configura el router
 server.use("/", mainRouter);

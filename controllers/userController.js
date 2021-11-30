@@ -5,6 +5,11 @@ const { validationResult } = require("express-validator");
 
 let userController = {
   login: (req, res) => {
+    if (req.session.usuariologueado != undefined) {
+      let ruta = "/users/detalle/" + req.session.usuariologueado.id;
+
+      return res.redirect(ruta);
+    }
     res.render("./users/login");
   },
   register: (req, res) => {
@@ -40,12 +45,16 @@ let userController = {
 
       req.session.usuarioALogearse = usuarioALogearse;
       if (req.body.recuerdame != undefined) {
-        res.cookie("recuerdame", usuarioALogearse.email, { maxAge: 600000 }); //!ACA CREO LA COOKIE
+        res.cookie("recuerdame", usuarioALogearse.email, {
+          maxAge: 600000,
+        }); //!ACA CREO LA COOKIE
 
         //No guardo todo el user ya que tengo poco espacio en las cookies. MaxAGE reciebe en milisegundos, cuanto tiempo va a durar la cookie
       }
 
-      return res.redirect("/users");
+      let ruta = "/users/detalle/" + usuarioALogearse.id;
+
+      return res.redirect(ruta);
     } else {
       return res.render("./users/login", {
         errors: errors.mapped(),
