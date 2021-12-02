@@ -11,15 +11,21 @@
           <img class="baners" src="../images/parts.jpg" alt="" />
         </div>
       </section>
+
+      <a class="boton_random" href="/products"><button>   <h3>Todos los Productos</h3> </button></a>
+
       <section class="Destacados">
-        <h2 class="armamos-tu-setup">
-          <b> Destacados </b>
+        <h2 class="armamos-tu-setup">Productos de
+          <b>  Alta  </b>gama
         </h2>
         
 
-                  <a href="/products"><button>TODOS</button></a>
+                  
                   
                   <% for (i=0 ; i<product.length; i++) { %> 
+                    <% if (product[i].target== "Ultrahigh") { %>
+                     
+                   
                     <article class="product">
                       <div>
                         <a href="./products/Detalle/<%=product[i].id%>"
@@ -35,6 +41,42 @@
             <button class="add">Agregar al carrito</button>
           </div>
         </article>
+         <% } %>
+
+        <% } %>
+        
+      </section>
+
+
+            <section class="Destacados">
+        <h2 class="armamos-tu-setup">Productos 
+          <b>  Gamer  </b>
+        </h2>
+        
+
+
+                  
+                  <% for (i=0 ; i<product.length; i++) { %> 
+                    <% if (product[i].target== "Gamer") { %>
+                     
+                   
+                    <article class="product">
+                      <div>
+                        <a href="./products/Detalle/<%=product[i].id%>"
+                          ><img src="/images/products/<%=product[i].image%>" alt="<%=product[i].name%>"
+                          /></a>
+                          <div class="descripcion">
+                            <div>Modelo:<%=product[i].description%></div>
+                            <div>Categoria:<%=product[i].category%></div>
+              <div>Precio:<%=product[i].price%></div>
+
+            </div>
+            <div class=""></div>
+            <button class="add">Agregar al carrito</button>
+          </div>
+        </article>
+         <% } %>
+
         <% } %>
         
       </section>
