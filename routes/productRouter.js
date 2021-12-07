@@ -2,6 +2,7 @@ let express = require("express");
 let router = express.Router();
 let productController = require("../controllers/productController");
 let upload = require("../middlewares/multerProducts");
+let admin = require("../middlewares/adminValidator");
 
 // Todos los productos
 router.get("/", productController.list);
@@ -12,7 +13,7 @@ router.get("/Detalle/:id", productController.detail);
 router.get("/Carrito", productController.cart);
 //Edicion de producto
 
-router.get("/Detalle/Edicion/:id", productController.edit);
+router.get("/Detalle/Edicion/:id", admin, productController.edit);
 router.put(
   "/Detalle/Edicion/:id",
   upload.single("image"),
@@ -22,6 +23,6 @@ router.put(
 router.get("/Creacion", productController.add);
 router.post("/Creacion", upload.single("image"), productController.store);
 // Borrado de producto
-router.delete("/Eliminacion/:id", productController.destroy);
+router.delete("/Eliminacion/:id", admin, productController.destroy);
 
 module.exports = router;

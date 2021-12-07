@@ -15,6 +15,8 @@ function recodameMiddleware(req, res, next) {
     if (usuarioALogearse != undefined) {
       req.session.usuariologueado = usuarioALogearse;
     } //Lo agrego a mi logica que el usuiario que encontre va a estar dendtro de mi session
+  } else if (req.session.usuariologueado) {
+    res.locals.user = req.session.usuariologueado;
   }
   next();
 }

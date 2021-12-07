@@ -4,6 +4,7 @@ let userController = require("../controllers/userController");
 let upload = require("../middlewares/multerUsers");
 const expressValidator = require("../middlewares/expValidator");
 const { body } = require("express-validator");
+let admin = require("../middlewares/adminValidator");
 
 router.get("/login", userController.login);
 router.post(
@@ -20,11 +21,16 @@ router.post(
   userController.postRegister
 );
 
-router.get("/", userController.list);
-router.get("/Detalle/:id", userController.detail);
+router.get("/", admin, userController.list);
+router.get("/Detalle/:id", admin, userController.detail);
 
-router.get("/editUser", userController.update);
-router.put("/editUser", upload.single("image"), userController.putUpdate);
+router.get("/editUser", admin, userController.update);
+router.put(
+  "/editUser",
+  upload.single("image"),
+  admin,
+  userController.putUpdate
+);
 
 router.delete("/Detalle/unregister/:id", userController.destroy);
 

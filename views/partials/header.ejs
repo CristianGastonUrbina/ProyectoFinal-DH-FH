@@ -17,13 +17,18 @@
         <div>
           <a href="" rel="Contacto"><i class="fas fa-phone fa-4x"></i></a>
         </div>
+
         <p>Contacto</p>
       </div>
       <div class="Mi-Cuenta">
         <div>
           <a href="/users/login"><i class="far fa-user fa-4x"></i></a>
         </div>
+        <% if (locals.user) { %>
+        <p><%= locals.user.firstname %></p>
+        <% }else { %>
         <p>Cuenta</p>
+        <% } %>
       </div>
     </div>
     <div class="search">
