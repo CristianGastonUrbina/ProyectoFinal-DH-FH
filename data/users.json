@@ -1,123 +1,123 @@
 [
   {
-    "id": 1,
-    "email": "germanpaul227@gmail.com",
-    "firstname": "German",
-    "lastname": "Paul",
-    "password": "123456",
-    "phone": "1121454231",
-    "zip": "1686",
-    "category": "Vendedor",
-    "image": "dummy.jpg"
-  },
-  {
-    "id": 2,
-    "email": "tqleo@hotmail.com",
-    "firstname": "Cristian",
-    "lastname": "Urbina",
-    "password": "654321",
-    "phone": "114123344",
-    "zip": "4123",
-    "category": "Vendedor",
-    "image": "dummy.jpg"
-  },
-  {
-    "id": 3,
-    "email": "manuelromanelli@hotmail.com",
-    "firstname": "Manuel",
-    "lastname": "Romanelli",
-    "password": "123qwe",
-    "phone": "1131234562",
-    "zip": "5512",
-    "category": "Vendedor",
-    "image": "dummy.jpg"
-  },
-  {
-    "id": 4,
-    "email": "sigalavaca@gmail.com",
-    "firstname": "Siga",
-    "lastname": "La Vaca",
-    "password": "sarasa",
-    "phone": "1131234456",
-    "zip": "3123",
-    "category": "Vendedor",
-    "image": "dummy.jpg"
-  },
-  {
-    "id": 5,
-    "email": "juandelospalotes@speedy.net",
-    "firstname": "Juan",
-    "lastname": "De Los Palotes",
-    "password": "peperina",
-    "phone": "1186544123",
-    "zip": "5512",
-    "category": "Vendedor",
-    "image": "dummy.jpg"
-  },
-  {
-    "id": 6,
-    "email": "pedroescamoso@aol.com",
-    "firstname": "Pedro",
-    "lastname": "Escamoso",
-    "password": "Buenos.Aires.2021",
-    "phone": "3123456123",
-    "zip": "8872",
-    "category": "Comprador",
-    "image": "dummy.jpg"
-  },
-  {
-    "id": 7,
-    "email": "aquilesmeodelatorre@google.com",
-    "firstname": "Aquiles M.",
-    "lastname": "De La Torre",
-    "password": "perrito66",
-    "phone": "2214294484",
-    "zip": "0112",
-    "category": "Comprador",
-    "image": "dummy.jpg"
-  },
-  {
-    "id": 8,
-    "email": "jose1988@gmail.com",
-    "firstname": "Jose",
-    "lastname": "La Tengo Toda",
-    "password": "12345678",
-    "phone": "1141234125",
-    "zip": "7123",
-    "category": "Comprador",
-    "image": "dummy.jpg"
-  },
-  {
-    "id": 9,
-    "email": "info@seratonic.com",
-    "firstname": "Seratonic",
-    "lastname": "S.R.L.",
-    "password": "Pan.Ke.Ke",
-    "phone": "11215005400",
-    "zip": "4142",
-    "category": "Comprador",
-    "image": "dummy.jpg"
-  },
-  {
-    "id": 10,
-    "email": "contacto@petrogas.net",
-    "firstname": "Petrogas",
-    "lastname": "S.A.",
-    "password": "blabla21",
-    "phone": "1131369988",
-    "zip": "7129",
-    "category": "Comprador",
-    "image": "dummy.jpg"
-  },
-  {
-    "id": 11,
-    "email": "fatiga.total@hotmail.com",
-    "firstname": "Cristian",
-    "lastname": "Urbina",
-    "password": "$2a$10$KdZ/BqE.21Rw1MDjQ.dJ7eqPDg4kS5b0EQGQZySeOTznNlz9BAAxe",
-    "phone": "47292613",
-    "zip": "1417",
-    "category": "admin",
-    "image": "1637875003476pulki.jpg"
-  }
+  "id": 2,
+  "email": "tqleo@hotmail.com",
+  "firstname": "Cristian",
+  "lastname": "Urbina",
+  "password": "654321",
+  "phone": "114123344",
+  "zip": "4123",
+  "category": "Vendedor",
+  "image": "dummy.jpg"
+ },
+ {
+  "id": 3,
+  "email": "manuelromanelli@hotmail.com",
+  "firstname": "Manuel",
+  "lastname": "Romanelli",
+  "password": "123qwe",
+  "phone": "1131234562",
+  "zip": "5512",
+  "category": "Vendedor",
+  "image": "dummy.jpg"
+ },
+ {
+  "id": 4,
+  "email": "sigalavaca@gmail.com",
+  "firstname": "Siga",
+  "lastname": "La Vaca",
+  "password": "sarasa",
+  "phone": "1131234456",
+  "zip": "3123",
+  "category": "Vendedor",
+  "image": "dummy.jpg"
+ },
+ {
+  "id": 5,
+  "email": "juandelospalotes@speedy.net",
+  "firstname": "Juan",
+  "lastname": "De Los Palotes",
+  "password": "peperina",
+  "phone": "1186544123",
+  "zip": "5512",
+  "category": "Vendedor",
+  "image": "dummy.jpg"
+ },
+ {
+  "id": 6,
+  "email": "pedroescamoso@aol.com",
+  "firstname": "Pedro",
+  "lastname": "Escamoso",
+  "password": "Buenos.Aires.2021",
+  "phone": "3123456123",
+  "zip": "8872",
+  "category": "Comprador",
+  "image": "dummy.jpg"
+ },
+ {
+  "id": 7,
+  "email": "aquilesmeodelatorre@google.com",
+  "firstname": "Aquiles M.",
+  "lastname": "De La Torre",
+  "password": "perrito66",
+  "phone": "2214294484",
+  "zip": "0112",
+  "category": "Comprador",
+  "image": "dummy.jpg"
+ },
+ {
+  "id": 8,
+  "email": "jose1988@gmail.com",
+  "firstname": "Jose",
+  "lastname": "La Tengo Toda",
+  "password": "12345678",
+  "phone": "1141234125",
+  "zip": "7123",
+  "category": "Comprador",
+  "image": "dummy.jpg"
+ },
+ {
+  "id": 9,
+  "email": "info@seratonic.com",
+  "firstname": "Seratonic",
+  "lastname": "S.R.L.",
+  "password": "Pan.Ke.Ke",
+  "phone": "11215005400",
+  "zip": "4142",
+  "category": "Comprador",
+  "image": "dummy.jpg"
+ },
+ {
+  "id": 10,
+  "email": "contacto@petrogas.net",
+  "firstname": "Petrogas",
+  "lastname": "S.A.",
+  "password": "blabla21",
+  "phone": "1131369988",
+  "zip": "7129",
+  "category": "Comprador",
+  "image": "dummy.jpg"
+ },
+ {
+  "id": 11,
+  "email": "fatiga.total@hotmail.com",
+  "firstname": "Cristian",
+  "lastname": "Urbina",
+  "password": "$2a$10$KdZ/BqE.21Rw1MDjQ.dJ7eqPDg4kS5b0EQGQZySeOTznNlz9BAAxe",
+  "phone": "47292613",
+  "zip": "1417",
+  "category": "admin",
+  "image": "1637875003476pulki.jpg"
+ },
+ {
+  "id": 12,
+  "email": "germanpaul227@gmail.com",
+  "firstname": "German",
+  "lastname": "Paul",
+  "password": "$2a$10$/M2QPqKmHqUasRQKpz2z5ek75PlbDa71YY4abyLiYu4fwbpBcLmoC",
+  "phone": "1133418912",
+  "zip": "1797",
+  "category": "Comprador",
+  "image": "163897414068190dc2481-bd7f-4dd2-837a-8054bb850c66.jpg"
+ }
 ]
