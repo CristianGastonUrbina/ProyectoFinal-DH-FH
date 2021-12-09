@@ -5,11 +5,6 @@ const { validationResult } = require("express-validator");
 
 let userController = {
   login: (req, res) => {
-    if (req.session.usuariologueado != undefined) {
-      let ruta = "/users/detalle/" + req.session.usuariologueado.id;
-
-      return res.redirect(ruta);
-    }
     res.render("./users/login");
   },
   register: (req, res) => {

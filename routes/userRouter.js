@@ -5,8 +5,9 @@ let upload = require("../middlewares/multerUsers");
 const expressValidator = require("../middlewares/expValidator");
 const { body } = require("express-validator");
 let admin = require("../middlewares/adminValidator");
+let guest = require("../middlewares/guestValidator");
 
-router.get("/login", userController.login);
+router.get("/login", guest, userController.login);
 router.post(
   "/login",
   expressValidator.loginValidations,
