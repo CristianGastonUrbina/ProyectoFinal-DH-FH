@@ -3,10 +3,11 @@ let router = express.Router();
 let userController = require("../controllers/userController");
 let upload = require("../middlewares/multerUsers");
 const expressValidator = require("../middlewares/expValidator");
+const usuarioNoLogueadoMiddleware=require("../middlewares/usuarioNoLogueado")
 const { body } = require("express-validator");
 let admin = require("../middlewares/adminValidator");
 
-router.get("/login", userController.login);
+router.get("/login",usuarioNoLogueadoMiddleware, userController.login);
 router.post(
   "/login",
   expressValidator.loginValidations,

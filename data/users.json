@@ -1,16 +1,5 @@
 [
- {
-  "id": 1,
-  "email": "germanpaul227@gmail.com",
-  "firstname": "German",
-  "lastname": "Paul",
-  "password": "123456",
-  "phone": "1121454231",
-  "zip": "1686",
-  "category": "Vendedor",
-  "image": "dummy.jpg"
- },
- {
+  {
   "id": 2,
   "email": "tqleo@hotmail.com",
   "firstname": "Cristian",
