@@ -1,10 +1,12 @@
 function adminValidator(req, res, next) {
-  // console.log(res.locals.user.category);
-  if (res.locals.user && res.locals.user.category === "admin") {
+  console.log(req.session.usuarioALogearse);
+  if (req.session.usuarioALogearse.category === "admin") {
     console.log("sos admin");
     next();
   } else {
-    res.redirect("/users/login");
+    return res.redirect("/users/login");
   }
+
+  next();
 }
 module.exports = adminValidator;
