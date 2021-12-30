@@ -13,8 +13,12 @@
         <input class="input"  type="text" name="name" id="name" placeholder="Nombre del Producto">
 
              <label class ="labelform
-             " for="manufacturer"><div class="negrita">Marca</div></label>
-        <input class="input"  type="text" name="manufacturer" id="manufacturer" placeholder="Marca del Producto">
+             " for="brand"><div class="negrita">Marca</div></label>
+             <select class="input"  name="brand" id="manufacturer" placeholder="Marca del Producto">
+             <% for( let i = 0; i < brands.length; i++ ) { %>
+               <option class="input"  name="brand" value="<%=brands[i].id%>"><%=brands[i].name%></option>
+             <% } %>
+             </select>
 
               <label class ="labelform
              " for="model"><div class="negrita">Modelo</div></label>
@@ -33,121 +37,31 @@
       " for="price"><div class="negrita">Precio</div></label>
         <input  class="input" type="number" name="price" id="price" placeholder="Precio">
 
-      <label class ="labelform" for="tags"><div class="negrita">Tags</div></label>
       
-         <div class="container">
-            <label class="container">Motherboard
-               <input type="checkbox" checked="checked" name="tags" value="Motherboard">
-               <span class="checkmark"></span>
-            </label>
-            <label class="container">Office
-               <input type="checkbox" name="tags" value="Office">
-               <span class="checkmark"></span>
-            </label>
-            <label class="container">ATX
-               <input type="checkbox" name="tags" value="ATX" id="ATX">
-               <span class="checkmark" ></span>
-            </label>
-            <label class="container">Monitor
-               <input type="checkbox" name="tags" value="Monitor" id="Monitor">
-               <span class="checkmark"></span>
-            </label>
-                     <label class="container">TV
-               <input type="checkbox" name="tags" value="TV" id="TV">
-               <span class="checkmark"></span>
-            </label>
-                     <label class="container">QLED
-               <input type="checkbox" name="tags" value="QLED" id="QLED" >
-               <span class="checkmark"></span>
-            </label>
-                     <label class="container">VGA
-               <input type="checkbox" name="tags" value="VGA" id="VGA" >
-               <span class="checkmark"></span>
-            </label>
-                     <label class="container">HDMI
-               <input type="checkbox" name="tags" value="HDMI" id="HDMI" >
-               <span class="checkmark"></span>
-            </label>
-                     <label class="container">Video
-               <input type="checkbox" name="tags" value="Video" id="Video" >
-               <span class="checkmark"></span>
-            </label>
-                     <label class="container">GPU
-               <input type="checkbox" name="tags" value="GPU" id="GPUU" >
-               <span class="checkmark"></span>
-            </label>
-                     <label class="container">Placa de video
-               <input type="checkbox" name="tags" value="PlacaDeVideo" id="PlacaDeVideo" >
-               <span class="checkmark"></span>
-            </label>
-                     <label class="container">Notebook
-               <input type="checkbox" name="tags" value="Notebook" id="Notebook" >
-               <span class="checkmark"></span>
-            </label>
-                     <label class="container">Fuente
-               <input type="checkbox" name="tags" value="Fuente" id="Fuente" >
-               <span class="checkmark"></span>
-            </label>
-                     <label class="container">Alimentacion
-               <input type="checkbox" name="tags" value="Alimentacion" id="Alimentacion" >
-               <span class="checkmark"></span>
-            </label>
-                     <label class="container">Certified
-               <input type="checkbox" name="tags" value="Certified" id="Certified" >
-               <span class="checkmark"></span>
-            </label>
-         </div>
 
-         <label class ="labelform
-        " for="target"><div class="negrita">Target</div></label>
+
+         <label class ="labelform" for="target"><div class="negrita">Target</div></label>
         <select class="input"  name="target" value="" id="target">
-        <option class="input"  name="target" value="home" id="home">Hogareño</option>
-        <option class="input"  name="target" value="office" id="office">Oficina</option>
-        <option  class="input" name="target" value="Gamer" id="Gamer">Gamer</option>
-        <option  class="input" name="target" value="ultrahigh" id="ultrahigh">Tope de Gama</option>
-
+           <% for( let i = 0; i < targets.length; i++ ) { %>
+            <option class="input"  name="target" value="<%=targets[i].id%>" id="home"><%=targets[i].name%></option>
+           <% } %>
+         
         </select>
 
 
 
-        <label class ="labelform
-        " for="categoria"><div class="negrita">Categoria</div></label>
+        <label class ="labelform" for="category"><div class="negrita">Categoria</div></label>
         <select class="input"  name="category" id="category">
-        <option class="input"  name="CPU" id="CPU">Procesadores y coolers</option>
-        <option class="input"  name="Mother" id="Mother">Motherboards</option>
-        <option  class="input" name="RAM" id="RAM">Memorias Ram</option>
-        <option  class="input" name="ROM" id="ROM">Almacenamiento</option>
-        <option  class="input" name="GPU" id="GPU">Tarjetas Graficas</option>
-        <option class="input"  name="Display" id="Display">Monitores</option>
-        <option  class="input" name="Others" id="Others">Otros Perfericos</option>
-        <option  class="input" name="M&K" id="M&K">Mouse y teclados</option>
-        <option  class="input" name="Soft" id="Soft">Software</option>
+           <% for( let i = 0; i < categorys.length; i++ ) { %>
+            <option class="input"  name="category" value="<%=categorys[i].id%>"><%=categorys[i].name%></option>
+           <% } %>
+
         </select>
         
 
 
-
-        
-                 <label class ="labelform
-        " for="ship"><div class="negrita">Envios</div></label>
-        <select class="input"  name="ship" value="" id="ship">
-        <option class="input"  name="ship" value="1" >Con Envios</option>
-        <option class="input"  name="ship" value="0" >Retiro en Sucursal</option>
-        </select>
-
-
-
-
-                         <label class ="labelform
-        " for="warranty"><div class="negrita">Garantia</div></label>
-        <select class="input"  name="warranty" value="" id="warranty">
-        <option class="input"  name="warranty" value="0" >Sin Garantia</option>
-        <option class="input"  name="warranty" value="3" >3 meses de garantia</option>
-        <option class="input"  name="warranty" value="6" >6 meses de garantia</option>
-        <option class="input"  name="warranty" value="9" >9 meses de garantia</option>
-        <option class="input"  name="warranty" value="12" >12 meses de garantia</option>
-        
-        </select>
+        <label class ="labelform" for="warranty"><div class="negrita">Garantia</div></label>
+        <input class="input"  type="text" name="warranty" id="warranty" placeholder="Meses de Garantia">
 
         
         

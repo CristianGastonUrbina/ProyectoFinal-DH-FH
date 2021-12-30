@@ -33,7 +33,21 @@ let productController = {
     res.render("./products/productEdit", { product: product });
   },
   add: (req, res) => {
-    res.render("./products/productAdd");
+    let brands = db.Brands.findAll();
+    let categorys = db.Product_categorys.findAll();
+    let targets = db.Targets.findAll();
+
+    Promise.all([brands, categorys, targets])
+      .then(function ([brands, categorys, targets]) {
+        res.render("./products/productAdd", {
+          brands: brands,
+          categorys: categorys,
+          targets: targets,
+        });
+      })
+      .catch(function (err) {
+        console.log(err);
+      });
   },
   store: (req, res) => {
     if (req.file) {
@@ -41,6 +55,23 @@ let productController = {
     } else {
       imageName = "dummy.jpg";
     }
+    db.Products.create({
+      name: req.body.name,
+      model: req.body.model,
+      description: req.body.description,
+      price: req.body.price,
+      id_target: req.body.target,
+      id_product_category: req.body.category,
+      image: imageName,
+      warranty: req.body.warranty,
+      id_brands: req.body.brand,
+    })
+      .then(function () {
+        res.redirect("/products");
+      })
+      .catch(function (err) {
+        console.error(err);
+      });
 
     //!Obsoleto a partir del uso de DB
     // let prod = new Product.Product(
@@ -59,7 +90,7 @@ let productController = {
     //   req.body.stock
     // );
     // Product.store(prod);
-    // res.redirect("/");
+    //
   },
   update: (req, res) => {
     if (req.file) {
