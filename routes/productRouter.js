@@ -13,12 +13,8 @@ router.get("/Detalle/:id", productController.detail);
 router.get("/Carrito", productController.cart);
 //Edicion de producto
 
-router.get("/Detalle/Edicion/:id", admin, productController.edit);
-router.put(
-  "/Detalle/Edicion/:id",
-  upload.single("image"),
-  productController.update
-);
+router.get("/Edicion/:id", productController.edit);
+router.put("/Edicion/:id", upload.single("image"), productController.update);
 //Creacion de producto
 router.get("/Creacion", productController.add);
 router.post("/Creacion", upload.single("image"), productController.store);

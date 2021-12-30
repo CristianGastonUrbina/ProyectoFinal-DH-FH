@@ -18,5 +18,12 @@ module.exports = function (sequelize, dataTypes) {
   };
   let Targets = sequelize.define(alias, cols, config);
   //defino el modelo con todos los parametros que defini arriba
+
+  Targets.associate = function (models) {
+    Targets.hasMany(models.Products, {
+      as: "products",
+      foreignKey: "id_target",
+    });
+  };
   return Targets;
 };

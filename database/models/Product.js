@@ -21,7 +21,7 @@ module.exports = function (sequelize, dataTypes) {
       allowNull: false,
     },
     warranty: { type: dataTypes.INTEGER, allowNull: false },
-    id_brands: { type: dataTypes.INTEGER, allowNull: false },
+    id_brand: { type: dataTypes.INTEGER, allowNull: false },
   };
   let config = {
     //Le damos el nombre de la tabla en la DB
@@ -30,5 +30,21 @@ module.exports = function (sequelize, dataTypes) {
   };
   let Products = sequelize.define(alias, cols, config);
   //defino el modelo con todos los parametros que defini arriba
+
+  Products.associate = function (models) {
+    Products.belongsTo(models.Product_categorys, {
+      foreignKey: "id_product_category",
+      as: "category",
+    });
+    Products.belongsTo(models.Targets, {
+      foreignKey: "id_target",
+      as: "target",
+    });
+    Products.belongsTo(models.Brands, {
+      foreignKey: "id_brand",
+      as: "brand",
+    });
+  };
+
   return Products;
 };

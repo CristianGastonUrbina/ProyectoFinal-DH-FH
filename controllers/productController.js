@@ -29,8 +29,26 @@ let productController = {
   },
 
   edit: (req, res) => {
-    product = Product.findProductbyPK(req.params.id);
-    res.render("./products/productEdit", { product: product });
+    let id = req.params.id;
+
+    let product = db.Products.findByPk(id, {});
+
+    let brands = db.Brands.findAll();
+    let categorys = db.Product_categorys.findAll();
+    let targets = db.Targets.findAll();
+
+    Promise.all([brands, categorys, targets, product])
+      .then(function ([brands, categorys, targets, product]) {
+        res.render("./products/productEdit", {
+          brands: brands,
+          categorys: categorys,
+          targets: targets,
+          product: product,
+        });
+      })
+      .catch(function (err) {
+        console.log(err);
+      });
   },
   add: (req, res) => {
     let brands = db.Brands.findAll();
@@ -72,51 +90,36 @@ let productController = {
       .catch(function (err) {
         console.error(err);
       });
-
-    //!Obsoleto a partir del uso de DB
-    // let prod = new Product.Product(
-    //   null,
-    //   req.body.name,
-    //   req.body.manufacturer,
-    //   req.body.model,
-    //   req.body.description,
-    //   req.body.category,
-    //   req.body.price,
-    //   req.body.target,
-    //   req.body.tags,
-    //   imageName,
-    //   req.body.ship,
-    //   req.body.warranty,
-    //   req.body.stock
-    // );
-    // Product.store(prod);
-    //
   },
+
   update: (req, res) => {
     if (req.file) {
       imageName = req.file.filename;
     } else {
-      prod = Product.findProductbyPK(req.params.id);
-      imageName = prod.image;
+      imageName = "dummy.jpg";
     }
-    let product = new Product.Product(
-      +req.params.id,
-      req.body.name,
-      req.body.manufacturer,
-      req.body.model,
-      req.body.description,
-      req.body.category,
-      req.body.price,
-      req.body.target,
-      req.body.tags,
-      imageName,
-      req.body.ship,
-      req.body.warranty,
-      req.body.stock
-    );
-    Product.edit(product);
-    res.redirect("/");
+    db.Products.update(
+      {
+        name: req.body.name,
+        model: req.body.model,
+        description: req.body.description,
+        price: req.body.price,
+        id_target: req.body.target,
+        id_product_category: req.body.category,
+        image: imageName,
+        warranty: req.body.warranty,
+        id_brands: req.body.brand,
+      },
+      { where: { id: req.params.id } }
+    )
+      .then(function () {
+        res.redirect("/products");
+      })
+      .catch(function (err) {
+        console.error(err);
+      });
   },
+
   destroy: (req, res) => {
     Product.delete(+req.params.id);
     res.redirect("/");

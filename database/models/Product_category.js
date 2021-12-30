@@ -18,5 +18,14 @@ module.exports = function (sequelize, dataTypes) {
   };
   let Product_categorys = sequelize.define(alias, cols, config);
   //defino el modelo con todos los parametros que defini arriba
+
+  Product_categorys.associate = function (models) {
+    //Una categoria tiene muchos productos
+    Product_categorys.hasMany(models.Products, {
+      as: "products",
+      foreignKey: "id_product_category",
+    });
+  };
+
   return Product_categorys;
 };
