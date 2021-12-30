@@ -1,5 +1,5 @@
 module.exports = function (sequelize, dataTypes) {
-  let alias = "Product_category";
+  let alias = "Product_categorys";
   //Esto es como vamos a llamar a la tabla
   let cols = {
     //Define las columnas de la tabla
@@ -16,7 +16,7 @@ module.exports = function (sequelize, dataTypes) {
     tableName: "product_category",
     timestamps: false,
   };
-  let Product_category = sequelize.define(alias, cols, config);
+  let Product_categorys = sequelize.define(alias, cols, config);
   //defino el modelo con todos los parametros que defini arriba
-  return Product_category;
+  return Product_categorys;
 };

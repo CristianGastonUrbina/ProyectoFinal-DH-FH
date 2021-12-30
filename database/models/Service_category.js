@@ -1,5 +1,5 @@
 module.exports = function (sequelize, dataTypes) {
-  let alias = "Service_category";
+  let alias = "Service_categorys";
   //Esto es como vamos a llamar a la tabla
   let cols = {
     //Define las columnas de la tabla
@@ -13,10 +13,10 @@ module.exports = function (sequelize, dataTypes) {
   };
   let config = {
     //Le damos el nombre de la tabla en la DB
-    tableName: "service_category",
+    tableName: "service_categorys",
     timestamps: false,
   };
   let Service_category = sequelize.define(alias, cols, config);
   //defino el modelo con todos los parametros que defini arriba
-  return Service_category;
+  return Service_categorys;
 };
