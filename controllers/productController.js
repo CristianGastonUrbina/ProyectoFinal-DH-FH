@@ -1,12 +1,17 @@
-const { randomInt } = require("crypto");
 const fs = require("fs");
-let db = require("../database/models");
+const db = require("../database/models");
 
-const Product = require("../entities/product");
+// const Product = require("../entities/product");
 
 let productController = {
   list: (req, res) => {
-    res.render("./products/products", { product: Product.findAll() });
+    db.Products.findAll()
+      .then(function (products) {
+        res.render("./products/products", { products: products });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   },
   cart: (req, res) => {
     res.render("./products/productCart");
@@ -31,23 +36,24 @@ let productController = {
       imageName = "dummy.jpg";
     }
 
-    let prod = new Product.Product(
-      null,
-      req.body.name,
-      req.body.manufacturer,
-      req.body.model,
-      req.body.description,
-      req.body.category,
-      req.body.price,
-      req.body.target,
-      req.body.tags,
-      imageName,
-      req.body.ship,
-      req.body.warranty,
-      req.body.stock
-    );
-    Product.store(prod);
-    res.redirect("/");
+    //!Obsoleto a partir del uso de DB
+    // let prod = new Product.Product(
+    //   null,
+    //   req.body.name,
+    //   req.body.manufacturer,
+    //   req.body.model,
+    //   req.body.description,
+    //   req.body.category,
+    //   req.body.price,
+    //   req.body.target,
+    //   req.body.tags,
+    //   imageName,
+    //   req.body.ship,
+    //   req.body.warranty,
+    //   req.body.stock
+    // );
+    // Product.store(prod);
+    // res.redirect("/");
   },
   update: (req, res) => {
     if (req.file) {
