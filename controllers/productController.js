@@ -16,10 +16,16 @@ let productController = {
   cart: (req, res) => {
     res.render("./products/productCart");
   },
+
   detail: (req, res) => {
     id = req.params.id;
-    product = Product.findProductbyPK(id);
-    res.render("./products/productDetails", { product });
+    db.Products.findByPk(id)
+      .then(function (product) {
+        res.render("./products/productDetails", { product: product });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   },
 
   edit: (req, res) => {
