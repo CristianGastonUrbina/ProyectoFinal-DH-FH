@@ -121,8 +121,13 @@ let productController = {
   },
 
   destroy: (req, res) => {
-    Product.delete(+req.params.id);
-    res.redirect("/");
+    db.Products.destroy({
+      where: {
+        id: req.params.id,
+      },
+    }).then(function () {
+      res.redirect("/products");
+    });
   },
 };
 

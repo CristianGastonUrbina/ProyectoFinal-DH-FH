@@ -19,6 +19,6 @@ router.put("/Edicion/:id", upload.single("image"), productController.update);
 router.get("/Creacion", productController.add);
 router.post("/Creacion", upload.single("image"), productController.store);
 // Borrado de producto
-router.delete("/Eliminacion/:id", admin, productController.destroy);
+router.delete("/Eliminacion/:id", productController.destroy);
 
 module.exports = router;
