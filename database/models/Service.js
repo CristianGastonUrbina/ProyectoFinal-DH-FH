@@ -13,7 +13,8 @@ module.exports = function (sequelize, dataTypes) {
     description: { type: dataTypes.STRING, notNull: true },
     id_service_category: { type: dataTypes.INTEGER, notNull: true },
     name: { type: dataTypes.STRING, notNull: true },
-    expiration_date: { type: dataTypes.DATE, notNull: true },
+    expiration_date: { type: dataTypes.DATE },
+    duration: { type: dataTypes.INTEGER },
   };
   let config = {
     //Le damos el nombre de la tabla en la DB

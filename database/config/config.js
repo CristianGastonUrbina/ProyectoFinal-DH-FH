@@ -1,7 +1,7 @@
 module.exports = {
   development: {
     username: " app.cmhm",
-    password: Cmhm_2021,
+    password: "Cmhm_2021",
     database: "cphmr",
     host: "apps.solucionescn.com",
     dialect: "mysql",

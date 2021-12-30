@@ -9,7 +9,7 @@ module.exports = function (sequelize, dataTypes) {
       type: dataTypes.INTEGER,
       notNull: true,
     },
-    email: { unique: true, type: dataTypes.INTEGER, notNull: true },
+    email: { unique: true, type: dataTypes.STRING, notNull: true },
     first_name: { type: dataTypes.STRING, notNull: true },
     last_name: { type: dataTypes.STRING, notNull: true },
     password: { type: dataTypes.STRING, notNull: true },

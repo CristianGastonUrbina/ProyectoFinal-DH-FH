@@ -13,10 +13,10 @@ module.exports = function (sequelize, dataTypes) {
   };
   let config = {
     //Le damos el nombre de la tabla en la DB
-    tableName: "service_categorys",
+    tableName: "service_category",
     timestamps: false,
   };
-  let Service_category = sequelize.define(alias, cols, config);
+  let Service_categorys = sequelize.define(alias, cols, config);
   //defino el modelo con todos los parametros que defini arriba
   return Service_categorys;
 };

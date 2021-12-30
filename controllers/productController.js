@@ -1,5 +1,6 @@
 const { randomInt } = require("crypto");
 const fs = require("fs");
+let db = require("../database/models");
 
 const Product = require("../entities/product");
 

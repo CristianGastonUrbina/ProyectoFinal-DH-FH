@@ -10,6 +10,7 @@ module.exports = function (sequelize, dataTypes) {
       notNull: true,
     },
     name: { type: dataTypes.STRING, notNull: true },
+    logo: { type: dataTypes.STRING, notNull: true },
   };
   let config = {
     //Le damos el nombre de la tabla en la DB
