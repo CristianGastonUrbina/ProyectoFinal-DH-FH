@@ -5,7 +5,7 @@ users = {
   User: function User(
     id,
     email,
-    fisftname,
+    firstname,
     lastname,
     password,
     phone,
