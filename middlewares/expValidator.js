@@ -3,8 +3,8 @@ const path = require("path");
 
 const expressValidator = {
   registerValidations: [
-    body("firstname").notEmpty().withMessage("Campo Obligatorio"),
-    body("lastname").notEmpty().withMessage("Campo Obligatorio"),
+    body("first_name").notEmpty().withMessage("Campo Obligatorio"),
+    body("last_name").notEmpty().withMessage("Campo Obligatorio"),
     body("email")
       .notEmpty()
       .withMessage("Campo Obligatorio")
@@ -17,7 +17,7 @@ const expressValidator = {
     body("image").custom((value, { req }) => {
       let file = req.file;
 
-      let extensionesAceptadas = [".jpg", ".png", ".gif"];
+      let extensionesAceptadas = [".jpeg",".jpg", ".png", ".gif"];
       if (!file) {
         throw new Error("Pone una imagen");
       } else {

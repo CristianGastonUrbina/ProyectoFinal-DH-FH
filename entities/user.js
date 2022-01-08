@@ -15,7 +15,7 @@ users = {
   ) {
     this.id = id;
     this.email = email;
-    this.firstname = fisftname;
+    this.firstname = firstname;
     this.lastname = lastname;
     this.password = password;
     this.phone = phone;

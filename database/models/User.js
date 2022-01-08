@@ -26,5 +26,11 @@ module.exports = function (sequelize, dataTypes) {
   };
   let Users = sequelize.define(alias, cols, config);
   //defino el modelo con todos los parametros que defini arriba
+  Users.associate = function(models){
+    Users.belongsTo(models.User_categorys,{
+      foreignKey:"id_user_category",
+      as:"category"
+    })
+  }
   return Users;
 };

@@ -12,14 +12,14 @@
       
              <label class ="labelform
              " for="nombre"><div class="negrita">Nombre</div></label>
-        <input class="input <%= locals.mensajesDeError && locals.mensajesDeError.firstname ? "error" : "" %>"  type="text" name="firstname" id="firstname" placeholder="Nombre"
+        <input class="input <%= locals.mensajesDeError && locals.mensajesDeError.firstname ? "error" : "" %>"  type="text" name="first_name" id="first_name" placeholder="Nombre"
         value="<%=  locals.old && old.firstname  ?  old.firstname : "" %>">
 
           <b><%= locals.mensajesDeError && locals.mensajesDeError.firstname ? mensajesDeError.firstname.msg : "" %> </b>
 
              <label class ="labelform
              " for="manufacturer"><div class="negrita">Apellido</div></label>
-        <input class="input <%= locals.mensajesDeError && locals.mensajesDeError.lastname ? "error" : "" %>"  type="text" name="lastname" id="lastname" placeholder="Apellido" value="<%= locals.old && old.lastname  ?  old.lastname : "" %>">
+        <input class="input <%= locals.mensajesDeError && locals.mensajesDeError.lastname ? "error" : "" %>"  type="text" name="last_name" id="last_name" placeholder="Apellido" value="<%= locals.old && old.lastname  ?  old.lastname : "" %>">
         <b><%= locals.mensajesDeError && locals.mensajesDeError.lastname ? mensajesDeError.lastname.msg : "" %> </b>
 
               <label class ="labelform
@@ -52,13 +52,21 @@
 
       
          <label class ="labelform
-        " for="category"><div class="negrita">Target</div></label>
-        <select class="input"  name="category" value="" id="target">
-        <option class="input"  name="category" value="Comprador"  id="Comprador"  <%= locals.old && old.category == "Comprador"  ?  "selected" : ""  %>>Comprador</option>
-        <option class="input"  name="category" value="Vendedor" id="Vendedor"  <%= locals.old && old.category == "Vendedor"  ?  "selected" : ""  %>    >Vendedor</option>
-        </select>
 
 
+         " for="category"><div class="negrita">Target</div></label>
+         <select class="input"  name="category" value="" id="target">
+
+        <% for( let i = 0; i < categorys.length; i++ ) { %>
+          <option class="input"  name="category" value="<%=categorys[i].id%>" ><%=categorys[i].name%></option>
+        <% } %>
+ 
+         </select>
+
+
+        <label class ="labelform" for="address"><div class="negrita">Direccion</div></label>
+        <input class="input <%= locals.mensajesDeError && locals.mensajesDeError.address ? "error" : "" %> "  type="text" name="address" id="address" placeholder="Direccion value="<%=locals.old && old.address  ?  old.address : "" %>">
+         <b><%= locals.mensajesDeError && locals.mensajesDeError.address ? mensajesDeError.address.msg : "" %> </b>
 
                
         
