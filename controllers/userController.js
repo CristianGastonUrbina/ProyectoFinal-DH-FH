@@ -3,8 +3,6 @@ const User = require("../entities/user");
 const bcrypt = require("bcryptjs");
 const { validationResult } = require("express-validator");
 const db = require("../database/models");
-
-
 let userController = {
   login: (req, res) => {
     res.render("./users/login");
@@ -19,33 +17,43 @@ let userController = {
   checkLogin: (req, res) => {
     let errors = validationResult(req); //Para levantar los errores enviados por express-validator
     if (errors.isEmpty()) {
-      let users = db.Users.findAll();
-      Promise.all([users]).then(function([users]){
-
-        users === "" ? (users = []) : ""; //Si no llego a tener users, creo un array vacio
-        let usuarioALogearse;
-        for (let i = 0; i < users.length; i++) {
-        
-          if (users[i].email === req.body.email) {
-            if (bcrypt.compareSync(req.body.password, users[i].password)) {
-              usuarioALogearse = users[i]; //Si lo encuentro, lo guardo
-              break;
-            }
-          }
+      let usuarioALogearse
+      let user = db.Users.findOne({
+        where:{
+          email:req.body.email
         }
+      });
+      Promise.all([user]).then(function([user])
+      {
+       if (bcrypt.compareSync(req.body.password, user.dataValues.password)) 
+       {
 
-        
-        if (usuarioALogearse == undefined) {
-          //Si no lo encuentro, redirecciono
-
+              usuarioALogearse = user.dataValues; //Si lo encuentro, lo guardo
+              
+        }else
+        {
           return res.render("./users/login", {
             errors: { msg: "Credenciales invalidas" },
             old: req.body,
           });
-
-           //Aca se hace una especie de mimica a como vienen los errores si estuviara usarndo express validator, cosa que si la pgaina ya esta armada para funcionar con express validator tambien me aparesca enste mensaje
         }
+/*        users === "" ? (users = []) : ""; //Si no llego a tener users, creo un array vacio
+        let usuarioALogearse;
+        for (let i = 0; i < users.length; i++) {
 
+          if (users[i].email === req.body.email) {
+            if (bcrypt.compareSync(req.body.password, users[i].password)) {
+
+              usuarioALogearse = users[i].dataValues; //Si lo encuentro, lo guardo
+              break;
+            }
+          }
+        }
+*/
+        
+        
+       
+    
         req.session.usuarioALogearse = usuarioALogearse;
         if (req.body.recuerdame != undefined) {
           res.cookie("recuerdame", usuarioALogearse.email, {
@@ -55,8 +63,9 @@ let userController = {
           //No guardo todo el user ya que tengo poco espacio en las cookies. MaxAGE reciebe en milisegundos, cuanto tiempo va a durar la cookie
         
         } 
-        let ruta = "/users/detalle/" + usuarioALogearse.id;
-
+        
+        let ruta = "/users/Detalle/" + usuarioALogearse.id;
+        console.log(ruta);
         return res.redirect(ruta);
       }) 
     }else {
@@ -122,8 +131,9 @@ let userController = {
     });  //  
   },
   detail: (req, res) => {
-    let user = db.Users.findUserbyPK(req.params.id);
-    res.render("./users/userDetail", { user: user });
+    db.Users.findByPk(req.params.id).then(function(user){
+      res.render("./users/userDetail", { user: user });
+    })
   },
   putUpdate: (req, res) => {
     res.send("fuiste por put a update");

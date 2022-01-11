@@ -23,7 +23,7 @@ router.post(
 );
 
 router.get("/", admin, userController.list);
-router.get("/Detalle/:id", admin, userController.detail);
+router.get("/Detalle/:id",  userController.detail);
 
 router.get("/editUser", admin, userController.update);
 router.put(
