@@ -51,9 +51,6 @@ let userController = {
         }
 */
         
-        
-       
-    
         req.session.usuarioALogearse = usuarioALogearse;
         if (req.body.recuerdame != undefined) {
           res.cookie("recuerdame", usuarioALogearse.email, {
@@ -65,7 +62,6 @@ let userController = {
         } 
         
         let ruta = "/users/Detalle/" + usuarioALogearse.id;
-        console.log(ruta);
         return res.redirect(ruta);
       }) 
     }else {
@@ -114,7 +110,11 @@ let userController = {
     }
   },
   destroy: (req, res) => {
-    db.Users.delete(+req.params.id);
+    db.Users.destroy({
+      where:{
+        id:req.params.id
+      }
+    });
     let users = db.Users.findAll();
     res.redirect("/users");
   },
