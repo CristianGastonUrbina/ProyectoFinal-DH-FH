@@ -33,6 +33,6 @@ router.put(
   userController.putUpdate
 );
 
-router.delete("/Detalle/unregister/:id", userController.destroy);
+router.delete("/unregister/:id", userController.destroy);
 
 module.exports = router;
