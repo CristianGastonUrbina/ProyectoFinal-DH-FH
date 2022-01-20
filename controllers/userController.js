@@ -114,7 +114,7 @@ let userController = {
     res.send("fuiste por get a update");
   },
   list: (req, res) => {
-    db.Users.findAll()
+    db.Users.findAll({ include: [{ association: "category" }] })
       .then(function (users) {
         res.render("./users/users", { users: users });
       })

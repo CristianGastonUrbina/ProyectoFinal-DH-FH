@@ -7,7 +7,7 @@ const { body } = require("express-validator");
 let admin = require("../middlewares/adminValidator");
 let guest = require("../middlewares/guestValidator");
 
-router.get("/login", guest, userController.login);
+router.get("/login", userController.login);
 router.post(
   "/login",
   expressValidator.loginValidations,
@@ -22,10 +22,10 @@ router.post(
   userController.postRegister
 );
 
-router.get("/", admin, userController.list);
-router.get("/Detalle/:id",  userController.detail);
+router.get("/", userController.list);
+router.get("/Detalle/:id", userController.detail);
 
-router.get("/editUser", admin, userController.update);
+router.get("/editUser", userController.update);
 router.put(
   "/editUser",
   upload.single("image"),

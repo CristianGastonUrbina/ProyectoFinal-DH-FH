@@ -5,7 +5,13 @@ const db = require("../database/models");
 
 let productController = {
   list: (req, res) => {
-    db.Products.findAll()
+    db.Products.findAll({
+      include: [
+        { association: "category" },
+        { association: "target" },
+        { association: "brand" },
+      ],
+    })
       .then(function (products) {
         res.render("./products/products", { products: products });
       })
@@ -19,7 +25,13 @@ let productController = {
 
   detail: (req, res) => {
     id = req.params.id;
-    db.Products.findByPk(id)
+    db.Products.findByPk(id, {
+      include: [
+        { association: "category" },
+        { association: "target" },
+        { association: "brand" },
+      ],
+    })
       .then(function (product) {
         res.render("./products/productDetails", { product: product });
       })
