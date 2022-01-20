@@ -82,7 +82,7 @@ let productController = {
       id_product_category: req.body.category,
       image: imageName,
       warranty: req.body.warranty,
-      id_brands: req.body.brand,
+      id_brand: req.body.brand,
     })
       .then(function () {
         res.redirect("/products");

@@ -5,7 +5,7 @@
 
       <section class="Destacados">
         <h2 class="armamos-tu-setup">
-            <b> <%=user.firstname%> <%=user.lastname%> </b>
+            <b> <%=user.first_name%> <%=user.last_name%> </b>
         </h2>
 
         
@@ -18,7 +18,7 @@
               <div>Nombre Completo: <%=user.first_name%> <%=user.last_name%></div>
               <div>Email:<%=user.email%></div>
               <div>Telefono:<%=user.phone%></div>
-              <div>Categoria:<%=user.category%></div>
+              <div>Categoria:<%=user.category.name%></div>
               <div>password:<%=user.password%></div>
               <div>Codigo Postal:<%=user.zip%></div>
             </div>
