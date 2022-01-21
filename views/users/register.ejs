@@ -5,7 +5,7 @@
   <main>
     <section >
     <form action="./register" method="post" class="formulario" enctype="multipart/form-data">
-      <h2 class="Titulo">Tu <b>Producto</b></h2>
+      <h2 class="Titulo">Tu <b>User</b></h2>
 
 
 
@@ -46,7 +46,7 @@
 
         <label class ="labelform
         " for="image"><div class="negrita"> <b>Avatar</b></div></label>
-        <input  class="input <%= locals.mensajesDeError && locals.mensajesDeError.image ? "error" : "" %>" type="file" name="image" id="image" value="<%= locals.old && old.lastname  ?  old.image : "" %>">
+        <input  class="input <%= locals.mensajesDeError && locals.mensajesDeError.image ? "error" : "" %>" type="file" name="image" id="image" value="<%= locals.old && old.image  ?  old.image : "" %>">
          <b><%= locals.mensajesDeError && locals.mensajesDeError.image ? mensajesDeError.image.msg : "" %> </b>
 
 

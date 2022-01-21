@@ -102,6 +102,7 @@ let userController = {
     }
   },
   destroy: (req, res) => {
+    console.log("Fuiste por destroy");
     db.Users.destroy({
       where: {
         id: req.params.id,

@@ -1,5 +1,6 @@
 const fs = require("fs");
 const db = require("../database/models");
+const { validationResult } = require("express-validator");
 
 // const Product = require("../entities/product");
 
@@ -85,23 +86,48 @@ let productController = {
     } else {
       imageName = "dummy.jpg";
     }
-    db.Products.create({
-      name: req.body.name,
-      model: req.body.model,
-      description: req.body.description,
-      price: req.body.price,
-      id_target: req.body.target,
-      id_product_category: req.body.category,
-      image: imageName,
-      warranty: req.body.warranty,
-      id_brand: req.body.brand,
-    })
-      .then(function () {
-        res.redirect("/products");
+
+    let errors = validationResult(req);
+
+    if (errors.isEmpty()) {
+      db.Products.create({
+        name: req.body.name,
+        model: req.body.model,
+        description: req.body.description,
+        price: req.body.price,
+        id_target: req.body.target,
+        id_product_category: req.body.category,
+        image: imageName,
+        warranty: req.body.warranty,
+        id_brand: req.body.brand,
       })
-      .catch(function (err) {
-        console.error(err);
-      });
+        .then(function () {
+          res.redirect("/products");
+        })
+        .catch(function (err) {
+          console.error(err);
+        });
+    } else {
+      let brands = db.Brands.findAll();
+      let categorys = db.Product_categorys.findAll();
+      let targets = db.Targets.findAll();
+
+      Promise.all([brands, categorys, targets])
+        .then(function ([brands, categorys, targets]) {
+          let old = req.body;
+          console.log("old . brond es:" + old.brand);
+          res.render("./products/productAdd", {
+            errors: errors.mapped(),
+            brands: brands,
+            categorys: categorys,
+            targets: targets,
+            old: old,
+          });
+        })
+        .catch(function (err) {
+          // console.error(err);
+        });
+    }
   },
 
   update: (req, res) => {

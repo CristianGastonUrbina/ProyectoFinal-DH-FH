@@ -19,7 +19,12 @@ header {
   color: white;
 }
 
-input.input.error {
+input.input.error,
+textarea.input.error {
+  box-shadow: red 0px 5px 5px;
+}
+
+textarea.input.error {
   box-shadow: red 0px 5px 5px;
 }
 
