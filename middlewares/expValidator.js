@@ -3,15 +3,25 @@ const path = require("path");
 
 const expressValidator = {
   registerValidations: [
-    body("first_name").notEmpty().withMessage("Campo Obligatorio"),
+    body("first_name")
+      .notEmpty()
+      .withMessage("Campo Obligatorio")
+      .isLength({ min: 2 })
+      .withMessage("Debe tener al menos 2 caracteres"),
     body("last_name").notEmpty().withMessage("Campo Obligatorio"),
     body("email")
       .notEmpty()
       .withMessage("Campo Obligatorio")
       .bail()
       .isEmail()
-      .withMessage("Ingresa un Emial Valido"),
-    body("password").notEmpty().withMessage("Campo Obligatorio"),
+      .withMessage("Ingresa un Email Valido"),
+    body("password")
+      .notEmpty()
+      .withMessage("Campo Obligatorio")
+      .isStrongPassword()
+      .withMessage(
+        "Debe tener al menos 8 caracteres, una mayuscula,una minuscula, un numero y un simbolo"
+      ),
     body("phone").notEmpty().withMessage("Campo Obligatorio"),
     body("zip").notEmpty().withMessage("Campo Obligatorio"),
     body("image").custom((value, { req }) => {

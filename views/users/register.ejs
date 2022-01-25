@@ -27,6 +27,9 @@
         <input class="input <%= locals.mensajesDeError && locals.mensajesDeError.email ? "error" : "" %>"  type="text" name="email" id="email" placeholder="Email"
         value="<%= locals.old && old.email  ?  old.email : "" %>">
          <b><%= locals.mensajesDeError && locals.mensajesDeError.email ? mensajesDeError.email.msg : "" %> </b>
+         <%= console.log(user) %> 
+         <b><%= user !== null ? "El usuario ya se encuentra registrado, ingrese otro email" : "" %> </b>
+         
 
              <label class ="labelform
              " for="description"><div class="negrita">Contraseña</div></label>

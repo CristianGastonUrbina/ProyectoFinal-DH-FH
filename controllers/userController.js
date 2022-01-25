@@ -84,7 +84,7 @@ let userController = {
       address: req.body.address,
     };
 
-    if (!errores.isEmpty()) {
+    if (!errores.isEmpty() || req.session.user) {
       let categorys = db.User_categorys.findAll();
       Promise.all([categorys])
         .then(function ([categorys]) {
@@ -92,6 +92,7 @@ let userController = {
             categorys: categorys,
             mensajesDeError: errores.mapped(),
             old: req.body,
+            user: req.session.user,
           });
         })
         .catch((err) => console.error(err));
