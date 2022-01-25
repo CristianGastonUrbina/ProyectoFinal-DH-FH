@@ -12,19 +12,19 @@
       
              <label class ="labelform
              " for="first_name"><div class="negrita">Nombre</div></label>
-        <input class="input <%= locals.mensajesDeError && locals.mensajesDeError.firstname ? "error" : "" %>"  type="text" name="first_name" id="first_name" placeholder="Nombre"
-        value="<%=  locals.old && old.firstname  ?  old.firstname : "" %>">
+        <input class="input <%= locals.mensajesDeError && locals.mensajesDeError.first_name ? "error" : "" %>"  type="text" name="first_name" id="first_name" placeholder="Nombre"
+        value="<%=  locals.old && old.first_name  ?  old.first_name : "" %>">
 
-          <b><%= locals.mensajesDeError && locals.mensajesDeError.firstname ? mensajesDeError.firstname.msg : "" %> </b>
+          <b><%= locals.mensajesDeError && locals.mensajesDeError.first_name ? mensajesDeError.first_name.msg : "" %> </b>
 
              <label class ="labelform
              " for="manufacturer"><div class="negrita">Apellido</div></label>
-        <input class="input <%= locals.mensajesDeError && locals.mensajesDeError.lastname ? "error" : "" %>"  type="text" name="last_name" id="last_name" placeholder="Apellido" value="<%= locals.old && old.lastname  ?  old.lastname : "" %>">
-        <b><%= locals.mensajesDeError && locals.mensajesDeError.lastname ? mensajesDeError.lastname.msg : "" %> </b>
+        <input class="input <%= locals.mensajesDeError && locals.mensajesDeError.last_name ? "error" : "" %>"  type="text" name="last_name" id="last_name" placeholder="Apellido" value="<%= locals.old && old.last_name  ?  old.last_name : "" %>">
+        <b><%= locals.mensajesDeError && locals.mensajesDeError.last_name ? mensajesDeError.last_name.msg : "" %> </b>
 
               <label class ="labelform
              " for="model"><div class="negrita">Email</div></label>
-        <input class="input <%= locals.mensajesDeError && locals.mensajesDeError.email ? "error" : "" %>"  type="text" name="email" id="email" placeholder="Email"
+        <input class="input <%= (locals.mensajesDeError && locals.mensajesDeError.email) || user !== null ? "error" : "" %>"  type="text" name="email" id="email" placeholder="Email"
         value="<%= locals.old && old.email  ?  old.email : "" %>">
          <b><%= locals.mensajesDeError && locals.mensajesDeError.email ? mensajesDeError.email.msg : "" %> </b>
          <%= console.log(user) %> 
@@ -68,7 +68,7 @@
 
 
         <label class ="labelform" for="address"><div class="negrita">Direccion</div></label>
-        <input class="input <%= locals.mensajesDeError && locals.mensajesDeError.address ? "error" : "" %> "  type="text" name="address" id="address" placeholder="Direccion value="<%=locals.old && old.address  ?  old.address : "" %>">
+        <input class="input <%= locals.mensajesDeError && locals.mensajesDeError.address ? "error" : "" %> "  type="text" name="address" id="address" value="<%=locals.old && old.address  ?  old.address : "" %>">
          <b><%= locals.mensajesDeError && locals.mensajesDeError.address ? mensajesDeError.address.msg : "" %> </b>
 
                

@@ -8,7 +8,11 @@ const expressValidator = {
       .withMessage("Campo Obligatorio")
       .isLength({ min: 2 })
       .withMessage("Debe tener al menos 2 caracteres"),
-    body("last_name").notEmpty().withMessage("Campo Obligatorio"),
+    body("last_name")
+      .notEmpty()
+      .withMessage("Campo Obligatorio")
+      .isLength({ min: 2 })
+      .withMessage("Debe tener al menos 2 caracteres"),
     body("email")
       .notEmpty()
       .withMessage("Campo Obligatorio")
