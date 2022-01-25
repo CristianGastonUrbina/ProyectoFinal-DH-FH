@@ -7,11 +7,11 @@
     <form action="/products/Edicion/<%=product.id%>?_method=PUT" method="post" class="formulario" enctype="multipart/form-data">
       <h2 class="Titulo">Tu <b>Producto</b></h2>
 
-      
 
              <label class ="labelform
-             " for="nombre"><div class="negrita">Nombre</div></label>
-        <input class="input"  type="text" name="name" id="name" value="<%=product.name%>">
+             " for="name"><div class="negrita">Nombre</div></label>
+        <input class="input <%= locals.errors && locals.errors.name ? "error" : "" %>"  type="text" name="name" id="name" value="<%=  locals.old && old.name  ?  old.name : product.name %>">
+        <b><%= locals.errors && locals.errors.name ? errors.name.msg : "" %> </b>
 
   
 
@@ -20,7 +20,9 @@
 
            <% for( let i = 0; i < brands.length; i++ ) { %>
 
-            <option class="input"  name="target" value="<%=brands[i].id%>" <% if (product.id_brand == brands[i].id) { %> selected <% } %>>
+            <option class="input"  name="target" value="<%=brands[i].id%>" <% if (product.id_brand == brands[i].id) { %> selected <% } %><% if (locals.old && locals.old.brand == brands[i].id) { %>
+                   <%= "selected" %> 
+                  <% } %>>
                <%=brands[i].name%>
               </option>
            <% } %>
@@ -30,21 +32,26 @@
 
               <label class ="labelform
              " for="model"><div class="negrita">Modelo</div></label>
-        <input class="input"  type="text" name="model" id="model" value="<%=product.model%>">
+        <input class="input <%= locals.errors && locals.errors.model ? "error" : "" %>"  type="text" name="model" id="model" value="<%=  locals.old && old.model  ?  old.model : product.model %>">
+        <b><%= locals.errors && locals.errors.model ? errors.model.msg : "" %> </b>
 
              <label class ="labelform
              " for="description"><div class="negrita">Descripcion</div></label>
-        <input class="input"  name="description" id="description" cols="30" rows="10"  value="<%=product.description%>">
+        <input class="input <%= locals.errors && locals.errors.description ? "error" : "" %>"  name="description" id="description" cols="30" rows="10"  value="<%=  locals.old && old.description  ?  old.description : product.description %>">
+        <b><%= locals.errors && locals.errors.description ? errors.description.msg : "" %> </b>
 
         <label class ="labelform
         " for="image"><div class="negrita">Imagen del <b>Producto </b></div></label>
         <img class ="imagen" src="../../../images/products/<%=product.image%>" alt="ACAA">
-        <input  class="input" type="file" name="image" id="image" >
+        <input  class="input <%= locals.errors && locals.errors.image ? "error" : "" %>" type="file" name="image" id="image" >
+        <b><%= locals.errors && locals.errors.image ? errors.image.msg : "" %> </b>
 
 
       <label class ="labelform
       " for="price"><div class="negrita">Precio</div></label>
-        <input  class="input" type="text" name="price" id="price" value="<%=product.price%>">
+        <input  class="input <%= locals.errors && locals.errors.price ? "error" : "" %>" type="text" name="price" id="price" value="<%=  locals.old && old.price  ?  old.price : product.price %>">
+
+         <b><%= locals.errors && locals.errors.price ? errors.price.msg : "" %> </b>
 
       
 
@@ -53,7 +60,9 @@
         <select class="input"  name="target"  id="target">
 
            <% for( let i = 0; i <targets.length; i++ ) { %>
-            <option class="input"  name="target" value="<%=targets[i].id%>" <% if (product.id_target == targets[i].id) { %> selected <% } %>> <%=targets[i].name%></option>
+            <option class="input"  name="target" value="<%=targets[i].id%>" <% if (product.id_target == targets[i].id) { %> selected <% } %><% if (locals.old && locals.old.target == targets[i].id) { %>
+                   <%= "selected" %> 
+                  <% } %>> <%=targets[i].name%></option>
            <% } %>
         </select>
    
@@ -61,7 +70,9 @@
           <label class ="labelform" for="category"><div class="negrita">Categoria</div></label>
         <select class="input"  name="category"  id="target">
            <% for( let i = 0; i < categorys.length; i++ ) { %>
-            <option class="input"  name="category" value="<%=categorys[i].id%>" <% if (product.id_product_category == categorys[i].id) { %> selected <% } %>> <%=categorys[i].name%></option>
+            <option class="input"  name="category" value="<%=categorys[i].id%>" <% if (product.id_product_category == categorys[i].id) { %> selected <% } %><% if (locals.old && locals.old.category == categorys[i].id) { %>
+                   <%= "selected" %> 
+                  <% } %>> <%=categorys[i].name%></option>
            <% } %>
         </select>
         
@@ -69,7 +80,8 @@
 
       <label class ="labelform
       " for="price"><div class="negrita">Garantia</div></label>
-        <input  class="input" type="text" name="warranty" id="warranty" value="<%=product.warranty%>">
+        <input  class="input <%= locals.errors && locals.errors.warranty ? "error" : "" %> " type="text" name="warranty" id="warranty" value="<%=  locals.old && old.warranty  ?  old.warranty : product.warranty %>">
+        <b><%= locals.errors && locals.errors.warranty ? errors.warranty.msg : "" %> </b>
 
       
 

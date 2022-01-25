@@ -31,12 +31,12 @@
               <label class ="labelform
              " for="model"><div class="negrita">Modelo</div></label>
         <input class="input <%= locals.errors && locals.errors.model ? "error" : "" %>"  type="text" name="model" id="model" placeholder="Marca del Producto">
-        <b><%= locals.errors && locals.errors.name ? errors.model.msg : "" %> </b>
+        <b><%= locals.errors && locals.errors.model ? errors.model.msg : "" %> </b>
 
              <label class ="labelform
              " for="description"><div class="negrita">Descripcion</div></label>
         <textarea class="input <%= locals.errors && locals.errors.description ? "error" : "" %>"  name="description" id="description" cols="30" rows="10"  placeholder="Tu descripcion aca"></textarea>
-        <b><%= locals.errors && locals.errors.description ? errors.model.msg : "" %> </b>
+        <b><%= locals.errors && locals.errors.description ? errors.description.msg : "" %> </b>
 
         <label class ="labelform
         " for="image"><div class="negrita">Imagen del <b>Producto</b></div></label>

@@ -42,14 +42,13 @@ let productController = {
   },
 
   edit: (req, res) => {
+    let old = req.session.old;
+    let errors = req.session.errors;
     let id = req.params.id;
-
     let product = db.Products.findByPk(id, {});
-
     let brands = db.Brands.findAll();
     let categorys = db.Product_categorys.findAll();
     let targets = db.Targets.findAll();
-
     Promise.all([brands, categorys, targets, product])
       .then(function ([brands, categorys, targets, product]) {
         res.render("./products/productEdit", {
@@ -57,6 +56,8 @@ let productController = {
           categorys: categorys,
           targets: targets,
           product: product,
+          old: old,
+          errors: errors,
         });
       })
       .catch(function (err) {
@@ -115,7 +116,6 @@ let productController = {
       Promise.all([brands, categorys, targets])
         .then(function ([brands, categorys, targets]) {
           let old = req.body;
-          console.log("old . brond es:" + old.brand);
           res.render("./products/productAdd", {
             errors: errors.mapped(),
             brands: brands,
@@ -125,7 +125,7 @@ let productController = {
           });
         })
         .catch(function (err) {
-          // console.error(err);
+          console.error(err);
         });
     }
   },
@@ -136,26 +136,39 @@ let productController = {
     } else {
       imageName = "dummy.jpg";
     }
-    db.Products.update(
-      {
-        name: req.body.name,
-        model: req.body.model,
-        description: req.body.description,
-        price: req.body.price,
-        id_target: req.body.target,
-        id_product_category: req.body.category,
-        image: imageName,
-        warranty: req.body.warranty,
-        id_brands: req.body.brand,
-      },
-      { where: { id: req.params.id } }
-    )
-      .then(function () {
-        res.redirect("/products");
-      })
-      .catch(function (err) {
-        console.error(err);
-      });
+    let errors = validationResult(req);
+
+    if (errors.isEmpty()) {
+      req.session = null;
+      db.Products.update(
+        {
+          name: req.body.name,
+          model: req.body.model,
+          description: req.body.description,
+          price: req.body.price,
+          id_target: req.body.target,
+          id_product_category: req.body.category,
+          image: imageName,
+          warranty: req.body.warranty,
+          id_brands: req.body.brand,
+        },
+        { where: { id: req.params.id } }
+      )
+        .then(function () {
+          res.redirect("/products");
+        })
+        .catch(function (err) {
+          console.error(err);
+        });
+    } else {
+      old = req.body;
+      req.session.old = old;
+      // console.log(req.session.old);
+      req.session.errors = errors.mapped();
+      // console.log(req.session.errors);
+
+      res.redirect("/products/Edicion/" + req.params.id);
+    }
   },
 
   destroy: (req, res) => {

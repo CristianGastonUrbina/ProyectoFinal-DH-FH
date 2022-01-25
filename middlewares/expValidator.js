@@ -56,8 +56,16 @@ const expressValidator = {
       .withMessage("Campo Obligatorio")
       .isLength({ min: 20 })
       .withMessage("Minimo de 20 caracteres"),
-    body("price").notEmpty().withMessage("Campo Obligatorio"),
-    body("warranty").notEmpty().withMessage("Campo Obligatorio"),
+    body("price")
+      .notEmpty()
+      .withMessage("Campo Obligatorio")
+      .isNumeric()
+      .withMessage("Debe ser un numero"),
+    body("warranty")
+      .notEmpty()
+      .withMessage("Campo Obligatorio")
+      .isNumeric()
+      .withMessage("Debe ser un numero"),
     body("image").custom((value, { req }) => {
       let file = req.file;
 
