@@ -6,24 +6,30 @@ window.onload = function () {
   form.addEventListener("submit", function (e) {
     e.preventDefault();
     checkValues();
+    let errors = document.getElementsByClassName("error").length;
+    if (errors === 0) {
+      form.submit();
+    }
   });
 
   function checkValues() {
     let emailValue = email.value;
     let passwordValue = password.value;
 
+    //Validacion email
     if (emailValue === "") {
       setError(email, "Mete un email campeon");
-    }
+    } else success(email);
 
+    //Validacion password
     if (passwordValue === "") {
       setError(password, "Poneme la password messi, poneme la pass");
-    } else if (isStrongPass(passwordValue)) {
+    } else if (isNotStrongPass(passwordValue)) {
       setError(
         password,
         "El pass necesita al menos mayusculas, minusculas, caracteres especiales y un minimo de 8 caracteres"
       );
-    }
+    } else success(password);
   }
 
   function setError(element, message) {
@@ -31,11 +37,16 @@ window.onload = function () {
     element.nextElementSibling.innerText = message;
   }
 
-  function isStrongPass(passwordValue) {
+  function isNotStrongPass(passwordValue) {
     let regex = new RegExp(
-      "^(?=.*[a-z])(?=.*[A-Z])(?=.*d)(?=.*[@$!%*?&])[A-Za-zd@$!%*?&]{8,}$"
+      "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$"
     );
     console.log(regex.test(passwordValue));
     return !regex.test(passwordValue);
+  }
+
+  function success(element) {
+    element.nextElementSibling.innerText = "";
+    element.classList.remove("error");
   }
 };

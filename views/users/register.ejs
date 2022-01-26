@@ -4,7 +4,7 @@
   <%- include ("../partials/header.ejs") %> 
   <main>
     <section >
-    <form action="./register" method="post" class="formulario" enctype="multipart/form-data">
+    <form action="./register" method="post" class="formulario" enctype="multipart/form-data" id="form">
       <h2 class="Titulo">Tu <b>User</b></h2>
 
 
@@ -14,35 +14,41 @@
              " for="first_name"><div class="negrita">Nombre</div></label>
         <input class="input <%= locals.mensajesDeError && locals.mensajesDeError.first_name ? "error" : "" %>"  type="text" name="first_name" id="first_name" placeholder="Nombre"
         value="<%=  locals.old && old.first_name  ?  old.first_name : "" %>">
+        <b></b>
 
           <b><%= locals.mensajesDeError && locals.mensajesDeError.first_name ? mensajesDeError.first_name.msg : "" %> </b>
 
              <label class ="labelform
              " for="manufacturer"><div class="negrita">Apellido</div></label>
         <input class="input <%= locals.mensajesDeError && locals.mensajesDeError.last_name ? "error" : "" %>"  type="text" name="last_name" id="last_name" placeholder="Apellido" value="<%= locals.old && old.last_name  ?  old.last_name : "" %>">
+        <b></b>
         <b><%= locals.mensajesDeError && locals.mensajesDeError.last_name ? mensajesDeError.last_name.msg : "" %> </b>
 
               <label class ="labelform
              " for="model"><div class="negrita">Email</div></label>
-        <input class="input <%= (locals.mensajesDeError && locals.mensajesDeError.email) || user !== null ? "error" : "" %>"  type="text" name="email" id="email" placeholder="Email"
+        <input class="input <%= (locals.mensajesDeError && locals.mensajesDeError.email) || locals.user ? "error" : "" %>"  type="text" name="email" id="email" placeholder="Email"
         value="<%= locals.old && old.email  ?  old.email : "" %>">
+        <b></b>
          <b><%= locals.mensajesDeError && locals.mensajesDeError.email ? mensajesDeError.email.msg : "" %> </b>
-         <%= console.log(user) %> 
-         <b><%= user !== null ? "El usuario ya se encuentra registrado, ingrese otro email" : "" %> </b>
+<%= console.log(locals) %> 
+         <b><%= locals.user  ? "El usuario ya se encuentra registrado, ingrese otro email" : "" %> </b>
          
 
              <label class ="labelform
              " for="description"><div class="negrita">Contraseña</div></label>
         <input class="input <%= locals.mensajesDeError && locals.mensajesDeError.password ? "error" : "" %>"  type="password" name="password" id="password" cols="30" rows="10"  placeholder="Dale, no pongas 1234" >
+        <b></b>
          <b><%= locals.mensajesDeError && locals.mensajesDeError.password ? mensajesDeError.password.msg : "" %> </b>
 
         <label class ="labelform" for="model"><div class="negrita">Telefono</div></label>
         <input class="input <%= locals.mensajesDeError && locals.mensajesDeError.phone ? "error" : "" %>"  type="text" name="phone" id="phone" placeholder="Telefono" value="<%=locals.old && old.phone  ?  old.phone : "" %>">
+        <b></b>
          <b><%= locals.mensajesDeError && locals.mensajesDeError.phone ? mensajesDeError.phone.msg : "" %> </b>
 
 
              <label class ="labelform" for="model"><div class="negrita">Codigo Postal</div></label>
         <input class="input <%= locals.mensajesDeError && locals.mensajesDeError.zip ? "error" : "" %> "  type="text" name="zip" id="zip" placeholder="Codigo Postal" value="<%=locals.old && old.zip  ?  old.zip : "" %>">
+        <b></b>
          <b><%= locals.mensajesDeError && locals.mensajesDeError.zip ? mensajesDeError.zip.msg : "" %> </b>
 
 
@@ -50,6 +56,7 @@
         <label class ="labelform
         " for="image"><div class="negrita"> <b>Avatar</b></div></label>
         <input  class="input <%= locals.mensajesDeError && locals.mensajesDeError.image ? "error" : "" %>" type="file" name="image" id="image" value="<%= locals.old && old.image  ?  old.image : "" %>">
+        <b></b>
          <b><%= locals.mensajesDeError && locals.mensajesDeError.image ? mensajesDeError.image.msg : "" %> </b>
 
 
@@ -69,6 +76,7 @@
 
         <label class ="labelform" for="address"><div class="negrita">Direccion</div></label>
         <input class="input <%= locals.mensajesDeError && locals.mensajesDeError.address ? "error" : "" %> "  type="text" name="address" id="address" value="<%=locals.old && old.address  ?  old.address : "" %>">
+        <b></b>
          <b><%= locals.mensajesDeError && locals.mensajesDeError.address ? mensajesDeError.address.msg : "" %> </b>
 
                
@@ -85,7 +93,7 @@
 
 
 
-
+<script src="/js/register.js"></script>
   <%- include ("../partials/footer.ejs") %> 
 </body>
 </html>
