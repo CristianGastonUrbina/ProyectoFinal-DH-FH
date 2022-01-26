@@ -4,19 +4,21 @@
   <%- include ("../partials/header.ejs") %> 
   <main>
     <section >
-    <form action="/products/Edicion/<%=product.id%>?_method=PUT" method="post" class="formulario" enctype="multipart/form-data">
+    <form  id="form" action="/products/Edicion/<%=product.id%>?_method=PUT" method="post" class="formulario" enctype="multipart/form-data">
       <h2 class="Titulo">Tu <b>Producto</b></h2>
 
 
              <label class ="labelform
              " for="name"><div class="negrita">Nombre</div></label>
         <input class="input <%= locals.errors && locals.errors.name ? "error" : "" %>"  type="text" name="name" id="name" value="<%=  locals.old && old.name  ?  old.name : product.name %>">
+        <b></b>
         <b><%= locals.errors && locals.errors.name ? errors.name.msg : "" %> </b>
 
   
 
                 <label class ="labelform" for="brand"><div class="negrita">Marca</div></label>
         <select class="input"  name="brand"  id="brand">
+          
 
            <% for( let i = 0; i < brands.length; i++ ) { %>
 
@@ -33,23 +35,27 @@
               <label class ="labelform
              " for="model"><div class="negrita">Modelo</div></label>
         <input class="input <%= locals.errors && locals.errors.model ? "error" : "" %>"  type="text" name="model" id="model" value="<%=  locals.old && old.model  ?  old.model : product.model %>">
+        <b></b>
         <b><%= locals.errors && locals.errors.model ? errors.model.msg : "" %> </b>
 
              <label class ="labelform
              " for="description"><div class="negrita">Descripcion</div></label>
         <input class="input <%= locals.errors && locals.errors.description ? "error" : "" %>"  name="description" id="description" cols="30" rows="10"  value="<%=  locals.old && old.description  ?  old.description : product.description %>">
+        <b></b>
         <b><%= locals.errors && locals.errors.description ? errors.description.msg : "" %> </b>
 
         <label class ="labelform
         " for="image"><div class="negrita">Imagen del <b>Producto </b></div></label>
         <img class ="imagen" src="../../../images/products/<%=product.image%>" alt="ACAA">
         <input  class="input <%= locals.errors && locals.errors.image ? "error" : "" %>" type="file" name="image" id="image" >
+        <b></b>
         <b><%= locals.errors && locals.errors.image ? errors.image.msg : "" %> </b>
 
 
       <label class ="labelform
       " for="price"><div class="negrita">Precio</div></label>
-        <input  class="input <%= locals.errors && locals.errors.price ? "error" : "" %>" type="text" name="price" id="price" value="<%=  locals.old && old.price  ?  old.price : product.price %>">
+        <input  class="input <%= locals.errors && locals.errors.price ? "error" : "" %>" type="number" name="price" id="price" value="<%=  locals.old && old.price  ?  old.price : product.price %>">
+        <b></b>
 
          <b><%= locals.errors && locals.errors.price ? errors.price.msg : "" %> </b>
 
@@ -80,7 +86,8 @@
 
       <label class ="labelform
       " for="price"><div class="negrita">Garantia</div></label>
-        <input  class="input <%= locals.errors && locals.errors.warranty ? "error" : "" %> " type="text" name="warranty" id="warranty" value="<%=  locals.old && old.warranty  ?  old.warranty : product.warranty %>">
+        <input  class="input <%= locals.errors && locals.errors.warranty ? "error" : "" %> " type="number" name="warranty" id="warranty" value="<%=  locals.old && old.warranty  ?  old.warranty : product.warranty %>">
+        <b></b>
         <b><%= locals.errors && locals.errors.warranty ? errors.warranty.msg : "" %> </b>
 
       
@@ -93,6 +100,7 @@
       </form>
     </section >
 
+    <script src="/js/productEdit.js"></script>
   </main>
 
 
