@@ -1,0 +1,2 @@
+14/1/22: DB terminados. En caso de inestabilidad tratamos de corregirlos sobre la marcha a medida que testeamos la página.
+21/1/22:Puesta en común. Se revisa la página y aquellas cosas que falten hacer para la próxima semana. 
