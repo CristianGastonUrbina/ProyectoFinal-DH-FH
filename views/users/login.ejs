@@ -4,20 +4,25 @@
   <%- include ("../partials/header.ejs") %> 
   <main>
     <section >
-    <form action="./login" method="post" class="formulario" >
+    <form action="./login" method="post" class="formulario" id="form">
       <h2 class="Titulo"> <b>Login</b></h2>
 
-      
+
              <label class ="labelform
              " for="email"><div class="negrita">Email</div></label>
-        <input class="input <%= locals.errors && locals.errors.email ? "error" : "" %>"  type="email"   name="email" id="email" placeholder="email"
-        value="<%=  locals.old && old.email  ?  old.email : "" %>">
+       <input class="input  <%= locals.errors && locals.errors.email ? "error" : "" %>"  type="email"   name="email" id="email" placeholder="email"
+        value="<%=  locals.old && old.email  ?  old.email : "" %>" >
+        <b></b>
+        
 
           <b><%= locals.errors && locals.errors.email ? errors.email.msg : "" %> </b>
 
+
+          
              <label class ="labelform
              " for="manufacturer"><div class="negrita">Password</div></label>
-        <input class="input <%= locals.errors && locals.errors.password ? "error" : "" %>"  type="Password" name="password" id="password" placeholder="*******">
+        <input class="input <%= locals.errors && locals.errors.password ? "error" : "" %>"  type="Password"  name="password" id="password" placeholder="*******">
+        <b></b>
         <b><%= locals.errors && locals.errors.password ? errors.password.msg : "" %> </b>
 
                     <div>
@@ -45,6 +50,8 @@
 
     </section >
 
+
+  <script type="module" src="/js/login.js"></script>
   </main>
 
 

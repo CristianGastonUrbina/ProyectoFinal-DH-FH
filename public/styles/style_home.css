@@ -24,6 +24,10 @@ textarea.input.error {
   box-shadow: red 0px 5px 5px;
 }
 
+.error {
+  box-shadow: red 0px 5px 5px;
+}
+
 textarea.input.error {
   box-shadow: red 0px 5px 5px;
 }
