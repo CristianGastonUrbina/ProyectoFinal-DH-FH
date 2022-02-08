@@ -18,6 +18,27 @@ let productController = {
       }
       return categorias;
     }
+    function ShowAllProducts(products) {
+      allproducts = [];
+      for (let index = 0; index < products.length; index++) {
+        const product = products[index];
+
+        producto = {
+          id: product.id,
+          name: product.name,
+          description: product.description,
+          model: product.model.name,
+          image: product.image,
+          price: product.price,
+          target: product.target.name,
+          category: product.category.name,
+          warranty: product.warranty,
+          detail: "http://localhost:3001/products/Detalle/" + product.id,
+        };
+        allproducts.push(producto);
+      }
+      return allproducts;
+    }
 
     db.Products.findAll({
       include: [
@@ -31,7 +52,7 @@ let productController = {
           total: products.length,
           totalByCategory: ContarCategoria(products),
           status: 200,
-          data: products,
+          products: ShowAllProducts(products),
         });
       })
       .catch((err) => {
@@ -51,7 +72,16 @@ let productController = {
       .then(function (product) {
         res.json({
           status: 200,
-          data: product,
+          id: product.id,
+          name: product.name,
+          description: product.description,
+          model: product.model.name,
+          image: product.image,
+          price: product.price,
+          target: product.target.name,
+          category: product.category.name,
+          warranty: product.warranty,
+          detail: "http://localhost:3001/products/Detalle/" + product.id,
         });
       })
       .catch((err) => {
