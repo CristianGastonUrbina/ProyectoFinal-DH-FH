@@ -13,7 +13,7 @@ const cookieParser = require("cookie-parser");
 let recuerdame = require("./middlewares/recuerdame");
 
 server.use(express.json());
-let port = 3000;
+let port = 3001;
 let publicPath = path.resolve(__dirname, "./public");
 //Se configura express
 server.use(express.static(publicPath));
