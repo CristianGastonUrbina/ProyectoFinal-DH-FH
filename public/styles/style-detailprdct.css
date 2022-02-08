@@ -134,19 +134,23 @@ b {
   justify-content: center;
 }
 .fotoproducto {
-  width: 70%;
+  padding: 60px;
+  justify-content: center;
 }
 .nombreProducto {
-  justify-content: right;
+  justify-content: center;
   display: flex;
   margin: 10px;
-  font-size: 20px;
-  text-align: right;
+  font-size: 30px;
+  text-align: center;
+ 
 }
 .descripcionProducto {
-  text-align: right;
-  font-size: 20px;
-  margin: 15px;
+  text-align: center;
+  font-size: 25px;
+  margin: 30px;
+  line-height: 40px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .disc {
@@ -156,9 +160,17 @@ b {
   display: flex;
   padding: 15px;
   justify-content: space-around;
+  margin-left: 10%;
+  margin-right: 10%;
+  box-sizing: content-box;
+  border: solid #5B6DCD 10px;
+}
+.preciosProducto div h3 {
+  font-size: 50px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 .botonCompra button {
-  width: 90%;
+  width: 100%;
   border-radius: 4px;
   margin: 10px;
   padding: 3px;
@@ -168,10 +180,27 @@ b {
 }
 .garantia {
   text-align: right;
-  font-size: 20px;
-  margin-top: 15px;
+  font-size: 22px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 28px;
 }
-
+.productoPregunta{
+  padding: 10px;
+  justify-content: center;
+  display: flex;
+}
+.editar{
+  padding: 5px;
+  justify-content: center;
+  display: flex;
+}
+.borrar{
+  padding: 5px;
+  justify-content: center;
+  display: flex;
+}
 .categorias {
   width: 85%;
   margin: auto;
@@ -366,4 +395,34 @@ b {
     flex-wrap: nowrap;
     max-width: 1200px;
   }
+}
+
+@media (max-width:767px) {
+  .preciosProducto {
+   flex-direction: column;
+
+  }
+  .preciosProducto div h3{
+    text-align: center;
+    font-size: 55px;
+    padding-bottom: 10%;
+  }
+  .nombreProducto{
+    font-size: 25px;
+  }
+  .preciosProducto .garantia{
+    text-align: center;
+    padding-top: 20px;
+  }
+  .descripcionProducto{
+    font-size: 15px;
+  }
+  .armamos-tu-setup2{
+    font-size: medium;
+  }
+  .botonCompra{
+    padding-right: 20px;
+
+  }
+
 }
