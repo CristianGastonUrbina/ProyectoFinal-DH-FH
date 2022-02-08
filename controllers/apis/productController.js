@@ -6,15 +6,17 @@ const { validationResult } = require("express-validator");
 
 let productController = {
   list: (req, res) => {
-    function contarTotalCategorias(productos, categoria) {
-      let total = 0;
+    function ContarCategoria(productos) {
+      let categorias = {};
       for (let i = 0; i < productos.length; i++) {
-        const element = productos[i];
-        if (element.category === categoria) {
-          total++;
+        const element = productos[i].category.name;
+        if (element in categorias) {
+          categorias[element] = categorias[element] + 1;
+        } else {
+          categorias[element] = 1;
         }
       }
-      return total;
+      return categorias;
     }
 
     db.Products.findAll({
@@ -27,9 +29,7 @@ let productController = {
       .then(function (products) {
         res.json({
           total: products.length,
-          totalByCategory: {
-            categories: contarTotalCategorias(products),
-          },
+          totalByCategory: ContarCategoria(products),
           status: 200,
           data: products,
         });
