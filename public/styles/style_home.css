@@ -339,7 +339,9 @@ ul {
 
   .Logo {
     order: 0;
-    color: white;
+    /* background-color: white;
+    -webkit-mask: url(logo.svg) no-repeat center;
+    mask: url(logo.svg) no-repeat center; */
   }
   .search {
     order: 10;
