@@ -4,7 +4,16 @@ import SmallCard from './SmallCard';
 /*  Cada set de datos es un objeto literal */
 
 /* <!-- Movies in DB --> */
-
+let productPromise=fetch('/api/Products');
+let userPromise=fetch('/api/Users');
+let categoriesPromise=fetch('/api/Categories');
+Promise.all([productPromise,userPromise,categoriesPromise]).then(
+    function (responses){
+        console.log(responses[0].json());
+        console.log(responses[1].json());
+        console.log(responses[2].json());
+    }
+)
 let moviesInDB = {
     title: 'Movies in Data Base',
     color: 'primary', 

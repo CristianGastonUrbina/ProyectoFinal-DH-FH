@@ -7,5 +7,4 @@ ApiRouter.get("/Products", ApiProductController.list);
 ApiRouter.get("/Products/:id", ApiProductController.detail);
 ApiRouter.get("/Users", ApiUserController.list);
 ApiRouter.get("/Users/:id", ApiUserController.detail);
-
 module.exports = ApiRouter;
