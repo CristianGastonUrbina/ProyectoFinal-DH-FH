@@ -395,6 +395,11 @@ b {
     flex-wrap: nowrap;
     max-width: 1200px;
   }
+  .fotoproducto {
+    width: 70%;
+    justify-content: center;
+    padding-left: 15%;
+  }
 }
 
 @media (max-width:767px) {
