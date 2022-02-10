@@ -16,14 +16,14 @@
 
       <section class="Destacados">
         <h2 class="armamos-tu-setup">Productos de
-          <b>  Alta  </b>gama
+          <b>  Tope  </b> de gama
         </h2>
         
 
                   
                   
                   <% for (i=0 ; i<product.length; i++) { %> 
-                    <% if (product[i].target== "Ultrahigh") { %>
+                    <% if (product[i].target.name== "Tope de Gama") { %>
                      
                    
                     <article class="product">
@@ -32,7 +32,7 @@
                           ><img src="../images/products/<%=product[i].image%>" alt="<%=product[i].name%>"
                           /></a>
                           <div class="descripcion">
-                            <div>Modelo:<%=product[i].description%></div>
+                            <div>Modelo:<%=product[i].model%></div>
                             <div>Categoria:<%=product[i].category%></div>
               <div>Precio:<%=product[i].price%></div>
 
@@ -57,7 +57,7 @@
 
                   
                   <% for (i=0 ; i<product.length; i++) { %> 
-                    <% if (product[i].target== "Gamer") { %>
+                    <% if (product[i].target.name== "Gamer") { %>
                      
                    
                     <article class="product">
@@ -66,8 +66,8 @@
                           ><img src="/images/products/<%=product[i].image%>" alt="<%=product[i].name%>"
                           /></a>
                           <div class="descripcion">
-                            <div>Modelo:<%=product[i].description%></div>
-                            <div>Categoria:<%=product[i].category%></div>
+                            <div>Modelo:<%=product[i].model%></div>
+                            <div>Categoria:<%=product[i].category.name%></div>
               <div>Precio:<%=product[i].price%></div>
 
             </div>
@@ -89,8 +89,8 @@
         <div class="categorias_conteiner">
           <% let category = [] %>
           <% for ( i=0; i<product.length; i++) { %>
-          <%  if  (!category.includes(product[i].category)) { %>
-           <%   category.push(product[i].category) %>
+          <%  if  (!category.includes(product[i].category.name)) { %>
+           <%   category.push(product[i].category.name) %>
            <% } %>
            <% } %> 
            
