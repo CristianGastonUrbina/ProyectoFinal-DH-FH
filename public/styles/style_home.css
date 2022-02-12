@@ -71,12 +71,13 @@ h6 {
 
 .Logo-footer img {
   width: 100%;
-  max-width: 120px;
+  max-width: 100px;
 }
 
 .Logo img {
   width: 100%;
-  max-width: 120px;
+  max-width: 100px;
+  padding-top: 10px;
 }
 img {
   width: 100%;
@@ -339,7 +340,9 @@ ul {
 
   .Logo {
     order: 0;
-    color: white;
+    /* background-color: white;
+    -webkit-mask: url(logo.svg) no-repeat center;
+    mask: url(logo.svg) no-repeat center; */
   }
   .search {
     order: 10;
