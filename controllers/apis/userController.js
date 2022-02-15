@@ -29,9 +29,11 @@ let userController = {
     })
       .then(function (users) {
         res.json({
-          total: users.length,
-          status: 200,
-          users: showAllUsers(users),
+          meta:{
+            total: users.length,
+            status: 200
+          },
+          data:showAllUsers(users),
         });
       })
       .catch((err) => {

@@ -20,7 +20,10 @@ let mainController = {
       ],
     })
       .then(function (product) {
-        res.render("index", { product: product });
+        if(req.session.usuarioALogearse&&req.session.usuarioALogearse.id_user_category === "admin")
+          res.render("indexAdmin", {product:product})
+        else
+          res.render("index", { product: product });
       })
       .catch(function (err) {
         console.log(err);

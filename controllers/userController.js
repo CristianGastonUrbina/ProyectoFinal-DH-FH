@@ -1,4 +1,4 @@
-const fs = require("fs");
+ const fs = require("fs");
 const User = require("../entities/user");
 const bcrypt = require("bcryptjs");
 const { validationResult } = require("express-validator");
@@ -23,7 +23,7 @@ let userController = {
         },
       });
       Promise.all([user]).then(function ([user]) {
-        if (bcrypt.compareSync(req.body.password, user.dataValues.password)) {
+        if (user&&bcrypt.compareSync(req.body.password, user.dataValues.password)) {
           usuarioALogearse = user.dataValues; //Si lo encuentro, lo guardo
         } else {
           return res.render("./users/login", {
