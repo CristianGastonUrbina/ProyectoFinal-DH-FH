@@ -1,4 +1,4 @@
-//Se declaran variables generales del proyecto
+  //Se declaran variables generales del proyecto
 
 let express = require("express");
 let server = express();

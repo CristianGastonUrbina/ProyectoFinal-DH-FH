@@ -6,9 +6,11 @@ let categoryController = {
     db.Product_categorys.findAll()
       .then(function (categorys) {
         res.json({
-          total: categorys.length,
-          status: 200,
-          products: categorys,
+          meta:{
+            total: categorys.length,
+            status: 200
+          },
+          data: categorys,
         });
       })
       .catch((err) => {

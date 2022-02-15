@@ -48,10 +48,12 @@ let productController = {
     })
       .then(function (products) {
         res.json({
-          total: products.length,
-          totalByCategory: ContarCategoria(products),
-          status: 200,
-          products: ShowAllProducts(products),
+          meta:{
+            total: products.length,
+            totalByCategory: ContarCategoria(products),
+            status: 200,
+          },
+          data: ShowAllProducts(products),
         });
       })
       .catch((err) => {
