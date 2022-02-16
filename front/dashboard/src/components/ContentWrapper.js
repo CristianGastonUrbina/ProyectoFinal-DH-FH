@@ -15,7 +15,6 @@ function ContentWrapper(){
                     <ContentRowTop />
                     <TypeCounts />
                     <TotalProducts />
-                    <Footer />
                 </div>
             </div>    
         </React.Fragment>
