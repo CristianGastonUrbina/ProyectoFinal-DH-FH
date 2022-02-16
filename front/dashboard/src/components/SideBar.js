@@ -1,5 +1,5 @@
 import React from 'react';
-import image from '../assets/images/viino.PNG';
+import image from '../assets/images/logo.svg';
 import {Link,Route, Routes} from "react-router-dom"
 import ContentWrapper from "./ContentWrapper"
 import Login from "./Login"
@@ -13,12 +13,12 @@ function SideBar(){
     return(
         <React.Fragment>
             {/*<!-- Sidebar -->*/}
-            <ul className="navbar-nav bg-dark sidebar sidebar-dark accordion" id="accordionSidebar">
+            <ul className="navbar-nav bg-info sidebar sidebar-dark accordion" id="accordionSidebar">
 
                 {/*<!-- Sidebar - Brand -->*/}
                 <a className="sidebar-brand d-flex align-items-center justify-content-center" href="/">
                     <div className="sidebar-brand-icon">
-                        <img className="w-100" src={image} alt="viino"/>
+                        <img className="w-100" src={image} alt="logo"/>
                     </div></a>
 
                 {/*<!-- Divider -->*/}
@@ -27,8 +27,8 @@ function SideBar(){
                 {/*<!-- Nav Item - Dashboard -->*/}
                 <li className="nav-item active">
                     <a className="nav-link" href="/">              
-                        <i className="fas fa-bold fa-wine-bottle"></i>
-                        <span>Home</span>
+                        <i className="fas fa-bold fa-computer"></i>
+                        <span>Dashboard</span>
                         </a>
                 </li>
                 
@@ -36,29 +36,16 @@ function SideBar(){
                 <hr className="sidebar-divider"/>
 
                 {/*<!-- Heading -->*/}
-                <div className="sidebar-heading">Secciones</div>
 
                 {/*<!-- Nav Item - Pages -->*/}
                 <li className="nav-item">
-                    <Link className="nav-link collapsed" to="/register">
-                    <i className="fas fa-thin fa-user"></i>
-                        <span>Register</span></Link>                    
+                    <a className="nav-link collapsed" href="http://localhost:3001/">
+                    <i className="fas fa-comerce fa-user"></i>
+                        <span>e-Comerce</span></a>                    
                 </li>
 
-                {/*<!-- Nav Item - Charts -->*/}
-                <li className="nav-item">
-                    <Link className="nav-link" to="/login">
-                    <i className="fas fa-thin fa-user"></i>
-                        <span>Login</span></Link>
-                </li>
-
-                {/*<!-- Nav Item - Tables -->*/}
-                <li className="nav-item">
-                    <Link className="nav-link" to="/shop">
-                    <i className="fas fa-thin fa-shopping-cart"></i>
-                        <span>Shop</span></Link>
-                </li>
-
+ 
+         
                 {/*<!-- Divider -->*/}
                 <hr className="sidebar-divider d-none d-md-block"/>
             </ul>

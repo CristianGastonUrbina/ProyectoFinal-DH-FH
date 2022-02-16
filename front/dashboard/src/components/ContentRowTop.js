@@ -1,9 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import Panels from './Panels';
-import LastUser from "./LastUser"
-import LastProduct from "./LastProduct"
-import MostSold from "./MostSold"
-import imagenF from "../assets/images/index/brindis-vino-tinto.png"
+import imagenF from "../assets/images/index/dc.jpg"
 function ContentRowTop(){
 	
 	const [users, setUser] = useState ([]);
@@ -17,7 +14,6 @@ function ContentRowTop(){
 			const usersTotal = users.data.total
 			
             setUser(usersTotal)
-			//console.log(lastUser)
             
         })
         .catch(error => console.log(error))
@@ -68,30 +64,18 @@ function ContentRowTop(){
                         <div className="card shadow mb-4">   
                         <div className="card-body  ">
                       <div className="text-center">  
-                      <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: 50 +'rem'}} src={imagenF} alt="brindis-vino-tinto "/>
-                    <h1>Nosotros</h1>                        
+                      <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: 50 +'rem'}} src={imagenF} alt="Centro de datos"/>
+                    <h1>Datos Generales</h1>                        
         </div>
-        <p> Somos una nueva propuesta que te acerca lo mejor de la cultura vitivinícola, acompañanos a encontrar el vino perfecto para vos  </p> 
-        <p> Sumate a la experiencia VIINO y recorré junto a nosotros los mejores aromas y productos de calidad del mercado </p>
+        <p> Este pequeño portal te permitira visualizar el status general del e-comerce y de su logistica interna  </p> 
+        <p> Los datos que podras encontrar aqui, reflejan el stock disponible, las categorias y marcas que la agencia cubre hoy dia, y los usuarios que la estan utilizando. </p>
     </div>
 </div>
 </div>
-					{/*<!-- Content Row Last Movie in Data Base -->*/}
-					<div className= "row">
-                    <MostSold {...products2} key={products2}  />
-                   
-                     <LastUser {...users} key={0} />                    
-                    				
-					{/*<!-- Genres in DB -->*/}
-					<LastProduct {...products} key={products}  />
-                    
-						{/*<!--End Genres In Db-->*/}		
-					
+				
 				</div>
 
-                </div>
-				{/*<!--End Content Row Top-->*/}
-
+               
         </React.Fragment>
     )
 
