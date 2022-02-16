@@ -20,7 +20,7 @@ let mainController = {
       ],
     })
       .then(function (product) {
-        if(req.session.usuarioALogearse&&req.session.usuarioALogearse.id_user_category === "admin")
+        if(req.session.usuarioALogearse&&req.session.usuarioALogearse.id_user_category == 3)
           res.render("indexAdmin", {product:product})
         else
           res.render("index", { product: product });

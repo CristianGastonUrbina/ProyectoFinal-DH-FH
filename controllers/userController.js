@@ -23,7 +23,7 @@ let userController = {
         },
       });
       Promise.all([user]).then(function ([user]) {
-        if (user&&bcrypt.compareSync(req.body.password, user.dataValues.password)) {
+        if (user&&   bcrypt.compareSync(req.body.password, user.dataValues.password)) {
           usuarioALogearse = user.dataValues; //Si lo encuentro, lo guardo
         } else {
           return res.render("./users/login", {

@@ -24,19 +24,21 @@
           <div>
             <a href="/users/login"><i class="far fa-user fa-2x"></i></a>
           </div>
-          <% if (locals.user) { %>
+          <%
+          console.log(locals);
+          if (locals.user) { %>
           <p><%= locals.user.firstname %></p>
           <% }else { %>
           <p>Cuenta</p>
           <% } %>
         </div>
       </div>
-      <div class="Administrar">
+      <div class="Usuarios">
         <div>
-          <a href="" rel="Administrar"><i class="fas fa-phone fa-2x"></i></a>
+          <a href="/users/" rel="Usuarios"><i class="fas fa-users fa-2x"></i></a>
         </div>
 
-        <p>Administrar</p>
+        <p>Usuarios</p>
       </div>
       <div class="search">
         <label for="searchbar"></label>
