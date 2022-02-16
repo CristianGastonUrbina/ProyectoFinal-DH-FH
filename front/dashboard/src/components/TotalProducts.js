@@ -11,7 +11,6 @@ function TotalProducts(){
             return response.json()
         })
         .then(products => {		
-			console.log(products.data)				
             setProduct(products.data)
 			            
         })
@@ -22,7 +21,7 @@ function TotalProducts(){
     return(
         <React.Fragment>
 				    {/*<!-- PRODUCTS LIST -->*/}
-					<h1 className="h3 mb-2 text-gray-800">Nuestros productos</h1>
+					<h1 className="h3 mb-2 text-gray-800">Equipos en stock</h1>
 					
 					{/*<!-- DataTales Example -->*/}
 					<div className="card shadow mb-4">

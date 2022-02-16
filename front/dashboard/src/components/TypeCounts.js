@@ -26,7 +26,7 @@ function TypeCounts(){
 			return (
 				<React.Fragment>
 					{/*<!-- types LIST -->*/}
-					<h1 className="h3 mb-2 text-gray-800">Nuestras categorías</h1>
+					<h1 className="h3 mb-2 text-gray-800">Tipos de equipamiento en stock</h1>
 					
 					{/*<!-- DataTales Example -->*/}
 					<div className="card shadow mb-4">
