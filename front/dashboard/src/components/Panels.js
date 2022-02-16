@@ -77,13 +77,13 @@ class Panels extends Component{
               cardProps: [
                 {
                   color: "primary",
-                  titulo: "Cantidad de productos total en DB",
+                  titulo: "Cantidad de productos en stock",
                   valor: products.meta.total,
                   icono: "fas fa-wine-bottle",
                 },
                 {
                   color: "primary",
-                  titulo: "Usuarios creados",
+                  titulo: "Usuarios registrados",
                   valor: users.meta.total,
                   icono: "fas fa-user",
                 },
